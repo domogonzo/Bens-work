@@ -1,0 +1,291 @@
+#tripane img{
+	vertical-align : middle;
+}
+
+a {
+	cursor : auto;
+}
+
+a:link {
+	color : #0000FF;
+}
+
+a:visited {
+	color : #990066;
+}
+
+a:hover {
+	color : #000080;
+}
+
+a.topbutton, a:visited.topbutton {
+	border : 1px solid #ffffff;
+	background : #000152;
+	color : #808080;
+	font : 11px Verdana, sans-serif;
+	cursor : auto;
+	padding : 4px;
+	text-align : center;
+	text-decoration : none;
+}
+
+a:link.selectedtab, a:visited.selectedtab, a:hover.selectedtab{
+	border : 1px solid;
+	border-bottom-color : #9E9BD4;
+	border-left-color : #9E9BD4;
+	border-right-color : #9E9BD4;
+	border-top-color : #9E9BD4;
+	background-color : #ffffff;
+	color : #000152;
+	font : 11px "MS Sans Serif", sans-serif;
+	margin : 0px;
+	padding : 1px 8px 2px 8px;
+	text-align : center;
+	text-decoration : none;
+}
+
+a:link.tab, a:visited.tab, a:hover.tab{
+	border : 1px solid;
+	border-bottom-style : none;
+	border-left-color : #FFFFFF;
+	border-right-color : #9E9BD4;
+	border-top-color : #FFFFFF;
+	color : #808080;
+	font : 11px "MS Sans Serif", sans-serif;
+	margin : 0px;
+	padding : 1px 8px 2px 8px;
+	text-align : center;
+	text-decoration : none;
+}
+
+body {
+	margin : 0em 0% 0em 0%;
+}
+
+body.contents {
+	background : #ffffff;
+	scrollbar-darkshadow-color : #9999DD;
+	scrollbar-face-color : #EAEAFF;
+	scrollbar-shadow-color : #CCCCFF;
+}
+
+body.tabs{
+	background : #CCCCFF url('toolbar_bg.jpg') repeat-x;
+	
+
+}
+ul.subheading2{
+	list-style-image: url('bullet.gif');
+}
+
+h1.headerbar {
+	background : #FFFFFF url('wiztopbar.jpg') no-repeat right;
+	border : 2px solid #9E9BD4;
+	color : #808080;
+	height : 63px;
+	margin : 0em 0%;
+	padding-left : 20px;
+	padding-top : 20px;
+	text-align : left;	
+	width : 100%; font-style:normal; font-variant:normal; font-weight:normal; font-size:20px; font-family:Verdana, serif
+	
+}
+
+#tripane {
+	margin-left : 0%;
+	margin-right : 0%;
+	margin-top : 1em;
+	padding-left : 3%;
+	padding-right : 3%;
+}
+
+#main {
+	background : #FFFFFF;
+	border-left : 1px solid #ffffff;
+	height : 100%;
+	margin-left : 0%;
+	margin-right : 0%;
+	margin-top : 0em;
+	margin-bottom: 0em;
+	padding-left : 3%;
+	padding-right : 3%;
+	padding-top : 0em;
+	padding-bottom: 1em
+}
+
+#tabs{
+	border-bottom : 9px solid #9E9BD4;
+	margin-top : 2px;
+	padding-left : 3px;
+}
+
+#tripane .heading1 {
+	border-bottom : none;
+	color : #808080;
+	font : bold 14px Verdana, serif;
+	padding-bottom : 1px;
+}
+   
+td.topleft, td.topright, td.bottomleft, td.bottomright {
+	font-family: "Verdana", verdana, arial, helvetica, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 11px;
+	color: #000000;
+	margin : 0;
+	background : #ffffff url('toolbar_bg.jpg') repeat-x;
+	padding-left:8px; padding-right:8px; padding-top:4px; padding-bottom:5px; background-image:url('toolbar_bg.jpg'); background-repeat:repeat-x
+}
+
+td.topright {
+	border-bottom: 0px solid #ffffff;
+	border-right: 0px solid #ffffff;
+}
+td.topleft {
+	border-bottom: 0px solid #ffffff;
+}
+
+td.bottomright {
+	border-top: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;
+}
+
+td.bottomleft {
+	border-top: 1px solid #ffffff;
+}
+
+a:hover.toolbar {
+	margin :0px;
+	border: 1px solid #808080;
+	padding : 3px 2px 0px 2px;
+	color : #808080;
+	text-decoration : none;
+}
+
+a.toolbar {
+	border : 0px none;
+	margin : 1px;
+	color : #808080;
+	text-decoration : none;
+	padding-left:2px; padding-right:2px; padding-top:0px; padding-bottom:0px
+}
+
+span.toolbar {
+	color : #808080;
+	font-weight : bold;
+}
+
+img.toolbar {
+	padding : 0;
+	margin:0;
+	position : relative;
+	top : -3px;
+	left : 0;
+    vertical-align : top;	
+	margin-bottom : -3px;
+}
+
+table.toolbar {
+	margin: 0px;
+	border : none;
+	padding : 0px;
+	border-collapse : collapse;
+}
+
+#footer {
+	border-left:0px none; border-top:0px none; border-bottom:0px none; margin:0; padding:8px; background:#808080; border-right:1px solid #808080; color : #ffffff;
+	text-align : left; font-style:normal; font-variant:normal; font-weight:normal; font-size:10px; font-family:Verdana, sans-serif
+	
+}
+ul.subheading2 {list-style-type: none;
+		list-style-image: url(none);
+        }
+		
+.keywords{
+	display: none;
+}
+div.popuponclick {
+   zoom: 1;
+   filter: 
+   "progid:DXImageTransform.Microsoft.DropShadow(OffX=5, OffY=5, Color=#80000000)";
+   background-color: #FFFFFF;
+}
+
+/***********************
+Bulleted Lists
+***********************/
+
+/* Set block-level padding and disc type to ensure standard 
+   design and spacing between bullets and li content.
+ */
+ul.tablelistbullet,
+ul.tablelistbullet2,
+ul.tablelistbullet3,
+ul.listbullet,
+ul.listbullet2,
+ul.listbullet3,
+ul.listbullet4 {
+	padding-left: 0pt;
+	list-style-type: disc;
+}
+
+/* If you are a standalone list bullet, 
+   aligning to the left side of the page, 
+   the whole list gets a custom margin-left.
+   
+   Each individual li is standardized at 12pt.
+ */
+ul.listbullet {
+	margin-left: 18pt;
+}
+ul.listbullet2 {
+	margin-left: 36pt;
+}
+ul.listbullet3 {
+	margin-left: 54pt;
+}
+ul.listbullet4 {
+	margin-left: 72pt;
+}
+
+li.listbullet,
+li.listbullet2,
+li.listbullet3,
+li.listbullet4 {
+	padding-left: 6pt;
+	margin-left: 12pt;
+}
+
+
+/***********************
+Numbered Lists
+***********************/
+
+ol.listnumber,
+ol.listnumber2,
+ol.listalpha,
+ol.listalpha2 {
+	padding-left: 6pt;
+}
+
+ol.listnumber {
+	margin-left: 18pt;
+}
+ol.listnumber2 {
+	margin-left: 36pt;
+}
+ol.listalpha {
+	margin-left: 36pt;
+}
+ol.listalpha2 {
+	margin-left: 54pt;
+}
+
+li.listnumber,
+li.listnumber2,
+li.listalpha,
+li.listalpha2 {
+	padding-left: 0pt;
+	margin-left: 12pt;
+}
