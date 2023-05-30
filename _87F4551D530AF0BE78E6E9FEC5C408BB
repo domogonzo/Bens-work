@@ -1,0 +1,989 @@
+function search_db_content(){ var json = 
+[
+  {
+    "id": 1,
+    "title": "Welcome to FactoryTalk Activation Manager",
+    "url": "22702.htm",
+    "text": "FactoryTalk&reg; Activation Manager provides a secure system for activating Rockwell Automation&reg; software and managing activation files. FactoryTalk Activation Manager offers several activation options, and does not require a master disk or other physical media. Activation files are distributed over the Internet.  See also  Find available activations  Get new activations  Borrow activations  Rehost activations  Renew activations  "
+  },
+  {
+    "id": 2,
+    "title": "How FactoryTalk Activation works",
+    "url": "22782.htm",
+    "text": "FactoryTalk Activation works by binding the license for a Rockwell Automation software product to a specific device, such as a dongle, Ethernet address for a computer, or hard disk drive so that it can be run in a production environment. Once a license is bound the product is activated. Without activation, some Rockwell Automation software products will not run, some will run with diminished functionality, and others will run for a limited period of time and then shut down with or without warning.  The activation is protected by a system-generated signature that is based on machine-specific information that you provide when installing the software. If the signature is tampered with, damaged, or deleted, the software will not function.  Important:  If an activation becomes corrupted, you must rehost the activation to rebind the license with the device.  See also  Types of activations  Supported dongle types  Rehost activations  ",
+    "keywords": {
+      "file corruption": "100",
+      "corrupt": "100",
+      "damage": "100",
+      "signature": "100"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Types of activations",
+    "url": "22711.htm",
+    "text": "Rockwell Software products offer different activation options. Bound activations to a permanent device on a computer, such as a hard disk or Ethernet card, or to a removable device, such as a dongle.   Node-locked activations  An activation locked to a specific piece of computer hardware and used only on the computer to which it is locked. Examples of computer hardware used for node-locked activation include an Ethernet card, a hard disk, or a dongle. Not all product support node-locked activations. See your product documentation for information on what types of activation it supports.  Concurrent activations  Concurrent activations require a network connection for all computers running Rockwell Automation software. The software automatically connects to a designated activation server on the network and retrieves an activation. Upon shutdown, the software automatically returns the activation to the pool of available activations.  The activation server manages a set number of activations and serves these activations to any configured computer on the network.  Borrowed activations  Borrowed activations are concurrent activation that do not require a continuous network connection and expire after a specified amount of time (borrow term).   Check out a borrowed activation from a pool of activations managed by an activation server. Check out a borrowed activation to a dongle or a computer. Once checked out to the device, the device does not need to maintain connection to the network. When the time limit of the borrowed activation expires, the software is no longer activated on the device where the borrowed activation resides, and the activation automatically becomes available again from the server's activation pool. Borrowing also allows activations to be reserved from the activation pool to be used by a certain computer or group of computers.   See also  Supported dongle types  Configure the FactoryTalk Activation server  Borrow an activation  ",
+    "keywords": {
+      "concurrent": "100",
+      "borrowed": "100",
+      "capacity": "100"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Supported dongle types",
+    "url": "162172.htm",
+    "text": "FactoryTalk Activation supports Rockwell Automation's Universal Serial Bus (USB) dongles. Binding an activation to the dongle's serial number allows the dongle to activate software on any computer that the dongle is attached to.  Using a plug-and-play dongle with storage capacity allows FactoryTalk Activation Manager to automatically detect the dongle and provide the option of downloading activation files to it. The dongle can then be connected to any computer and used to activate software.  Each dongle is labeled:  CodeMeter dongles are labeled CmStick or CmCard.  FlexNet dongles are labeled FlexNet, Flexera, HASP, or FLEXid.  FactoryTalk Activation Manager supports the following activation dongles:  Catalog Number  Name  Storage  9509-USB-DONG2  FlexNet (plug-and-play)  2 GB  9509-CMSTICKC  CodeMeter CmStick Compact  None  9509-CMSTICK8  CodeMeter CmStick  8 GB  9509-CMSDCD4  CodeMeter CmCard SD  4 GB  In some cases, a product's activation requires a specific dongle type. The error message Different dongle type needed indicates that the dongle in use does not support the activation of the product. The message indicates the type of dongle required,  FlexNet or CmStick. Identify the correct dongle type and plug it into the computer.  See also  Install a driver for a FlexNet dongle  ",
+    "keywords": {
+      "dongle": "100",
+      "cmstick": "100",
+      "flexnet": "100"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Install a driver for a FlexNet dongle",
+    "url": "136469.htm",
+    "text": "Use the following procedure to update or install a driver for a FlexNet dongle.  To install a FlexNet dongle driver:  In the ..\\Rockwell Software\\FactoryTalk Activation\\ subdirectory, double-click the Install Dongle Driver.bat file.  The Sentinel Runtime Environment Installer runs. Click OK when the operation is successfully completed.  See also  Cannot retrieve binding from a dongle  Supported dongle types  ",
+    "keywords": {
+      "install": "100",
+      "dongle": "100",
+      "driver": "100"
+    }
+  },
+  {
+    "id": 6,
+    "title": "FactoryTalk Activation Manager service dependencies",
+    "url": "203479.htm",
+    "text": "FactoryTalk Activation Manager contains these services:  FactoryTalk Activation Helper  FactoryTalk Activation Service  FactoryTalk Activation Manager is dependent on these services:  NetworkProvider  Windows Management Instrumentation  WMI Performance Adapter  Rockwell Application Services is required for logging but is not required for activating products or retrieving activations.  CodeMeter Runtime Server  See also  FactoryTalk Activation Manager file folders and file extensions  FactoryTalk Activation Manager firewall ports and rules  ",
+    "keywords": {
+      "services": "100",
+      "helper": "100",
+      "dependencies": "100"
+    }
+  },
+  {
+    "id": 7,
+    "title": "FactoryTalk Activation Manager firewall ports and rules",
+    "url": "203478.htm",
+    "text": "Firewall rules allow a computer to send or receive traffic from programs, system services, other computers, or computer users.  FactoryTalk Activation Manager uses the following Transmission Control Protocol (TCP) ports and rules.  Program  Ports  Rules  lmgrd.exe, Flexera Software license daemon  One TCP port between 27000 and 27009.  Allow inbound traffic from one of these ports. The default is 27000. Non-default ports need to be set in each license file.  flexsvr.exe, Rockwell Automation vendor daemon  One other TCP port, negotiated.  Allow inbound and outbound connections from one additional TCP port which will be negotiated at runtime.  codemeter.exe, CodeMeter runtime server  TCP and UDP port 22350.  All inbound and outbound connections from TCP and UDP port 22350.  For Windows Firewall, FactoryTalk Activation Manager automatically adds exceptions for lmgrd.exe and flexsvr.exe during installation.  See also  FactoryTalk Activation Manager file folders and file extensions  FactoryTalk Activation Manager service dependencies  ",
+    "keywords": {
+      "rules": "100",
+      "firewall": "100",
+      "ports": "100"
+    }
+  },
+  {
+    "id": 8,
+    "title": "Find available activations",
+    "url": "22699.htm",
+    "text": "How do I open the Find Available Activations page?  Click Manage Activations > Find Available Activations.  Use the Find Available Activations page to view paths to available activations and to view the directory path to each activation server. If an activation is not usable it is marked with a red exclamation mark@ icon in the left column. To display the explanation, hover the cursor over the@ icon. Possible reasons that an activation is not usable are the activation expired or did not reach its start date.  The Path to Activations list includes all local and all network server locations that were selected to provide activations to this computer. The list is based on the activation search path locations added and selected using the Update Activation Search Path dialog.  The Available Activations table lists all available activations. The activations can exist on the local computer or on a remote computer running FactoryTalk Activation Manager.  Tip:  Node-locked activations and local-only activations on a remote or server computer do not appear in the list of available activations on a client computer. To make these activation types available on a client computer, rehost the node-locked or local-only activations on the server computer and either replace them with concurrent versions or download node-locked or local-only activations to the client computer.  The listed activations include:  The products and activations purchased for each product, and the number of activations used for each product.  The types of available activations.  The local computer or remote computer running the FactoryTalk Activation Manager software.  See also  Add an activation server to the search path  Remove an activation server from the search path  Change the order of search path servers  Available Activations table  ",
+    "keywords": {
+      "activations": "100",
+      "find": "100",
+      "available": "100",
+      "path": "100"
+    }
+  },
+  {
+    "id": 9,
+    "title": "Find where activations are in use",
+    "url": "39998.htm",
+    "text": "As an administrator, identify where activations are used to:  Ensure activations are being used properly.  Identify activations being used on a computer that was lost, stolen, or failed.  To find where activations are in use:  Click the Home tab and then click Find Available Activations.  In the Available activations table, click a non-zero number in the In Use or Borrowed column to display the Activation Usage Detail dialog box.  Click the In Use number to see a three column grid that provides these details:  Column   Description  Computer  Name of the computer that checked out or borrowed the activation  If using dongle-based activations, the hardware ID of the device the activation is bound to.  Quantity  Number of activations checked out or borrowed.  Type  Floating for activations that have been checked out for currently running sessions.  Borrowed for activations that are checked out for a specified length of time.  Click the Borrowed number to see a three column grid that provides these details:  Column   Description  Computer  Name of the computer that borrowed the activation  If using dongle-based activations, the hardware ID of the device the activation is bound to.  Borrow Date  When the activation was borrowed by that computer.  Expire Date  The date when the activation expires.  Tip:  If the borrow term of a license is updated on the activation server, the Borrow details are not updated in the FactoryTalk Activation Manager client display until the FactoryTalk Activation Service is restarted on the server.  See also  Find Available Activations page  Available Activations table  ",
+    "keywords": {
+      "who": "100",
+      "where": "100",
+      "activations": "100",
+      "in use": "100"
+    }
+  },
+  {
+    "id": 10,
+    "title": "Available Activations table",
+    "url": "28893.htm",
+    "text": "The Available Activations table contains this information.  Tip:  Node-locked activations and local-only activations on a remote or server computer do not appear in the list of available activations on a client computer. To make these activation types available on a client computer, rehost the node-locked or local-only activations on the server computer and either replace them with concurrent versions or download node-locked or local-only activations to the client computer.  Name  Description  Product  The Rockwell Automation product.  Serial#  The serial number of the product.  Expires  The activation's expiration date.  Activation  The name of the activation.  Feature Version  The feature version of the license.  Location  The name of the local or remote computer on which activations are downloaded for the product. For example Local: Borrowed identifies an activation borrowed from an activation server and available on the local computer until the activation is returned or expires.  Total  The number of activations purchased with the product.  In Use  The number of activations used for each product. Click the number in this column to see more details, such as the computer that checked out or borrowed the activation, the number of activations checked out or borrowed, and whether the activation is concurrent or borrowed. No details are available if the number in this column is zero.  Borrowed  The number of activations borrowed from an activation server. Click the number in this column to see more details, such as the computer that borrowed the activation, the date the activation was borrowed, and the date the borrowed activation expires. No details are available if the number in this column is zero.  Product Version  The product version activated. n/a if not used. Some activations are for multiple product versions. This field displays n/a if not used.  See also  Find available activations  Types of activations  ",
+    "keywords": {
+      "available activations": "100"
+    }
+  },
+  {
+    "id": 11,
+    "title": "Set path to activations",
+    "url": "284363.htm",
+    "text": "Path to Activations is a list of all local and all network server locations selected to provide activations to this computer. The list is based on the activation search path locations added and selected using the Update Activation Search Path dialog box.  See also  Change the search path order of servers  Add an activation server to the search path  Remove an activation server from the search path  Update Activation Search Path settings  ",
+    "keywords": {
+      "path": "100",
+      "update": "100"
+    }
+  },
+  {
+    "id": 12,
+    "title": "Change the search path order of servers",
+    "url": "197894.htm",
+    "text": "When you run Rockwell Automation software, FactoryTalk Activation first searches for an activation on the activation server at the top of the Path to Activations list. If the activation file is not available on that server, the system searches the next activation server in the list. Use the following procedure to change the order of the search paths.  To change the search path order of servers:  Click the Manage Activations tab.  Click the Update Activation Search Path link.  Click a server path that you want to move up or down in the list.  Click Up or Down to reposition the search path in the table.  When all server paths are properly ordered, click Save.  Click Refresh Activations to see the changes in the search path list.  See also  Find available activations  Add an activation server to the search path  Remove an activation server from the search path  ",
+    "keywords": {
+      "path": "100",
+      "change": "100",
+      "order": "100"
+    }
+  },
+  {
+    "id": 13,
+    "title": "Add an activation server to the search path",
+    "url": "22704.htm",
+    "text": "The search path identifies the locations that clients can use to obtain activations. Use the following procedure to add an activation server to the Find Available Activations search path.  To add an activation server to the search path:  Click the Manage Activations tab.  On the Find Available Activations page, click the Update Activation Search Path link.  Click Add Server. A new line is added in the Path to Activations list.  Type the path to the server or click the Browse button @ to open the Browse for Server dialog box to navigate to and select the server using the network tree. After locating the server in the Browse for Server dialog box, click OK to return to the Update Activation Search Path dialog box.  Select the check box next to the server, and click Save.  Click Refresh Activations to see the changes in the search path list.  See also  Find available activations page  Available Activations table  Remove an activation server from the search path  Change the order of search path servers  ",
+    "keywords": {
+      "add": "100",
+      "path": "100",
+      "search": "100",
+      "update": "100"
+    }
+  },
+  {
+    "id": 14,
+    "title": "Remove an activation server from the search path",
+    "url": "22705.htm",
+    "text": "Remove an activation server from the search path to prevent client computers from attempting to connect to a server that is no longer available. To remove an activation server from the Available Activations search path use the following procedure. The default path for local activations is always displayed and cannot be removed from the list of activation locations.  To remove an activation server from the Find Available Activations search path:  Click Manage Activations > Find Available Activations.  Click Update Activation Search Path.  Select the activation server to be removed. The row is highlighted.  Click Delete. The Confirm Delete dialog box is displayed. Click Yes to delete the activation server from the search path.  Click Save.  Click Refresh Activations to see the changes in the search path list.  See also  Find available activations page  Available Activations table  Add an activation server to the search path  Change the order of search path servers  ",
+    "keywords": {
+      "path": "100",
+      "remove": "100",
+      "search": "100",
+      "update": "100"
+    }
+  },
+  {
+    "id": 15,
+    "title": "Update Activation Search Path settings",
+    "url": "302191.htm",
+    "text": "The Activation Search Path is the location that the client computer searches when finding available activations. You can have multiple search paths. The client searches the selected paths in order. If a path is not selected, it will not be searched.   After making changes to the Activation Search Path, restart the FactoryTalk Activation service.   The following settings are available in the Update Activation Search Path dialog box.  Setting  Description  Path to Activations  Either a local directory path for locating activation files on the computer's hard drive or a server name. Selecting the check box includes the path in the search path list. Clearing the check box removes it from the list.   Add Server  Create a new, blank row in the Path to Activation list. Click the Browse button to use a folder tree to locate the computer on your network.  Delete  Removes the currently selected path from the Path to Activation list.  Up  Moves the selected path up one position in the list to modify the search order.  Down  Moves the selected path down one position in the list to modify the search order.  Merge to Default  Merges activations in multiple local folders to the default Activations folder. This button is only visible when more than one local folder is present in the search path.  Tip: Clicking this button results in the activation files being copied from the previous folder to the default Activations folder. A progress dialog box opens during the copy operation. If an error occurs, the progress dialog expands to reveal a list of errors. If a file is not successfully copied, then that file's directory is not removed from the server search path.  See also  Available Activations table  Change the search path order of servers  Find available activations page  Remove an activation server from the search path  "
+  },
+  {
+    "id": 16,
+    "title": "Get new activations",
+    "url": "22700.htm",
+    "text": "How do I open the Get New Activations page?  Click Manage Activations > Get New Activations.  Use the Get New Activations page to download an activation to the computer or to a storage device.  The procedure used to get a new activation depends on:  Whether the activation is for the local computer or another computer  Whether the computer is connected to the Internet  The binding method chosen for the activation  To get an activation for a product that is running with multiple versions, you need to specify the Product Version of the software as part of the activation request.  FactoryTalk Activation Manager detects whether you are connected to the Internet. The options available for getting new activations differ depending on your Internet connectivity.  See also  Get an activation for a computer with Internet access  Get an activation from another Internet-connected computer  Get an activation when Internet access is not available  Get an activation for a dongle  ",
+    "keywords": {
+      "get": "100",
+      "new": "100",
+      "activations": "100"
+    }
+  },
+  {
+    "id": 17,
+    "title": "Get an activation for a computer with Internet access",
+    "url": "25124.htm",
+    "text": "To get an activation for a computer with an Internet connection requires the following information:  The software product serial number  Product key  The earliest version of the product to activate (when multiple versions of a software product are being installed).  To get an activation for a computer with Internet access:  Click the Manage Activations tab.  Click Get New Activations.  Enter the serial number and product key for each software product and click Validate Activation to display the list of products that you entered. A red exclamation point @ icon indicates the product activation has an error. Hover over the icon to see details.  (optional) For each product in the Validate Activation table, the Product Version column displays the earliest version of the product available. Use this default value or select a different version.  If you need to download more than one copy of a product's activation, edit the value in that product's # to Download column.  After the earliest version selections have been validated, the Binding columns become active and display the default binding.  (optional) To select a different binding:  Click in the Binding cell.  Click Browse @ to open the Binding Selection window.  In the Binding Selection window, choose the binding to use.  Click Select to accept the binding and close the Binding Selection window.  Click Download Activation.  After the activations have downloaded, click Print to save a copy of the activation information for your records.   See also  Tips for selecting a binding  Bind an activation to an Ethernet MAC ID  Get an activation from another Internet-connected computer  Get new activations  ",
+    "keywords": {
+      "get": "100",
+      "new": "100",
+      "activation": "100",
+      "internet": "100",
+      "download": "100",
+      "binding": "100",
+      "validate": "100",
+      "earliest": "100",
+      "version": "100"
+    }
+  },
+  {
+    "id": 18,
+    "title": "Get an activation from another Internet-connected computer",
+    "url": "25128.htm",
+    "text": "Use the following procedures to get activations for a computer that is not connected to the Internet. You will need a removable storage device, such as a USB drive, and access to a computer with an Internet connection.  The process involves these steps:  Step #1. At the computer without Internet access, create or update the data file and copy that file to a removable storage device.  Step #2. At a computer with Internet access download activations to the removable storage device.  Step #3. At the computer without Internet access, use the removable storage device to move the activations to the computer.  See also  Create or update a data file for a binding  Download an activation to a removable storage device  Move an activation to this computer  Keywords:get, new, activation, no internet, disconnected, internet  "
+  },
+  {
+    "id": 19,
+    "title": "Create or update a data file",
+    "url": "25147.htm",
+    "text": "A data file contains the binding information of a computer.   To create or update a data file:  At the computer without Internet access, attach a removable storage device, open FactoryTalk Activation Manager, and click Manage Activations.  Click Get New Activations.  Click I need to start the activation process by creating a data file.  Click Specify Data File.  The default location for FactoryTalk Activation Manager data files is listed in File Location and the default data file name is listed in File name. Click Browse @ to navigate to a different storage location. If the data file already exists, click the file to choose it.  Click Get Bindings.  To select a binding for the computer do one of the following:  Accept the default binding.  Select a different binding. To view a list of bindings currently in the data file, click Show Collected Bindings.  (optional) Enter a name for a binding, by clicking in Name and entering the name.  Click Create Data File. FactoryTalk Activation Manager creates or updates the XML data file at the specified location.  See also  Download an activation to a removable storage device  Get an activation from another Internet-connected computer  Move an activation to a computer without Internet access  Get new activations  Tips for selecting a binding  ",
+    "keywords": {
+      "get": "100",
+      "new": "100",
+      "activation": "100",
+      "no internet": "100",
+      "disconnected": "100",
+      "internet": "100",
+      "data file": "100"
+    }
+  },
+  {
+    "id": 20,
+    "title": "Download an activation to a removable storage device",
+    "url": "25126.htm",
+    "text": "To get an activation for a computer that doesn't have Internet access, take the disconnected computers data file to a computer with Internet access and then use that computer to download an activation to a removable storage device.  Before you begin:  A removable storage device with a copy of the disconnected computer's data file is required.  For each product being activated, have the following:  Product serial number  Product key  The earliest version of the product to activate (when multiple versions of a software product are being installed).  To download an activation to a removable storage device:  At a computer with Internet access, attach the removable storage device.  Open the FactoryTalk Activation Manager Home page, click Get New Activations.  Enter the serial number and product key for the software being activated and click Validate Activation to open the Validate Activation table.  (optional) For each product in the Validate Activation table, the Product Version column displays the earliest version of the product available. Use this default value or select a different version.  To download more than one copy of the activation, edit the value in the # to Download cell. After the earliest version selections have been validated, the Binding cells become active and display the default binding.  Select the binding that includes the disconnected computer's data file:  Click in the Binding cell.  Click Browse @ to open the Binding Selection window.  In the Binding Selection window, click Import Additional Binding and then choose XML data file you created.  Click Select to accept the binding and close the Binding Selection window.  Click Download Activation.  After the activations have downloaded, click Print to save a copy of the activation information for your records.  See also  Move an activation to this computer  Get an activation for another computer  Get new activations  ",
+    "keywords": {
+      "get": "100",
+      "new": "100",
+      "activation": "100",
+      "no internet": "100",
+      "disconnected": "100",
+      "internet": "100",
+      "download": "100",
+      "validate": "100"
+    }
+  },
+  {
+    "id": 21,
+    "title": "Move an activation to a computer without Internet access",
+    "url": "25148.htm",
+    "text": "After downloading activations to a removable storage device, move the activations to the computer that is not connected to the Internet.   Before you begin:  Download activations from an Internet-connected computer to a removable storage device.  To move an activation to a computer without Internet access:  Attach the removable storage device that includes the downloaded activations to the target computer.  On the FactoryTalk Activation Manager home page, click the Manage Activations tab.  Click Get New Activations.  Click I have downloaded activation files and need to move them to this computer.  Click Specify File Location. The File location box displays the location of the file on the removable storage device. Click the Browse button to select a different location.  Click Move Files to import the files and activate the licenses.  See also  Get an activation from another Internet-connected computer  Download an activation to a removable storage device  Get new activations  Get an activation when Internet access is not available  ",
+    "keywords": {
+      "get": "100",
+      "new": "100",
+      "activation": "100",
+      "no": "100",
+      "internet": "100",
+      "disconnected": "100",
+      "move": "100",
+      "files": "100"
+    }
+  },
+  {
+    "id": 22,
+    "title": "Get an activation when Internet access is not available",
+    "url": "22726.htm",
+    "text": "If you do not have Internet access, call Rockwell Automation Technical Support to get an activation file. Have your product key and serial number available. This information is located on the Activation Certificate that shipped with your product.  See also  Find available activations  Get new activations  ",
+    "keywords": {
+      "get": "100",
+      "new": "100",
+      "activation": "100",
+      "no internet": "100",
+      "disconnected": "100",
+      "internet": "100"
+    }
+  },
+  {
+    "id": 23,
+    "title": "Get an activation for a dongle",
+    "url": "22722.htm",
+    "text": "Get activations for only one dongle at a time.  Before you begin  For each product to activate, gather this information:  Internet access  Product serial number  Product key  The earliest version of the product to activate (when multiple versions of a software product are being installed)  To get activations for a dongle  Plug the dongle into the computer.  On the FactoryTalk Activation Manager Home page, click Get New Activations.  Enter the serial number and product key for each product to activate, and then click Validate Activation. A table lists the products entered. A red exclamation point @ icon indicates the product has an error. To see details, hover over the icon.  (optional) For each product in the Validate Activation table, the Product Version column displays the earliest version of the product available. Use this default value or select a different version.  (optional) To download more than one copy of the product's activation, on the Validate Activation table in the # to Download cell, enter the number of copies.  Verify that the Binding cell contains the ID of the dongle. The Destination column displays the default location for the activation file, based on the selected binding.  (optional) To change the destination, click in the Destination cell and select a destination from the list.  Click Download Activation.  After the activations have downloaded, click Print to save a copy of the activation information.  See also  Supported dongle types  Install a driver for a FlexNet dongle  Move an activation license file to a different computer  Get new activations  ",
+    "keywords": {
+      "get": "100",
+      "new": "100",
+      "activation": "100",
+      "internet": "100",
+      "plug-and-play": "100",
+      "dongle": "100"
+    }
+  },
+  {
+    "id": 24,
+    "title": "Tips for selecting a binding",
+    "url": "26300.htm",
+    "text": "Considerations when selecting a binding from the Validate Activation table:  The default selection is usually the preferred binding.  Fixed devices, such as a hard disk drive or hardware network adapter serial numbers, are suitable choices for binding. If the computer has more than one hard disk drive, only the binding for the drive that is used to boot from will appear in the Binding Selection dialog box.  When using a laptop in a docking station with a network adapter, do not use the network adapter as a binding. The software will not run when the laptop is undocked. Use a binding that is always present on the laptop, such as the disk serial number.  See also  How FactoryTalk Activation works  Get new activations  ",
+    "keywords": {
+      "binding": "100",
+      "validate": "100",
+      "selection": "100"
+    }
+  },
+  {
+    "id": 25,
+    "title": "Bind an activation to an Ethernet MAC ID",
+    "url": "172576.htm",
+    "text": "Use the following procedure to manually bind an activation to an Ethernet MAC ID.  To bind an activation to an Ethernet MAC ID:  On the FactoryTalk Activation Manager page, click Manage Activations.  Click Get New Activations.  Enter the serial number and product key for the product that you want to activate and click Validate Activation.  (optional) For each product in the Validate Activation table, the Product Version column displays the earliest version of the product available. Use this default value or select a different version.  If you need to download more than one copy of the activation, edit the value in the # to Download cell.  Click in the Binding field and enter the 12-character MAC ID as one contiguous string. Do not include spaces or colon (:) separators. For example: 0123456789AB.  Click Download Activation.  After the activations have downloaded, click Print to save a copy of the activation information for your records.  See also  Get new activations  ",
+    "keywords": {
+      "binding": "100",
+      "ethernet": "100",
+      "MAC ID": "100",
+      "validate": "100"
+    }
+  },
+  {
+    "id": 26,
+    "title": "Borrow activations",
+    "url": "145617.htm",
+    "text": "How do I open the Borrow Activations page?  Click Manage Activations > Borrow Activations.  Activations can be borrowed from the activation server for a specified period of time. The software deactivates when the activation expires and the activation is available for borrowing again on the activation server. If needed, a borrowed activation can be returned before the end of the borrow term to make it available for another binding.  Use the Borrow Activations page to:  Select an activation to borrow.  Set the borrow term.  Some products do not support activation borrowing. Refer to your product documentation for details.  See also  Borrow an activation  Set the borrow term  Return a borrowed activation  Requirements and restrictions for borrowed activations  ",
+    "keywords": {
+      "activations": "100",
+      "borrow": "100"
+    }
+  },
+  {
+    "id": 27,
+    "title": "Borrow an activation",
+    "url": "22721.htm",
+    "text": "Use the Borrow Activations page to borrow one or more activations from the activation server or from a CodeMeter dongle for a specified period of time. The software deactivates when the activation expires. A borrowed activation can be returned manually before the end of the borrow term.  To borrow an activation:  On the FactoryTalk Activation Manager Home page, click Manage Activations.  Click Borrow Activations.  If the activation is not listed:  Click I Don't See My Activation Here. The Find Available Activations page opens.  Click Update Activation Search Path.  Click Add Server.  Click the Browse button @ to navigate to and select the server and click OK.  Select the check box next to the server, and click Save.  Under the Available activations list click Refresh Activations.  Click Borrow Activations.  Tip:  If the activation to be borrowed is on a CodeMeter dongle, make sure the dongle is plugged into a USB port on a computer that is accessible through the activation search path.  Select the check box for the activation to borrow.  Click Set Borrow Term. When borrowing more than one activation, the borrow term applies to each activation in the group. You cannot exceed the shortest borrow limit found in the group of activations.  Select and configure one of the following options:  Calendar. This default option displays the latest date or maximum term for which you can borrow the activation. To change this option, click the arrow list to display a calendar and select an earlier date.  Days. Enter the number of days to borrow the activation.  Hours. Enter the number of hours to borrow the activation.  Click Borrow Activations. The window displays the borrowed activations.  See also  Borrow activations  Return a borrowed activation  Decrease the maximum borrow time of an activation  Set up a primary and a backup activation server  ",
+    "keywords": {
+      "activations": "100",
+      "borrow": "100",
+      "borrow term": "100",
+      "update": "100",
+      "search path": "100"
+    }
+  },
+  {
+    "id": 28,
+    "title": "Return a borrowed activation",
+    "url": "22761.htm",
+    "text": "Use FactoryTalk Activation Manager to return a borrowed activation to the pool of activations prior to its expiration date. The computer must be connected to the original activation server.  To return a borrowed activation:  Click Manage Activations > Return Activations.  From the list of borrowed activations, select the activations to return.  Tip:  Check that the server from which the activation is borrowed remains in the Activation search path and is accessible before returning the borrowed activation. Errors might occur if the server is not accessible.  Click Return Activations. The window displays the successfully returned activations.  See also  Borrow activations  Borrow an activation  Set the borrow term  ",
+    "keywords": {
+      "activations": "100",
+      "borrow": "100",
+      "return": "100"
+    }
+  },
+  {
+    "id": 29,
+    "title": "Set the borrow term",
+    "url": "22720.htm",
+    "text": "The borrow term for an activation specifies when the activation is automatically returned to the activation server.  When borrowing more than one activation, the borrow term applies to each activation in the group. You cannot exceed the shortest borrow limit found in the group of activations.  To set the borrow term:  Click Manage Activations > Borrow Activations.  Select the check box next to each activation for which you want to set the borrow term.  Click Set Borrow Term.  Select and configure one of the following options:  Calendar. This default option displays the latest date or maximum term for which you can borrow the activation. To change this option, click the arrow list to display a calendar and select an earlier date.  Days. Enter the number of days that you want to borrow the activation.  Hours. Enter the number of hours that you want to borrow the activation.  Tip:  The default date for the Calendar option is the maximum borrow term for the activation or group of activations.  See also  Return a borrowed activation  Borrow an activation  ",
+    "keywords": {
+      "borrow": "100",
+      "borrow term": "100"
+    }
+  },
+  {
+    "id": 30,
+    "title": "Requirements and restrictions for borrowed activations",
+    "url": "22714.htm",
+    "text": "Borrowing an activation requires a network connection, but once the activation is borrowed to a particular computer, the computer can be disconnected from the network.   When a borrowed activation expires, the software on the computer will no longer be activated and the activation automatically becomes available again from the server's activation pool (no network connection is required).  A borrowed activation can be manually returned to the activation server before the borrow term expires, but this requires a network connection.  A borrowed FlexNet Publisher (FNP) activation can only activate local applications installed on the same machine, not applications installed on another virtual or physical machine.   Tips:  Borrowed activations are not supported by all products. See product documentation for details.  Borrowed activations are not supported on client computers using Remote Desktop Services or Terminal Services client access licenses.  See also  Borrow an activation  Return a borrowed activation  Borrow activations  ",
+    "keywords": {
+      "requirements": "100",
+      "borrow": "100"
+    }
+  },
+  {
+    "id": 31,
+    "title": "Rehost Activations page",
+    "url": "24360.htm",
+    "text": "How do I open the Rehost Activations page?  Click Manage Activations > Rehost Activations.  Rehost activations for unexpected or infrequent events, such as a computer upgrade, system failure, or changes to the system.   Use the Rehost Activations page to remove an activation from its current host computer to move it to a different computer. Rehosting is not intended for moving activations frequently.   For concurrent activations with a quantity greater than 1, there is the option to select a quantity less than the total activations. This leaves a quantity of the activations on the local computer while allowing the rest of the activations to become available for download to other computers. By default, all activations are removed from the local computer.  If moving the activation between computers that have an internet connection, use FactoryTalk Activation Manager to automatically rehost an activation. The rehost code is automatically created and sent to the Rockwell Automation Licensing website.   If moving the activation from a computer that is not connected to the internet, to complete the process, use another Internet-connected computer to connect to the Rockwell Automation Licensing website.   If rehosting with no computers connected to the internet, contact Rockwell Automation Technical Support to perform the rehosting process.   See also  Rehost an activation from another Internet-connected computer  Rehost an activation from a computer with Internet access  Rehost an activation when Internet access is not available  "
+  },
+  {
+    "id": 32,
+    "title": "Rehost an activation from a computer with Internet access",
+    "url": "22728.htm",
+    "text": "Rehosting an activation removes the activation from either the current host computer or dongle and returns it to the pool of activations on the activation server. For concurrent activations with a quantity greater than 1, there is the option to select a quantity less than the total activations. This leaves a quantity of the activations on the local computer while allowing the rest of the activations to become available for download to other computers. By default, all activations are removed from the local computer.  Before you begin:  If rehosting a dongle-based activation, insert the dongle into the USB drive of the Internet connected computer.  To rehost an activation from a computer with Internet access:  Click Manage Activations > Rehost Activations.  Select the check box next to the activation to rehost.  If more than one activation is available, in # to Rehost, enter the number of activations to rehost. By default, all activations are rehosted.  Click Continue Rehosting. The Confirm Activation Removal dialog box opens.  Click Continue to complete the rehosting or click Cancel to return to Select Activations.  See also  Rehost an activation from a computer without an Internet connection  Rehost an activation when Internet access is not available  ",
+    "keywords": {
+      "activations": "100",
+      "rehost": "100",
+      "internet": "100",
+      "remove": "100"
+    }
+  },
+  {
+    "id": 33,
+    "title": "Rehost an activation from a computer without an Internet connection",
+    "url": "rehost_activations_later.htm",
+    "text": "Rehosting an activation removes the activation from the current host device and returns it to the pool of activations on the activation server. If the computer using the activation does not have an Internet connection, transfer the activation data file to a removable storage device and take it to a computer with Internet access to perform the rehosting process.  On a computer without an Internet connection, you cannot select a quantity of activations less than the total number of activations. All activations are removed from the local computer.  Tip:  Both the computer connected to the Internet and the computer disconnected from the Internet must run the same version of FactoryTalk Activation Manager.  To rehost an activation from a computer without an Internet connection:  On the computer without an Internet connection, attach the storage device and start FactoryTalk Activation Manager. Select the activations to rehost using the following steps:  Click Manage Activations > Rehost Activations.  On the Choose Phase page, select I need to select the activations I want to bind to a different computer or dongle and click Select Data File.  On the Select Data File page, create the data file to use for rehosting. Use the default file name (FTAManagerData.xml) and location. Or, specify a different file name and location in the File location box by clicking Browse @ to navigate to and select the file. Or, type the name and path of the file directly in the space provided.  Click Select Activations. In the activations table, select the Product check box for each activation to rehost.   Click Next Steps. A confirmation window lists the selected activations. Click Continue to proceed, or click Cancel to end the procedure without removing the activations.  On the Next Steps page, click Go to Data File Location to open the file folder in Windows Explorer. Copy the data file to a removable storage device.   Go to a computer with an Internet connection. Transfer the activations to the pool of activations using the following steps:  Click Manage Activations > Rehost Activations.  Click Import From Data File. By default the data file copied to the removable storage device is selected. Click Open. Select the check box next to the activations to rehost.  Click Continue Rehosting. The Confirm Activation Removal dialog box opens. Click Continue or click Cancel to return to the Select Activations page. The Contacting Rockwell Automation Activation Service progress bar is displayed while the activations are being processed. The data file is updated to indicate that the activations have been rehosted.  Return to the computer without an Internet connection, attach the removable storage device, start FactoryTalk Activation Manager and perform the following steps to finish the rehosting process:  Click Manage Activations > Rehost Activations.  On the Choose Phase page, select I need to remove rehosted activations from this machine and click Select Data File.  Select the name and location of the data file on the removable storage device and then click Next Steps. The confirmation dialog opens. Click Continue to complete the removal of the activation.  Go to a computer with an Internet connection. Transfer the activations to the pool of activations using the following steps:  Click Manage Activations > Rehost Activations.  Click Import From Data File. The removable storage device is selected. Click Open. Select the check box next to the activations to rehost.  Click Continue Rehosting. The Contacting Rockwell Automation Activation Service progress bar is displayed during the process.  See also  Rehost an activation when Internet access is not available  ",
+    "keywords": {
+      "activations": "100",
+      "rehost": "100",
+      "no internet": "100",
+      "disconnected": "100",
+      "internet": "100",
+      "data": "100",
+      "file ": "100"
+    }
+  },
+  {
+    "id": 34,
+    "title": "Rehost an activation when Internet access is not available",
+    "url": "22735.htm",
+    "text": "Rehosting an activation removes the activation from the current host and returns it to the pool of activations on the activation server. On a computer without an Internet connection, you cannot select a quantity of activations less than the total number of activations. All activations are removed from the local computer.  If Internet access is not available, call Rockwell Automation Technical Support to rehost the activation file.  Important:  CodeMeter-based activations cannot be rehosted manually.  To rehost an activation when Internet access is not available:  Click Advanced > Rehost Activation Manually.  Select the check boxes next to the activations to rehost.  Click Complete Rehosting. A confirmation dialog box opens.  Click Continue to remove the activation files from this computer, or click Cancel to end the process without removing the activations.  Click Print to print the information for Rockwell Automation Technical Support.  Call Rockwell Automation Technical Support at the number listed on the Complete Rehosting page for a guide through the steps to rehost activation files.  To return to the Select Activations page, click Rehost Activation Manually.  See also  Rehost an activation from a computer with Internet access  ",
+    "keywords": {
+      "rehost": "100",
+      "no internet": "100",
+      "disconnected": "100",
+      "manual": "100"
+    }
+  },
+  {
+    "id": 35,
+    "title": "Rehost activation considerations",
+    "url": "343781.htm",
+    "text": "Keep these considerations in mind when rehosting activations:  If multiple FlexNet Publisher (FNP) activations of different product versions but the same serial number and binding or host ID are either partially rehosted or renewed, the product version of the activations after the completion of the partial rehost or renew will all indicate the same product version. This indicated product version will be the latest downloaded product version before performing the partial rehost or renew. This behavior can have adverse effects if activations of different product versions are required, including Rockwell products not being activated and node-locked activations being changed to concurrent activations.   When performing a disconnected rehost for multiple FNP activations of different product versions but the same serial number, the quantities displayed in the # to Rehost and Available columns will not be correct. All of the activations will be removed and entitlements will be returned as expected upon completion of the disconnected rehost steps.  In case of a hard drive crash, contact Rockwell Automation Technical Support.  Do not rehost borrowed activations. If you need to rehost an activation that is currently borrowed, ensure that the activation is returned to the activation server before you rehost the activation.  Rehosting is not intended for moving activations frequently. It is intended to be used only for unexpected or infrequent events such as a computer upgrade or failure, or a change to the system.   Each serial number can be rehosted using the web site up to three times in any 12-month period. Rehosting an activation a fourth time requires a call to Rockwell Automation Technical Support.  Rehosting deletes activation files from the local computer, always run this process on the physical computer where the activation files reside.  For concurrent activations with a quantity greater than 1, there is the option to select a quantity less than the total activations. This leaves a quantity of the activations on the local computer while allowing the rest of the activations to become available for download to other computers. By default, all activations are removed from the local computer. Once an activation is rehosted, borrows of that activation appear in the Find Available Activations table until they expire.   Both FlexNet and CodeMeter activations rehosted on a disconnected computer require confirmation to complete the rehost. You need the product key originally provided with the software to download the activations again after the rehost.  See also  Rehost Activations page  "
+  },
+  {
+    "id": 36,
+    "title": "Renew activations",
+    "url": "284454.htm",
+    "text": "Use the Renew activations page to update the expiration date of an activation after extending the term of a license.  To renew activations:  Click Manage Activations > Renew Activations.  In Renew Activations, select the activations to renew.  Click Continue Renewing. FactoryTalk Activation Manager connects to the Rockwell Automation web service and extends the expiration date of the activation to the currently purchased date.  See also  Activation renewals  Renew an activation from a computer without an Internet connection  Get new activations  ",
+    "keywords": {
+      "renew": "100",
+      "activations": "100"
+    }
+  },
+  {
+    "id": 37,
+    "title": "Renew an activation from a computer without an Internet connection",
+    "url": "378625.htm",
+    "text": "If the computer using the activation does not have an Internet connection, transfer the activation data file to a removable storage device and take it to a computer with Internet access to perform the renewal process.  Tip:  Both the computer connected to the Internet and the computer disconnected from the Internet must run the same version of FactoryTalk Activation Manager.  To renew an activation from a computer without an Internet connection:  On the computer without an Internet connection, attach the removable storage device and then start FactoryTalk Activation Manager. Collect activation renewal information by performing these steps:  Select Manage Activations > Renew Activations.  On the Choose Phase page, select I need to start the renewal procedure by creating a data file and then select Specify Data File.  On the Specify Data File page, specify the data file location and name. (Optional) Use the default file location and name (FTAManagerData.xml).  Select Create Data File. The Create Data File page displays the result of the operation and the location of the data file.  If needed, on the Create Data File page, select Go to Data File Location, move or copy the data file to the removable storage device, and then remove the storage device from the computer.  Go to a computer with an Internet connection, attach the storage device and then start FactoryTalk Activation Manager to continue the renewal process:  Select Manage Activations > Renew Activations.  Select Import from Data File. The data file copied to the removable storage device is selected by default. Select Open. Activations that require renewal appear.  Select the check box of the activations to renew.  Select Continue Renewing. The Contacting Rockwell Automation Activation Service progress bar appears while the activations are being processed. The Continue Renewing page displays the results of the renew operation.  Remove the storage device from the computer.  Return to the computer without an Internet connection, attach the removable storage device, start FactoryTalk Activation Manager and perform these steps to finish the renewal process:  Select Manage Activations > Renew Activations.  On the Choose Phase page, select I have moved the data transport file and need to import the updates to this computer and then select Select Data File.  Select the name and location of the data file on the removable storage device and then select Continue Renewing. The Continue Renewing page displays the results of the renew operation.  See also  Renew activations  Activation renewals  ",
+    "keywords": {
+      "activations": "100",
+      "renew": "100",
+      "no internet": "100",
+      "disconnected": "100",
+      "internet": "100",
+      "data": "100",
+      "file ": "100"
+    }
+  },
+  {
+    "id": 38,
+    "title": "Activation renewals",
+    "url": "299525.htm",
+    "text": "Rockwell Activation Notifier provides notification when users attempt to renew activations. Renew activations when:  The expiration date of an activation is extended to a later date.  A later version of the feature is available for activation.  Use the Advanced tab in FactoryTalk Activation Manager to configure automatic renewals. By default, automatic renewals is enabled.  Configure activations to renew automatically or renew activations manually using the Rockwell Activation Notifier icon, or FactoryTalk Activation Manager.  Automatic renewal - If automatic renewal is enabled, a computer with a time-limited activation and an Internet connection will periodically check for available updates. Renewals are downloaded to the computer and a notice displays information about the renewed activations. Once you access the Find Available Activations page within FactoryTalk Activation Manager, a notification dialog box displays automatic renewal information. Click OK to acknowledge the renewal. FactoryTalk Activation Manager checks for renewed activations every 24 hours by default.   In Microsoft&reg; Windows 10, access the Action Center to view all automatic renewals.  Manual renewal - Click Check For Renewals Now on the Rockwell Activation notification icon to cause the client computer to check the activation server for renewable activations. If any are found, choose which activations to renew on the local client computer. Click Renew to renew the activation and to view the renewal information. Alternatively, open FactoryTalk Activation Manager on the client computer, access the Renew Activations page, and choose the activations to renew.  Once an activation has been renewed, check on the Find Available Activations page. Look in the Available Activations table to see updated expiration dates.  See also  Find available activations  Renew activations  Renew an activation from a computer without an Internet connection  ",
+    "keywords": {
+      "renew": "100"
+    }
+  },
+  {
+    "id": 39,
+    "title": "Configure the FactoryTalk Activation server",
+    "url": "22785.htm",
+    "text": "The FactoryTalk Activation server manages and shares activations with other configured computers on the network. Multiple activation servers can exist on a network, and client computers can retrieve activations from more than one activation server. A remote computer can also be set as an activation server.  The FactoryTalk Activation server does not require a server operating system, and can be any computer that hosts activations for distribution to clients. However, a server operating system will administer the licenses more effectively. Download times will be shorter and the system administrator can use a single, central computer to host activations.  See also  Set up a primary and a backup activation server  Add an activation server to the search path  Remove an activation server from the search path  Restart the activation services  Change the order of search path servers  ",
+    "keywords": {
+      "activation server": "100",
+      "server": "100"
+    }
+  },
+  {
+    "id": 40,
+    "title": "Network connectivity failure and the activation server",
+    "url": "39620.htm",
+    "text": "In the event of a network failure, the following factors apply to the activation server connection:  The computer makes three attempts to reconnect to the activation server.  There is a 60-second interval between attempts.  There is a two-hour TCP Timeout on the local computer before concurrent activations are checked back in to the activation server.  Grace period  Loss of network connectivity, user configuration error, hardware failure, insufficient available activations or any other activation failure will not deny the short-term use of critical Rockwell Automation software products. When activation fails, the product will still operate for a seven-day grace period.  A message display for these reasons:  When the grace period starts  At four-hour intervals while the software is running under a grace period  Whenever the software starts under a grace period  When the grace period expires  When activation is found and the grace period is ending  All Rockwell Automation Software products that affect running systems provide a grace period. Products used for design (that would not halt a running system) may or may not provide a grace period.  See also  Configure the FactoryTalk Activation server  Set up a primary and a backup activation server  ",
+    "keywords": {
+      "network": "100",
+      "connectivity": "100",
+      "failure": "100"
+    }
+  },
+  {
+    "id": 41,
+    "title": "Set up a primary and a backup activation server",
+    "url": "24293.htm",
+    "text": "Use a backup activation server to provide activations in case your primary activation server fails. To establish two activation servers with one as a backup, install FactoryTalk Activation Manager and add the activation files to both computers. Lock the activations to a dongle so that the dongle can be moved between the servers. Add the location of both activation servers to any computer that will be checking out activations.  To set up a primary and a backup activation server:  Install FactoryTalk Activation Manager on both server computers.  Retrieve activation files for the primary server using the dongle as the binding.  Copy the activation files you retrieved to the activation folder on the backup server.  Attach the dongle to the primary server.  Configure all computers that need software activations to recognize both servers. To expedite checkouts, place the primary server at the top of the list of servers.  If the primary server fails, move the dongle to the secondary server.  On the FactoryTalk Activation Manager Home page, click the Manage Activations tab, and move the secondary server to the top of the list to expedite checkouts.  See also  Get an activation for a plug-and-play dongle  Update activation search path locations  Manage the FactoryTalk Activation server  File access  ",
+    "keywords": {
+      "primary": "100",
+      "backup": "100",
+      "secondary": "100"
+    }
+  },
+  {
+    "id": 42,
+    "title": "Check the status of activation servers",
+    "url": "135499.htm",
+    "text": "Use Activation Server Status to:  Verify the current status of activation servers.  Determine if an activation server is unresponsive, needs software updates, or needs activations renewed.  To check the status of activation servers:  At the right of the taskbar at the bottom of the screen, click the up arrow to show hidden icons.  Click the Rockwell Activation icon @.  Click Check Servers Now. The Activation Server Status box lists the name of the activation servers and the status of each server. A server can be in the following states:  Unresponsive. Indicates that the computer is not communicating with the activation server due to a problem with the server or the connection to the server.  Needs update. Indicates the server is not running the latest version of FactoryTalk Activation. Contact your system administrator to install the current version of FactoryTalk Activation.  Click Close.  See also  Network connectivity failure and the activation server  Set up a primary and a backup activation server  Activation renewals  ",
+    "keywords": {
+      "status": "100",
+      "unresponsive": "100",
+      "update": "100"
+    }
+  },
+  {
+    "id": 43,
+    "title": "Restart the activation services",
+    "url": "216953.htm",
+    "text": "Restart the FactoryTalk Activation services if you cannot refresh the server using the Refresh button, or activations do not appear after adding a new activation server.  To restart the activation services:  Open the Windows Control Panel, then click Administrative Tools > Services.  Right-click FactoryTalk Activation Helper, and click Restart.  Right-click FactoryTalk Activation Service, and click Restart.  See also  Configure the FactoryTalk Activation server  ",
+    "keywords": {
+      "restart": "100",
+      "helper": "100",
+      "service": "100"
+    }
+  },
+  {
+    "id": 44,
+    "title": "Server log file",
+    "url": "229087.htm",
+    "text": "FactoryTalk Activation Manager generates the server log file each time an activation server is started or refreshed. The log file provides the following information:  License file locations  The binding tied to licenses  Type of license  Who has checked out or borrowed activations  Who has returned or stopped using activations  Borrow errors  Exclude errors  Tip:  The server log file is overwritten when the activation server is restarted. To keep a copy of the server log file save it with a new name before restarting the server.  See also  View the server log file  Configure the FactoryTalk Activation server  Restart the activation services  ",
+    "keywords": {
+      "server": "100",
+      "log": "100"
+    }
+  },
+  {
+    "id": 45,
+    "title": "View the server log file",
+    "url": "26294.htm",
+    "text": "The server log file is generated each time an activation server is started or refreshed.  To view the server log file:  Start the activation server if it is not already running.  Navigate to the server log directory. By default this is C:\\Users\\Public\\Documents\\Rockwell Automation\\Activations\\Logs\\.  Open the server log file RSsvr.log in a text editor.  Tip:  When viewing the log file, ignore references to RSI.MASTER.  See also  Server log file  Configure the FactoryTalk Activation server  Restart the activation server  ",
+    "keywords": {
+      "server": "100",
+      "log": "100"
+    }
+  },
+  {
+    "id": 46,
+    "title": "Advanced FactoryTalk Activation server settings",
+    "url": "25184.htm",
+    "text": "How do I open the Advanced page?  From FactoryTalk Activation Manager click the Advanced tab.  Use the Advanced page to:  Refresh activation servers running on the computer  Configure CodeMeter settings on this computer  Configure Automatic Renewal settings  Access the Activation Folder  Open the Diagnostics Viewer  Edit the Options file  Show bindings available for this computer  Borrow and return activations using a data file  If you are not using CodeMeter dongles for activation, you can also:  Create activations manually  Rehost activations manually  See also  Refresh the FactoryTalk Activation server  Configure CodeMeter settings  File access settings  Show bindings information  Options file  ",
+    "keywords": {
+      "advanced": "100",
+      "configure": "100"
+    }
+  },
+  {
+    "id": 47,
+    "title": "Refresh the FactoryTalk Activation server",
+    "url": "28910.htm",
+    "text": "How do I open the Refresh This Server page?  Click Advanced > Refresh This Server.  Refreshing the FactoryTalk Activation server restarts the FactoryTalk Activation services and resets the server log file. Some system updates and changing the options file require that you refresh the server for the change to take effect.  The Refresh This Server page includes the following controls:  Server state: Indicates the state of the server &#8212; Stopped (red), Refreshing (yellow), or Running (green).  Refresh Server: To manually refresh the servers, click Refresh Server. The server state changes from Running to Refreshing and back to Running.   See also  Activation server is not responding  Activations do not appear in available activations list  ",
+    "keywords": {
+      "server": "100",
+      "refresh": "100",
+      "state": "100"
+    }
+  },
+  {
+    "id": 48,
+    "title": "Configure CodeMeter settings",
+    "url": "284364.htm",
+    "text": "CodeMeter activation servers have the following additional options:  Run Network Server. Select this check box to open the CodeMeter port and enable CodeMeter activation servers to distribute licenses. Clear the check box to deactivate the servers and close the server ports to incoming and outgoing data.  Use CodeMeter First. Select this check box to use CodeMeter activations when running Rockwell Software&reg; products on this computer before using Flexera activations of the same feature name. Clear the check box to use Flexera activations first.  Apply. Click this button to change the CodeMeter server settings and restart the server. This button is disabled if no setting changes are pending.  WebAdmin. Click this button to launch the internal, web-based CodeMeter server administration utility.  See also  Advanced FactoryTalk Activation server settings  Change the default CodeMeter configuration  ",
+    "keywords": {
+      "configure": "100",
+      "server": "100",
+      "codemeter": "100",
+      "cm": "100",
+      "port": "100"
+    }
+  },
+  {
+    "id": 49,
+    "title": "Include specific computers or users as allowed or denied access to an activation",
+    "url": "340061.htm",
+    "text": "Configure CodeMeter options to allow or deny access to an activation for specific computers or users.  Keep these considerations in mind when configuring CodeMeter options:  Only activations that are currently on the server can be configured.  Changing the access rules might require a refresh of the CodeMeter server.  To configure a computer to be a CodeMeter server, select the Run Network Server box on the Advanced > Configure CodeMeter page.  To include specific computers or users as allowed or denied access to an activation:  In FactoryTalk Activation Manager, click the Advanced tab.   Click Configure CodeMeter.  Click Web Admin to open the CodeMeter WebAdmin utility.  Tip:  In the CodeMeter WebAdmin utility, click the help @ icon for more information on settings and parameters.  On the Configuration menu, click Server > License Access Permissions.  In the Mode box, select Advanced.  In the Advanced Mode Configuration box, under Specific access rules, click Add new Firm Code to open the Add Firm Code box.  Select the firm code to configure and click Add. The firm code is added under Specific access rules.  Under the firm code, click Add New Product Code to open the Add Product Code box.  Select the product name for the activation to be included and click Add.  Select the default action for any computer access that is not configured with an access rule. For example, selecting Deny for the default action denies every access that is not specifically allowed in an access rule. Selecting Allow for the default action allows every access that is not specifically denied in an access rule.  Click Add new access rule to open the Add Rule box.  For Action, select the opposite of the default action. For example, if the default action is Deny for access not covered by the rule, select Allow for the rule action.  In the Host, Subnet, or User box, enter an identifier for the computer to be allowed to borrow an activation.   In the HOST box, enter the computer name or IP address for which access should be allowed, or  In the Subnet box, enter the IP address for which access should be allowed, or  In the User box, enter the user for whom access should be allowed. Use the following format:  DomainName\\UserName or PCName\\UserName  In the Group box, enter a Windows user group for whom access should be allowed. Use the following format:  DomainName\\GroupName  See also  Restrict access to CodeMeter activations on a server  Deny access to all computers to all activations of a specific firm code  Limit the number of times a computer or user can check out an activation  Configure CodeMeter options to reserve activations for specific computers or users  "
+  },
+  {
+    "id": 50,
+    "title": "Deny access to all computers to all activations of a specific firm code",
+    "url": "342704.htm",
+    "text": "Configure CodeMeter options to deny access to all computers to all activations of a specific firm code, such as 102389 or 6000458.  Keep these considerations in mind when configuring CodeMeter options:  Only activations that are currently on the server can be configured.  Changing the access rules might require a refresh of the CodeMeter server.  To configure a computer to be a CodeMeter server, select the Run Network Server box on the Advanced > Configure CodeMeter page.  To deny access to all computers to all activations of a specific firm code:  Open FactoryTalk Activation Manager on the server computer and click the Advanced tab.   Click Configure CodeMeter.  Click Web Admin to open the CodeMeter WebAdmin utility.  Tip:  In the CodeMeter WebAdmin utility, click the help @ icon for more information on settings and parameters.  In the Mode box, select Advanced.  In the Advanced Mode Configuration box, under Specific access rules, click Add new Firm Code to open the Add Firm Code box.  Select the firm code to configure and click Add. The firm code is added under Specific access rules.  For the default action, select Deny. All computers are denied access to use the specific Rockwell Automation software activations of the firm code. However, computers are automatically allowed access to localhost (the server computer).  See also  Restrict access to CodeMeter activations on a server  Include specific computers or users as allowed or denied access to an activation  Configure CodeMeter options to reserve activations for specific computers or users  Limit the number of times a computer or user can check out an activation  "
+  },
+  {
+    "id": 51,
+    "title": "Restrict access to CodeMeter activations on a server",
+    "url": "342675.htm",
+    "text": "Configure CodeMeter options to exclude a specific computer from accessing all CodeMeter activations.  Keep these considerations in mind when configuring CodeMeter options:  Only activations that are currently on the server can be configured.  Changing the access rules might require a refresh of the CodeMeter server.  To configure a computer to be a CodeMeter server, select the Run Network Server box on the Advanced > Configure CodeMeter page.  To restrict access to CodeMeter activations on a server:  Open FactoryTalk Activation Manager on the server computer and click the Advanced tab.   Click Configure CodeMeter.  Click Web Admin to open the CodeMeter WebAdmin utility.  Tip:  In the CodeMeter WebAdmin utility, click the help @ icon for more information on settings and parameters.  On the Configuration menu, click Server > License Access Permissions.  In the Mode box, select Basic.  In the Mode Configuration box, click Add. The CodeMeter WebAdmin utility adds localhost automatically.  Enter computer names that are allowed to access the CodeMeter activations on this server computer. Computers that are not included in the Basic Mode Configuration client list are not allowed to access the CodeMeter activations. FactoryTalk Activation Manager does not display activations on the Find Available Activations page and they cannot be checked out.  See also  Deny access to all computers to all activations of a specific firm code  Include specific computers or users as allowed or denied access to an activation  Configure CodeMeter options to reserve activations for specific computers or users  Limit the number of times a computer or user can check out an activation  ",
+    "keywords": {
+      "reserve": "100",
+      "activations": "100",
+      "host": "100"
+    }
+  },
+  {
+    "id": 52,
+    "title": "Limit the number of times a computer or user can check out an activation",
+    "url": "340125.htm",
+    "text": "Configure CodeMeter options to limit the number of times a computer or user can check out an activation.  Keep these considerations in mind when configuring CodeMeter options:  Only activations that are currently on the server can be configured.  Changing the access rules might require a refresh of the CodeMeter server.  To configure a computer to be a CodeMeter server, select the Run Network Server box on the Advanced > Configure CodeMeter page.  To limit the number of times a computer or user can check out an activation:  In FactoryTalk Activation Manager, click the Advanced tab.   Click Configure CodeMeter.  Click Web Admin to open the CodeMeter WebAdmin utility.  Tip:  In the CodeMeter WebAdmin utility, click the help @ icon for more information on settings and parameters.  On the Configuration menu, click Server > License Access Permissions.  In the Mode box, select Advanced.  In the Advanced Mode Configuration box, under Specific access rules, click Add new Firm Code to open the Add Firm Code box.  Select the firm code to configure and click Add. The firm code is added under Specific access rules.  Under the firm code, click Add New Product Code to open the Add Product Code box.  Select the product name for the activation to be included and click Add.  Click Add new access rule to open the Add Rule box.  For Action, select the opposite of the default action. For example, if the default action is Deny for access not covered by the rule, select Allow for the rule action.  In the Host, Subnet, User, or Group box, enter an identifier for the computer or user to be allowed to borrow an activation.   In the HOST box, enter the computer name or IP address for which access should be allowed, or  In the Subnet box, enter the IP address for which access should be allowed, or  In the User box, enter the user for whom access should be allowed. Use the following format:  DomainName\\UserName or PCName\\UserName  In the Group box, enter a Windows user group for whom access should be allowed. Use the following format:  DomainName\\GroupName  In the Limit box, enter the maximum number of times that an activation can be checked out or borrowed by the specified host, subnet, user, or group. The number cannot be larger than the number of activations on the server.  See also  Configure CodeMeter options to reserve activations for specific computers or users  Include specific computers or users as allowed or denied access to an activation  Deny access to all computers to all activations of a specific firm code  Restrict access to CodeMeter activations on a server  "
+  },
+  {
+    "id": 53,
+    "title": "Configure CodeMeter options to reserve activations for specific computers or users",
+    "url": "342720.htm",
+    "text": "Configure CodeMeter options to reserve activations for specific computers.  Keep these considerations in mind when configuring CodeMeter options:  Only activations that are currently on the server can be configured.  Changing the access rules might require a refresh of the CodeMeter server.  To configure a computer to be a CodeMeter server, select the Run Network Server box on the Advanced > Configure CodeMeter page.  Configure CodeMeter options to reserve activations for specific computers or users:  In FactoryTalk Activation Manager, click the Advanced tab.   Click Configure CodeMeter.  Click Web Admin to open the CodeMeter WebAdmin utility.  Tip:  In the CodeMeter WebAdmin utility, click the help @ icon for more information on settings and parameters.  On the Configuration menu, click Server > License Access Permissions.  In the Mode box, select Advanced.  In the Advanced Mode Configuration box, under Specific access rules, click Add new Firm Code to open the Add Firm Code box.  Select the firm code to configure and click Add. The firm code is added under Specific access rules.  Under the firm code, click Add New Product Code to open the Add Product Code box.  Select the product name for the activation to be included and click Add.  Click Add new access rule to open the Add Rule box.  For Action, select the opposite of the default action. For example, if the default action is Deny for access not covered by the rule, select Allow for the rule action.  In the Host, Subnet, User, or Group box, enter an identifier for the computer to be allowed to borrow an activation.   In the HOST box, enter the computer name or IP address for which access should be allowed, or  In the Subnet box, enter the IP address for which access should be allowed, or  In the User box, enter the user for whom access should be allowed. Use the following format:  DomainName\\UserName or PCName\\UserName  In the Group box, enter a Windows user group for whom access should be allowed. Use the following format:  DomainName\\GroupName  In the Reserved box, enter the number of activations to be reserved for the specified host, subnet, user, or group. The number of reserved activations cannot be larger than the number of activations on the server.  See also  Restrict access to CodeMeter activations on a server  Deny access to all computers to all activations of a specific firm code  Include specific computers or users as allowed or denied access to an activation  Limit the number of times a computer or user can check out an activation  "
+  },
+  {
+    "id": 54,
+    "title": "Change the default CodeMeter configuration",
+    "url": "285916.htm",
+    "text": "By default CodeMeter dongles attempt to connect to the CodeMeter time server over the Internet to verify the certified time included in their license files. In an environment where computers are not connected to the internet this behavior can cause slower performance. Therefore, if a computer will not be connected to the Internet and is using a CodeMeter dongle to store activations, it is recommended that the default CodeMeter configuration be changed to improve performance.&nbsp;   To change the default CodeMeter configuration  Click Advanced > Configure CodeMeter.  Click WebAdmin to open the CodeMeter WebAdmin console.  Click Configuration > Advanced to open the Time Server page (http://localhost:22352/configuration/certified_time.html)  By default four URLs are listed in the Time Server list.  @   Click Remove @ next to the URL and remove all but one of the time servers.  Click in the Time Out box and change the value to 1 second.&nbsp;This decreases the time spent by the software attempting to connect to the time servers from 80 seconds (4 x 20 seconds) down to 1 second.   If the computer networking is changed to be connected to the Internet press the Restore Defaults button to return the time servers to the default configuration.  See also  Advanced FactoryTalk Activation server settings  "
+  },
+  {
+    "id": 55,
+    "title": "Configure Automatic Renewals page",
+    "url": "302257.htm",
+    "text": "Use the Configure Automatic Renewals page to accomplish the following tasks:  Enable or disable automatic renewals.  Specify the number of days between checks for automatic renewal of activations.  The Configure Automatic Renewals page has the following settings:  Setting  Description  Automatic Renewals Enabled  When selected, the activation server automatically connects to the Rockwell Automation Activation service and queries for renewed activations to download.  Automatic Renewal is enabled by default.  Time in days between checks for renewable activations  When configured to automatically check for renewable activations, by default, the first query occurs 10 minutes after Activation Notifier starts and subsequent queries occur every 24 hours.   Minimum: 1 day  Maximum: 10 days  Apply  Click Apply for the Automatic Renewal configuration changes to take effect.  Registry settings  Automatic renewal settings correlate with equivalent registry keys.  Important:  Incorrectly editing the registry may severely damage your system. Before making changes to the registry, back up any valued data on your computer.  FactoryTalk Activation Registry keys are located in the following registry hives:  HKEY_LOCAL_MACHINE\\SOFTWARE\\Rockwell Software\\FactoryTalk Activation (32- bit)  HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Rockwell Software\\FactoryTalk Activation (64-bit)  Setting  Registry Key   TYPE  Values  Automatic Renewals Enabled  AutoRenewalsEnabled  By default, automatic renewals is enabled. To disable automatic renewals, use the FactoryTalk Activation install to pass the /DisableAutoRenew option to the FTA install. See Configure Automatic Renewals, Renew activations, and Activation renewals for more details.  DWORD  Enabled = 1  Disable = 0  Initial check for renewals after feature enabled<br />(in minutes)  CheckRenewalMinutesInit  DWORD  Minimum = 1  Default = 10  Time between checks for renewable activations <br />(in minutes)  CheckRenewalMinutes  DWORD  Minimum = 240  Default = 1440  See also  Configure Automatic Renewals  Renew activations  Activation renewals  "
+  },
+  {
+    "id": 56,
+    "title": "Configure Automatic Renewals",
+    "url": "308784.htm",
+    "text": "Use the Configure Automatic Renewals page to accomplish the following tasks:  Enable or disable automatic renewals.  Specify the number of days between checks for automatic renewal of activations.  To configure Automatic Renewals:  Access the Configure Automatic Renewals page by selecting the Advanced tab and choosing Configure Automatic Renewals.  Verify that Automatic Renewals Enabled is selected. Automatic Renewals is enabled by default.  Enter a number between 1 and 10 for the Time in days between check for renewable activations.   Select Apply.  See also  Configure Automatic Renewals page  Renew activations  Activation renewals  ",
+    "keywords": {
+      "configure": "100",
+      "automatic": "100",
+      "renewal": "100"
+    }
+  },
+  {
+    "id": 57,
+    "title": "Borrow activations using a data file",
+    "url": "369460.htm",
+    "text": "Use a data file to borrow a CodeMeter activation from a source computer to a destination computer when the computers cannot connect over a network. The data file passes the necessary data between the source and destination computers.  This table describes the steps in the process, and the computer on which the steps are carried out. The process requires switching back and forth from the destination computer, where the borrowed activation should go, to the source computer, which contains the activation to borrow.  On this computer  Carry out this step  Destination computer  1. Set up a data file and select the binding to store the activation.  Source computer  2. Import the data file, select the activation to borrow, and set the borrow time limit.  Destination computer  3. Import the update data added to the data file and create a receipt.   Source computer  4. Import the receipt data added to the data file.  To borrow activations using a data file  On the destination computer, set up a data file and select the binding to store the activation.   Expand the detailed instructions for this step.  Open the FactoryTalk Activation Manager and select the Advanced tab.  Select Borrow by file.  Select step 1, Select the binding.  Select Specify data file.  Beside the File location box, select Browse @ to navigate to the file location.  Select the file to use.  Select Get bindings.   Select the check box for the binding to use.  Select Create data file. The binding is written to the data file.  To move or copy the data file to removable media or to a shared network directory, select Go to Data File Location. Make sure the file is moved or saved to a location that is accessible from the source computer. The default name of the data file is FTAManagerData.xml.  On the source computer, import the data file, select the activation to borrow, and set the borrow time limit.  Expand the detailed instructions for this step.  Open the FactoryTalk Activation Manager and select the Advanced tab.  Select Borrow by file.  Select step 2, Select the activation to borrow.  Select Specify data file.  Beside the File location box, select Browse @ to navigate to the file location where the data file was saved in step 1.  Select the data file (by default, FTAManagerData.xml).  Select Select Activations.  Select the check box for the activation to borrow.  Select Set Borrow Term.  Set the borrow time limit using a calendar date, a number of days, or a number of hours. When the time limit expires, the activation is returned.  Select Create Data File to add the information on the activation and borrow term limit to the data file.  Select Go to Data File Location to move or copy the data file (by default, FTAManagerData.xml) to removable media or to a shared network directory.  On the destination computer, import the update data added to the data file and create a receipt.  Expand the detailed instructions for this step.   On the Advanced tab, select Borrow by file.  Select step 3, Import update and create receipt.  Select Specify data file.  Beside the File location box, select Browse @ to navigate to the file location.  Select the data file (by default, FTAManagerData.xml).  Select Import Update.  Select Create Data File to import the information on the activation and borrow term limit and write the receipt data to the data file.  To move or copy the data file to removable media or to a shared network directory, select Go to Data File Location.  On the source computer, import the receipt data added to the data file.  Expand the detailed instructions for this step.  On the Advanced tab, select Borrow by file.  Select step 4, Finalize the borrow.  Select Specify data file.  Beside the File location box, select Browse @ to navigate to the file location.  Select the data file (by default, FTAManagerData.xml).  Select Import Receipt to import the receipt from the data file.   (Optional) Open the Find available activations list to verify that the activation is marked as borrowed:  Select the Manage Activations tab.  Select Find Available Activations.  See also  Return activations using a data file  Find available activations  "
+  },
+  {
+    "id": 58,
+    "title": "Return activations using a data file",
+    "url": "369474.htm",
+    "text": "Use a data file to return a CodeMeter activation from the computer (the destination computer) that borrowed the CodeMeter activation back to another computer (the source computer) when the computers cannot connect over a network. The data file passes the necessary data between the destination and source computers.  This table describes the steps in the process, and the computer on which the steps are carried out. The process requires switching back and forth from the destination computer, where the borrowed activation resides, to the source computer, where the borrowed activation is returned.  On this computer  Carry out this step  Destination computer  1. Set up a data file and select the activation to return.  Source computer  2. Import the data file that contains the return information.  Destination computer  3. Import the update data added to the data file and create a receipt.   Source computer  4. Import the receipt data added to the data file.  To return activations using a data file  On the destination computer, set up a data file and select the activation to return.   Expand the detailed instructions for this step.  Open the FactoryTalk Activation Manager and select the Advanced tab.  Select Return by file.  Select step 1, Select the activation to return.  Select Specify data file.  Beside the File location box, select the Browse button @ to navigate to the file location.  Select the file to use. The default name of the data file is FTAManagerData.xml.   Select Select Activation to Return.  Select the check box for the activation to return.  Select Create data file. The context data for the selected activation is written to the data file.  To move or copy the data file to removable media or to a shared network directory, select Go to Data File Location. Make sure the file is moved or saved to a location that is accessible from the source computer.  On the source computer, import the data file that contains the return information.  Expand the detailed instructions for this step.  Open the FactoryTalk Activation Manager and select the Advanced tab.  Select Return by file.  Select step 2, Create the update file.  Select Specify data file.  Beside the File location box, select the Browse button @ to navigate to the file location where you put the data file in step 1.  Select the data file (by default, FTAManagerData.xml).  Select Create Update to display the activation that is being returned.  Select Create Data File to add the information on the returned activation to the data file.  Select Go to Data File Location to move or copy the data file to removable media or to a shared network directory.  On the destination computer, import the update data added to the data file and create a receipt.  Expand the detailed instructions for this step.   On the Advanced tab, select Return by file.  Select step 3, Import update and create receipt.  Select Specify data file.  Beside the File location box, select the Browse button @ to navigate to the file location.  Select the data file (by default, FTAManagerData.xml).  Select Return Activation From Destination to display the activation that is being returned.  Select Create Data File to import the information on the returned activation and write the receipt data to the data file.  To move or copy the data file to removable media or to a shared network directory, select Go to Data File Location.  On the source computer, import the receipt data added to the data file.  Expand the detailed instructions for this step.  On the Advanced tab, select Return by file.  Select step 4, Finalize the return.  Select Specify data file.  Beside the File location box, select the Browse button @ to navigate to the file location.  Select the data file (by default, FTAManagerData.xml).  Select Complete Return by File.  (Optional) Open the Find available activations list to verify that the activation is marked as returned:  Select the Manage Activations tab.  Select Find Available Activations.  See also  Borrow activations using a data file  Find available activations  "
+  },
+  {
+    "id": 59,
+    "title": "File access settings",
+    "url": "22780.htm",
+    "text": "How do I open the File Access page?  Click Advanced&nbsp;> File Access.  Use the File Access page to:  Browse to the Activation folder.  Click Browse Activation Folder to open Windows Explorer scoped to the activation folder. This folder contains the Options file, activation files, and the Logs folder where server log files are stored.  View FactoryTalk Diagnostics.  Click View Diagnostics to open the FactoryTalk Diagnostics Viewer. This viewer displays the event messages from all of the FactoryTalk system components. Click a message to view details. The log file is cleared when the server is refreshed or restarted.  Edit the Options file.  Click Edit Options File to open the options file (flexsvr.opt) in Notepad for editing. The options file is used to configure special circumstances for activation clients. By default, the options file is blank.  See also  Activation-related messages  Data available in an activation-related message   FactoryTalk Activation Manager file folders and file extensions  Options file  ",
+    "keywords": {
+      "file": "100",
+      "access": "100",
+      "activation folder": "100",
+      "view": "100",
+      "diagnostics": "100"
+    }
+  },
+  {
+    "id": 60,
+    "title": "FactoryTalk Activation Manager file folders and file extensions",
+    "url": "40236.htm",
+    "text": "The following are the default FactoryTalk Activation Manager file folders and file name extensions.  Default file folders  By default activation files are stored in the following location:  C:\\Users\\Public\\Documents\\Rockwell Automation\\Activations  Tip:  C: represents the system drive letter. Your directory path might be different.  Default file extensions  File extension  Description  .lic  FlexNet license files.  .xml  Binding file and other internal, FactoryTalk Activation Manager files.  .WibuCmRac<br />.WibuCmRaU  WIBU data files.  See also  FactoryTalk Activation Manager firewall ports and rules  FactoryTalk Activation Manager service dependencies  ",
+    "keywords": {
+      "file": "100",
+      "folders": "100",
+      "extensions": "100"
+    }
+  },
+  {
+    "id": 61,
+    "title": "Activation-related messages",
+    "url": "22719.htm",
+    "text": "Messages related to FactoryTalk Activation are logged to the FactoryTalk Diagnostics Local Log. If you have FactoryTalk&reg; AssetCentre you can access the FactoryTalk Audit Log by using the FactoryTalk Diagnostics Viewer.  See also  Configure FactoryTalk Diagnostics Viewer  View messages in FactoryTalk Diagnostics Viewer  Data available in an activation-related message  "
+  },
+  {
+    "id": 62,
+    "title": "Data available in an activation-related message",
+    "url": "28904.htm",
+    "text": "The Diagnostic Viewer displays the following information. Some types of data are available only for specific types of transactions. The example information in the following table is for a borrow return transaction type.  Data  Description  Borrow return example  Transaction  Type of action requested by FactoryTalk Activation Manager.  borrow return  Server  The computer that requested the transaction.  LocComp2  Feature  The activation feature/file name that is being used.  RSVSESRV.250  Version  Product version number.  3.00  Serial number  Serial number of the product.  2322888888  Other  Severity  Severity of the message such as Information, Audit, Error, Warning.  Information  Audience  Type of user and security.  Operator & Secured  Time  Date and time the diagnostic information was logged.  7/2/2015 3:14:56 PM  Location  Name of computer where the diagnostic message was generated.  RemComp1  Provider  Service that provided the data to be logged.  FactoryTalk Activation Server  User  User domain and login name, or domain and computer name, or SYSTEM depending on the transaction type.  SYSTEM  Full Name  Full name of the logged in user, or blank.  blank  See also  Activation-related messages  ",
+    "keywords": {
+      "diagnostic": "100",
+      "data": "100"
+    }
+  },
+  {
+    "id": 63,
+    "title": "Configure FactoryTalk Diagnostics Viewer",
+    "url": "28914.htm",
+    "text": "To view messages from a central location, configure FactoryTalk Diagnostics Viewer to:  View all the local logs of each client computer from the server computer.  Log all diagnostic messages to one location.  For additional information about configuring FactoryTalk Diagnostics Viewer, see Knowledgebase Document ID: QA13255 Centralize FactoryTalk Diagnostics Logs.  Tip:  Sign in to your Rockwell Automation account to view Knowledgebase articles.   See also  View messages in FactoryTalk Diagnostics Viewer  File access  Activation-related messages  ",
+    "keywords": {
+      "viewer": "100",
+      "diagnostic ": "100"
+    }
+  },
+  {
+    "id": 64,
+    "title": "View messages in FactoryTalk Diagnostics Viewer",
+    "url": "26290.htm",
+    "text": "When an activation is borrowed or returned, FactoryTalk Activation Manager sends a message to the FactoryTalk Diagnostics log identifying the user who borrowed or returned the activation.  Activation-related messages are logged to FactoryTalk Diagnostics Viewer only on the local computer by default.   To view messages in FactoryTalk Diagnostics Viewer:  Click Advanced > File Access.  Click View Diagnostics to open the FactoryTalk Diagnostics Viewer.  See also  Configure FactoryTalk Diagnostics Viewer  ",
+    "keywords": {
+      "view": "100",
+      "diagnostic": "100",
+      "message": "100"
+    }
+  },
+  {
+    "id": 65,
+    "title": "Activation feature names associated with products",
+    "url": "22799.htm",
+    "text": "An activation feature name is the string name associated with the Rockwell Automation software product. For example, the feature name for RSLinx&reg; Classic is RSLINX.EXE.   For a list of activation feature names, see Knowledgebase Document ID: QA8394 Activation feature names associated with products.  Tip:  Sign in to your Rockwell Automation account to view Knowledgebase articles.   See also  File access settings  Activation-related messages  ",
+    "keywords": {
+      "activation": "100",
+      "feature names": "100"
+    }
+  },
+  {
+    "id": 66,
+    "title": "Activation file details",
+    "url": "22701.htm",
+    "text": "System administrators can find information about the contents of an activation file useful. For example, when writing an Options file, a system administrator might need to obtain activation information without starting the server and shutting it back down again.  Concurrent activation file example  This example shows a concurrent activation file for RSLogix 500:  SERVER LicnSvr 39F837ABC83  VENDOR flexsvr  INCREMENT RS500.exe &nbsp;flexsvr 1.0 permanent 5 \\  &nbsp;&nbsp;&nbsp;&nbsp;VENDOR_STRING=1234567890 \\  &nbsp;&nbsp;&nbsp;&nbsp;BORROW=48       vendor_info=PRODUCT_NAME:RSLogix500 \\  &nbsp;&nbsp;&nbsp;&nbsp;SN=0451234567  &nbsp;&nbsp;&nbsp;&nbsp;SIGN=\"0000 C0A3 5511 2DDD 3151 82FC D473 \\  &nbsp;&nbsp;&nbsp;&nbsp;8F9B 5623 3099 BBCD 63ED 9999 FFFF C829 \\  &nbsp;&nbsp;&nbsp;&nbsp;4606 4E85 7A20 DC42 A691 1234\"  The concurrent activation file has these elements:  Element  Description  LicnSvr  The name of the activation server, followed by its binding.  flexsvr  The name of the vendor service.  Increment RS500.exe  The name of the activation that identifies the software product.  1.0  Indicates that this activation will only work with versions 0.0 to 1.0 inclusive.  permanent 5  The number of concurrent activations that have been purchased and are available for check out or borrow.  Vendor_string  The product serial number.  Borrow=48  The time limit, in hours, that an activation can be borrowed. If the product does not support borrowing, this statement will not appear.  Vendor_info  Information that identifies the product.  SN  A number used to identify the vendor for each activation.  SIGN=&#8220; \u2026 &#8221;  The signature for this entry in the activation file. The signature enables the activation.  Node-locked activation file example  This example shows a node-locked activation file for an RSNetWorx for ControlNet software package.  INCREMENT rsntwcn3.exe flexsvr 1.0 permanent \\  &nbsp;&nbsp;&nbsp;&nbsp;uncounted \\  &nbsp;   VENDOR_STRING=1211234567 \\  &nbsp;&nbsp;&nbsp;&nbsp;HOSTID=39F837ABC83 \\  &nbsp;&nbsp;&nbsp;&nbsp;vendor_info=\"PRODUCT_NAME:RSNetworx \\  &nbsp;&nbsp;&nbsp;&nbsp;for ControlNet\" \\  &nbsp;&nbsp;&nbsp;&nbsp;SN=0431234567 \\  &nbsp;&nbsp;&nbsp;&nbsp;SIGN=\"0000 3214 1111 CED1 BF34 3214 7777 5312 \\  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8878 AABC FE43 7777 5312 8878 AABC FE43 \\  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7777 5312 8878 AABC FE43 2222\"  The node-locked activation file has these elements:  Element  Description  Increment rsntwcn3.exe  The activation that identifies the RSNetWorx for ControlNet software product.  flexsvr  The name of the vendor service.  1.0  Indicates that this activation will only work with versions 0.0 to 1.0 inclusive.  permanent  The activation never expires.  uncounted  An unlimited number of activations can be used on the specified host.   Vendor_string  The serial number of the product.  HOSTID=39F837ABC83  The binding of the machine that the activation is locked to.  Vendor_info  Information that identifies the product.  SN  A number used to identify the vendor for each activation.  SIGN=&#8220; \u2026 &#8221;  The signature for this entry in the activation file.  See also  Activation feature names associated with products  Keyw",
+    "keywords": {
+      "tivation file": "100"
+    }
+  },
+  {
+    "id": 67,
+    "title": "Damaged or deleted activation files",
+    "url": "22763.htm",
+    "text": "During software installation, a system-generated signature is created to protect the contents of the activation file. If the activation file is damaged or tampered with, the activation will not work.  If an activation file is damaged or deleted, contact Rockwell Automation Technical Support. Be sure to have the binding of the computer or dongle associated with the lost or damaged file, and the software serial number and product key.  See also  Show bindings information  ",
+    "keywords": {
+      "damaged": "100",
+      "deleted": "100",
+      "corrupted": "100"
+    }
+  },
+  {
+    "id": 68,
+    "title": "Show bindings information",
+    "url": "39772.htm",
+    "text": "How do I open the Show Bindings page?  Click Advanced&nbsp;> Show Bindings.  Use the Show Bindings page to:  Get binding information to provide to Rockwell Automation Technical Support.  Copy a binding to the clipboard when obtaining activation using the Activation website or by phone without FactoryTalk Activation Manager.  Click Copy @ at the left side of the Binding row.  See also  Manage the server   Use advanced options  ",
+    "keywords": {
+      "show": "100",
+      "bindings": "100",
+      "copy": "100",
+      "binding": "100"
+    }
+  },
+  {
+    "id": 69,
+    "title": "Options file",
+    "url": "22717.htm",
+    "text": "The Options file lists the options that affect how an activation server manages activations.  Configure the options file to accomplish the following:  Reserve activations for specific computers or users.  Restrict maximum borrow time per computer.  Manage capacity access for activations.  See also  File Access page   Create or edit the Options file  Options file elements  ",
+    "keywords": {
+      "options": "100",
+      "options file": "100"
+    }
+  },
+  {
+    "id": 70,
+    "title": "Create or edit the Options file",
+    "url": "22718.htm",
+    "text": "The Options file is a text file that defines the options for managing concurrent activations.  To create or edit the Options file:  Click the Advanced tab, and click File Access.  Click Edit Options File to open the file in a text editor.  Type the lines into the options file as needed to control the activation servers response to an activation request.  Save the file with the name flexsvr.opt in the default activation folder.  Restart the activation service to implement the new options.  See also  Options file syntax  Reserve activations for individual host computers  Reserve activations for groups of host computers  ",
+    "keywords": {
+      "create": "100",
+      "edit": "100",
+      "options": "100",
+      "option": "100",
+      "file": "100"
+    }
+  },
+  {
+    "id": 71,
+    "title": "Options file syntax",
+    "url": "284459.htm",
+    "text": "The options file is a plain text file that is read by the activation server when it determines the activation request to grant a license to a client. Each line of the options file control one option identified by a keyword. The keyword implementation options are specified using the following syntax items:  count  The limit being defined by the element  featurekey  The Rockwell Automation software this element applies to, identified by executable name.  USER, HOST, DISPLAY, GROUP or HOST_GROUP  Identifies the type of account to which to apply the element.  name  Identifier for the account, such as a user name, group name, or IP address  The following keywords are used to define the behavior specified by the options file:  Keyword  Syntax  Example  BORROW_LOWWATER  Sets limit of licenses that cannot be borrowed.  There must be more than one install available for borrowing to use this option.  BORROW_LOWWATER [featurekey] [count]  BORROW_LOWWATER RSLINX.EXE 3  Restricts three licenses of RSLinx from being available to borrow.  DEBUGLOG  Specifies a location for the debug log output. Precede the debug_log_path with a + character to append log entries to the existing file; otherwise, the log file is overwritten with each restart of the service FactoryTalk Activation Service.  DEBUGLOG [+] [debug_log_path]  DEBUGLOG +C:\\Logs\\RSsvr.log  Will append log entries to C:\\Logs\\RSsvr.log  DEBUGLOG C:\\Logs\\RSsvr.log  Log file C:\\Logs\\RSsvr.log will be overwritten when FactoryTalk Activation Service is started.  EXCLUDE  Creates a list of users, groups, or computers that are prevented from using the software. If a user or group is identified by an INCLUDE element as well as an EXCLUDE element, the user or group is excluded. To give a previously excluded user or group permission to use the software, remove them from the EXCLUDE list.  EXCLUDE [featurekey] [USER | HOST | DISPLAY | GROUP | HOST_GROUP] [name]  EXCLUDE RSLINX.EXE USER jondoe  Prevents a user named jondoe from using RSLinx.  EXCLUDE RS5K_700.EXE HOST 10.15.123.*  Prevents computers in the 10.15.123 network from using the Logix Designer application.  EXCLUDE_BORROW  Creates a list of computers or groups of computers that are prevented from borrowing an activation for a software application. If a computer is identified by an INCLUDE_BORROW element as well as an EXCLUDE_BORROW element, the computer is excluded. To give previously excluded computers permission to borrow an activation for a software application, remove them from the EXCLUDE_BORROW list.  Tip: A specific user cannot be excluded from borrowing a license. A borrowed license is available for all users logged into the computer.  EXCLUDE_BORROW [featurekey] [HOST | HOST_GROUP] [name]  EXCLUDE_BORROW RS5K_700.EXE HOST 10.15.123.*  Prevents computers in the 10.15.123 network from borrowing activations for the  Logix Designer application.  EXCLUDEALL  Creates a list of users, groups, or computers that are prevented from using all Rockwell Automation software activations on the activation server.  EXCLUDEALL [USER | HOST | DISPLAY | GROUP | HOST_GROUP] [name]  EXCLUDEALL GROUP officepcs  Prevents the officepcs group from using any applications managed by the activation server.  GROUP  Used to define a group name for a list of user account names. Use the group name to assign options or a group of users instead of specifying each user individually. Group and User names are case sensitive by default.  GROUP [group_name] [user1] [user2] [userN]  GROUP authusers Frank Sarah Will  Creates a group of users called authusers, consisting of Frank, Sarah, and Will.  GROUPCASEINSENSITIVE  Turns on case insensitivity for groups and group members.  Does not turn on case insensitivity for the group name.  GROUPCASEINSENSITIVE ON  GROUPCASEINSENSITIVE ON  GROUP testgroup usr  EXCLUDE RSLINX.GW GROUP testgroup  Excludes the user usr or USR from checking out the RSLINX.GW license.  HOST_GROUP  Defines a group of host computers. Use Multiple HOST_GROUP lines to add all the specified hosts into the group. Host computers can be specified using computer names or IP addresses. Host names are case insensitive.  HOST_GROUP [group_name] [host1] [host2] [hostN]  HOST_GROUP officepcs frontdeskpc accountingpc1 accountingpc2  Creates a group of host computers called officepcs consisting of PCs named frontdeskpc, accountingpc1, and accountingpc2.  HOST_GROUP plantfloor 10.15.*  Create a group of host computers called plantfloor that includes all PCs with IP addresses starting with 10.15.  INCLUDE  Creates a list of users, groups, or computers that are allowed to use the software. If a user or group is identified by an INCLUDE element as well as an EXCLUDE element, the user or group is excluded. To give a previously excluded user or group permission to use a feature, remove them from the EXCLUDE list.  INCLUDE [featurekey] [USER | HOST | DISPLAY | GROUP | HOST_GROUP] [name]  INCLUDE RSLINX.EXE USER jondoe  Allows a user named jondoe to activate RSLinx.  INCLUDE RS5K_700.EXE HOST 10.15.123.*  Allow computers in the 10.15.123 network to activate the Logix Designer application.  INCLUDE_BORROW  Creates a list of computers or groups that are allowed to borrow an activation for a feature. If a computer or group is identified by an INCLUDE_BORROW element as well as an EXCLUDE_BORROW element, the computer or group is excluded. To give a previously excluded computer or group permission to borrow an activation for a feature, remove them from the EXCLUDE_BORROW list.  Tip: A specific user cannot be allowed to borrow a license. A borrowed license is available for all users logged into the computer.  INCLUDE_BORROW [featurekey] | HOST | HOST_GROUP] [name]  INCLUDE_BORROW RS5K_700.EXE HOST 10.15.123.*  Allows computers in the 10.15.123 network to borrow activations for the Logix Designer application.  INCLUDEALL  Creates a list of users, groups, or computers that are allowed to use any of the Rockwell Automation software activations on the activation server.  INCLUDEALL [USER | HOST | DISPLAY | GROUP | HOST_GROUP] [name]  INCLUDEALL GROUP plantadmins  Allows the members of the plantadmins group to use any applications managed by the activation server.  MAX  Limits the usage of a software application for a user or group.   MAX [count] [featurekey] [USER | HOST | DISPLAY | GROUP | HOST_GROUP] [name]  MAX 3 RSLINX.EXE GROUP China  Allows only 3 users in the China group to run FactoryTalk&reg; Linx&#8482; at one time.  MAX_BORROW_HOURS  Changes the maximum time for which a license can be borrowed. New period of time must be less than in the original license certificate.  MAX_BORROW_HOURS [featurekey] [count]  MAX_BORROW_HOURS RS5K_700.exe 36  Sets the maximum borrow time limit for borrowed activations for the Logix Designer application to 36 hours.  NOLOG  Disables logging of a specific type of event in the log file. The event types are:  IN - Check in of activations  OUT - Check out of activations  DENIED - Activations denied  QUEUED - Activation request queued  NOLOG [IN | OUT| DENIED | QUEUED]  NOLOG IN  Turns off logging of activations checked in.  RESERVE  Holds a license back to be used by a specific user, computer, or group.  RESERVE [count] [featurekey] [USER | HOST | DISPLAY | GROUP | HOST_GROUP] [name]  RESERVE 1 RSlgx5.exe HOST electricianbullpen_pc  Ensures that the computer named electriacianbullpen_pc will always have an available activation for the Logix Designer application.  TIMEOUT  Sets the time in seconds after which inactive licenses for a specific product are freed and reclaimed by the activation server.  TIMEOUT [featurekey] [count]  TIMEOUT RSlgx5.exe 3600  Reclaims RSLogix 5 licenses that have been inactive for 1 hour (3600 seconds).  TIMEOUTALL  Sets the time in seconds after which inactive licenses for all products are freed and reclaimed by the activation server.  TIMEOUTALL [count]  TIMEOUTALL 7200  Reclaims any licenses ",
+    "keywords": {
+      "option": "100",
+      "options": "100",
+      "syntax": "100"
+    }
+  },
+  {
+    "id": 72,
+    "title": "Decrease the maximum borrow time of an activation",
+    "url": "22758.htm",
+    "text": "Use the following procedure to decrease the maximum borrow time of a borrowed activation.  To decrease the maximum borrow time of an activation:  Click the Advanced tab, and click File Access.  Click Edit Options File to open the Options file, flexsvr.opt in a text editor. If the file does not exist, you will be prompted to create a new one.  Edit the Options file using the following as an example, which uses RS500.exe as the activation feature name for the RSLogix 500 product:  MAX_BORROW_HOURS &nbsp;RS500.exe &nbsp;24  where:  MAX_BORROW_HOURS&#8212; is the option to set the maximum number of hours to borrow activations.  RS500.exe&#8212; is the activation feature name for the RSLogix 500&reg; product, for example. See the increment line in the activation file to determine the correct feature name for your product.  24&#8212; is the maximum number of hours.  Save the file with the name flexsvr.opt in the default folder.  Restart the activation service to enable the new options.  Tip:  The factory-set maximum borrow time is also in the activation file BORROW= statement. If the activation file does not contain a BORROW= statement, the product does not support borrowing.  See also  Options file  Create or edit the options file  ",
+    "keywords": {
+      "borrow": "100",
+      "borrow time": "100",
+      "hours": "100",
+      "borrow hours": "100",
+      "max": "100"
+    }
+  },
+  {
+    "id": 73,
+    "title": "Reserve activations for individual host computers",
+    "url": "22801.htm",
+    "text": "Reserve activations for specific computers by editing the Options file, flexsvr.opt.  To reserve activations for individual host computers:  Open the existing flexsvr.opt file or create a new one.  Edit the Options file to include the following line. Replace:  [featurekey] with the name of the software application executable.  [count] with the number of activations to reserve.  [name] with the computer name on which to reserve activations:  RESERVE [count] [featurekey] HOST [name]  For example:   RESERVE 2 RS5K_700.EXE HOST Floorsupervisorpc.*  Holds two activations for the Logix Designer application for use by the computer named Floorsupervisorpc.  Save the file with the name flexsvr.opt in the default folder.   From the Advanced tab, refresh the activation server.  See also  Example Options file for individual host computers  Reserve activations for groups of host computers  Activation feature names associated with products  ",
+    "keywords": {
+      "reserve": "100",
+      "activations": "100",
+      "host ": "100"
+    }
+  },
+  {
+    "id": 74,
+    "title": "Reserve activations for groups of host computers",
+    "url": "22800.htm",
+    "text": "Edit the Options file to organize host computers in a group and reserve activations for the group.  To reserve activations for groups of host computers:  Open the existing flexsvr.opt options file or create a new file.  Edit the Options file to include the following lines. Replace:  [name] with the name of the group of computers  [host] with the name of the computer to be included in the group. Specify as many computers as necessary.  [featurekey] with the name of the software application executable.  [count] with the number of activations to reserve.  HOST_GROUP [name] [host1] [host2] [hostN]  RESERVE [count] [featurekey] HOST_GROUP [name]  For example:  HOST_GROUP Plantadminpcs flooradminpc supervisorpc1 supervisorpc2 teamleadpc1 teamleadpc2  RESERVE 5 RS5K_700.EXE HOST_GROUP Plantadminpcs.*  The first line creates the group Plantadminpcs composed of 5 computers. The second line holds five activations for the Logix Designer application for use by computers that are members of the Plantadminpcs group.  Save the file with the name flexsvr.opt in the default folder.  From the Advanced tab, refresh the activation server.  See also  Example Options file for groups of host computers  Activation feature names associated with products  Restrict maximum borrow time  Exclude a specific computer from borrowing  ",
+    "keywords": {
+      "reserve": "100",
+      "activation": "100",
+      "group": "100",
+      "host": "100"
+    }
+  },
+  {
+    "id": 75,
+    "title": "Exclude activations for lower-precedent products",
+    "url": "22802.htm",
+    "text": "Certain products, such as FactoryTalk&reg; Linx&#8482; and FactoryTalk Transaction Manager, check out activations in order of precedence. To reserve an activation for products that are lower in precedence, configure the Options file to exclude the activations with higher precedence.  For example, the following activations appear in order of precedence for a specific computer:  ActivationA.3000  ActivationB.2000  ActivationC.1000  To only use ActivationC.1000 on the computer OperatorComputer1, exclude ActivationA.3000 and ActivationB.2000, and reserve ActivationC.1000. The following shows the Options file edited to reserve one ActivationC.1000 activation for the computer OperatorComputer1.  EXCLUDE &nbsp;&nbsp;ActivationA.3000 HOST OperatorComputer1  EXCLUDE &nbsp;&nbsp;ActivationB.2000 HOST OperatorComputer1  RESERVE 1 ActivationC.1000 HOST OperatorComputer1  If ActivationA.3000 and ActivationsB.2000 are not excluded, they would check out first because they have a higher precedence than ActivationC.1000, even though ActivationC.1000 has been reserved.  See also  Reserve activations for individual host computers  Reserve activations for groups of host computers  Exclude a specific computer from borrowing  Restrict maximum borrow time  Options file  ",
+    "keywords": {
+      "exclude": "100",
+      "precedence": "100"
+    }
+  },
+  {
+    "id": 76,
+    "title": "Exclude a specific computer from borrowing an activation",
+    "url": "24308.htm",
+    "text": "Edit the Options file to prevent a specific computer from borrowing an activation.  Tip:  On systems using Flexera, activations are borrowed from a system account. Regardless of which computer logs into the system, Flexera considers the computer a system account, and using an EXCLUDE_BORROW entry in the flexsvr.opt file does not prevent that computer or a specific user from borrowing an activation.  To exclude a specific computer from borrowing an activation:  Open the existing flexsvr.opt options file or create a new file.  Edit the Options file to include the following line. Replace:  [featurekey] with the name of the software application executable.  [name] with the computer name to exclude from borrowing activations.  EXCLUDE_BORROW [featurekey] HOST [name]  For example:   EXCLUDE_BORROW RS5K_700.EXE HOST InternPC1.*  Prevents the computer named InternPC1 from borrowing an activation for the Logix Designer application.  Save the file with the name flexsvr.opt in the default folder.  From the Advanced tab, refresh the activation server.  See also  Example Options file for individual host computers  Activation feature names associated with products  Restrict maximum borrow time  Reserve activations for individual host computers  Reserve activations for groups of host computers  ",
+    "keywords": {
+      "exclude": "100",
+      "borrow": "100"
+    }
+  },
+  {
+    "id": 77,
+    "title": "Example Options file for individual host computers",
+    "url": "25230.htm",
+    "text": "This is an example of an Options file where:  RESERVE 3 RS500.exe HOST OperatorComputer1 &#8212; Reserves three activations for the RSLogix 500 product for the HOST computer OperatorComputer1.  RESERVE 2 RS500.exe HOST OperatorComputer2 &#8212; Reserves two activations for the RSLogix 500 product for the HOST computer OperatorComputer2.  Example  RESERVE 3 RS500.exe &nbsp;HOST OperatorComputer1  RESERVE 2 RS500.exe &nbsp;HOST OperatorComputer2  This example reserves five activations. Additional activations are available to other computers.  See also  Reserve activations for individual host computers  Options file  "
+  },
+  {
+    "id": 78,
+    "title": "Example Options file for groups of host computers",
+    "url": "25122.htm",
+    "text": "This is an example of an Options file where:  HOST_GROUP Operators OpComputer1 &#8212; Creates a computer group called Operators that consists of the Windows computer names OpComputer1 through OpComputer5.  HOST_GROUP Supervisors SupComputer1 &#8212; Creates a computer group called Supervisors that consists of the Windows computer names SupComputer1 through SupComputer5.  RESERVE 3 RS500.exe HOST_GROUP Operators &#8212; Reserves three activations from the available activations for RSLogix 500 for the Operators group. These activations are reserved exclusively for members of the Operators group and cannot be used by computers not in this group.  RESERVE 2 RS500.exe HOST_GROUP Supervisors &#8212; Reserves two activations from the available activations for RSLogix 500 for the Supervisors group. These activations are reserved exclusively for members of the Supervisors group and cannot be used by computers that are not members of the group.  Example  HOST_GROUP Operators OpComputer1 OpComputer2 OpComputer3 \\  OpComputer4 OpComputer5  HOST_GROUP Supervisors SupComputer1 SupComputer2 \\  SupComputer3 SupComputer4 SupComputer5  RESERVE 3 RS500.exe HOST_GROUP Operators  RESERVE 2 RS500.exe HOST_GROUP Supervisors  In this example, the Operators group includes five computers that share three activations. The first three computers that use the software lock the activations available to the group. If there are other activations available that are not reserved on the server, the other members of the Operators computer group can use the activations.  See also  Options file  Reserve activations for groups of host computers  Example Options file for individual host computers  "
+  },
+  {
+    "id": 79,
+    "title": "Troubleshoot",
+    "url": "24401.htm",
+    "text": "At release time, this application presents certain circumstances and errors that require troubleshooting. This section supplies categories of Troubleshooting topics that indicate possible causes and solutions.  Activation expirations  Activation requests  Borrowed activations  Bindings  Activation server and services  "
+  },
+  {
+    "id": 80,
+    "title": "Activation expirations",
+    "url": "357444.htm",
+    "text": "In this section:  Inaccurate display of activation expirations  "
+  },
+  {
+    "id": 81,
+    "title": "Inaccurate display of activation expirations",
+    "url": "357442.htm",
+    "text": "Possible cause and solution:  CodeMeter activations expire at a specific hour, minute, second. In FactoryTalk Activation Manager, the CodeMeter activation expiration time is at the beginning of the day. Depending on the time of day, the Find Available page may show a CodeMeter activation as available even though the activation expired and is not usable.   To view the CodeMeter activation expiration times, in CodeMeter Web Admin, select Container > Licenses.  The Find Available page and CodeMeter activations are consistent the beginning of day after the expiration date.  Tip:  FlexNet Publisher activation expiration time is at the end of the day.  "
+  },
+  {
+    "id": 82,
+    "title": "Activation requests",
+    "url": "283806.htm",
+    "text": "In this section:  Insufficient number of concurrent activations  Activation bound to the wrong host computer or dongle  Activation requested for the wrong product  Requested too many concurrent activations  Activations do not appear in available activations list  "
+  },
+  {
+    "id": 83,
+    "title": "Insufficient number of concurrent activations",
+    "url": "22776.htm",
+    "text": "Possible cause and solution:  Not enough concurrent activations for your usage of a product.  Purchase more activations for the same binding if the activations are available. Contact your Rockwell Automation sales office or Rockwell Automation Technical Support for sales information.  See also  Get an activation when Internet access is not available  "
+  },
+  {
+    "id": 84,
+    "title": "Activation bound to the wrong host computer or dongle",
+    "url": "22778.htm",
+    "text": "Possible cause and solution:  Requested activations for the wrong binding (computer or dongle).  Rehost all of the activations you downloaded and request the activations again for the correct binding.  See also  Rehost activations  "
+  },
+  {
+    "id": 85,
+    "title": "Activation requested for the wrong product",
+    "url": "22779.htm",
+    "text": "Possible cause and solution:  Requested an activation for the wrong product or the wrong version of a product.  Rehost all activations for that product, and request the correct activations.  See also  Rehost activations  "
+  },
+  {
+    "id": 86,
+    "title": "Requested too many concurrent activations",
+    "url": "22777.htm",
+    "text": "Possible cause and solution:  Requested too many concurrent activations for a product. To correct the problem, try one these possible solutions:  Rehost with partial activations and leave the correct number of activations on the local computer.  Rehost all of the activations and request the correct number of activations.  See also  Rehost activations  "
+  },
+  {
+    "id": 87,
+    "title": "Activations do not appear in available activations list",
+    "url": "22770.htm",
+    "text": "Possible cause and solution:  The activation has expired.  Request a new activation.  The computer cannot access the activation files on the dongle.  Verify that the dongle drivers are installed on the computer. If not, navigate to the ..\\Rockwell Software\\FactoryTalk Activation\\ subdirectory and double-click the Install Dongle Driver.bat file to launch the dongle installation process.  The activations were rehosted before they were returned.  Refresh the server by clicking Advanced > Manage This Server > Refresh.  The activation server is not reachable.  Verify that each selected computer in the Path to Activations is connected to the network and is available. If not, address the connectivity issues and try again.  Verify that each path in Path to Activations is correct. If not, correct the path to reflect the correct path to activations and then try again.  Check that the activation server is running. If the server state is Stopped, click Advanced > Manage This Server > Refresh.  See also  Restart the activation services  Configure the FactoryTalk Activation server  "
+  },
+  {
+    "id": 88,
+    "title": "Borrowed activations",
+    "url": "283808.htm",
+    "text": "In this section:  Cannot borrow an activation  Cannot return borrowed activations  Product does not start properly after borrowing activations  Inaccurate display of borrowed information  "
+  },
+  {
+    "id": 89,
+    "title": "Cannot borrow an activation",
+    "url": "22767.htm",
+    "text": "Possible cause and solution:  Some Rockwell Automation products do not support borrowed activations.  Verify that the product supports borrowing. See the product documentation for details.  The activation location is not defined.  Define the activation location using the following steps.  From the Borrow Activations page, click I Don't See My Activation here. The Find Available Activations page opens.  Click Update Activation Search Path.  Click Add Server.  Click the Browse button @ to navigate to and select the server and click OK.  Select the check box next to the server, and click Save.  Under the Available activations list click Refresh Activations.  Click Borrow Activations and try to borrow the activation.  The borrow term is incorrect.  At the Borrow Activations page, select the activation and click Set Borrow Term and select a valid borrow term.  The Options file settings prevent borrowing.  Click Advanced > File Access, and click Edit Options File to check if the EXCLUDE_BORROW or BORROW_LOWWATER keywords are configured to not allow an activation to be borrowed.  See also  Options file  "
+  },
+  {
+    "id": 90,
+    "title": "Cannot return borrowed activations",
+    "url": "22769.htm",
+    "text": "Possible cause and solution:  The activation path is incorrect.  Make sure the activation path on Manage Activations > Find available activations lists the location from which the activation was originally borrowed.  There are pending changes to the activation server.  Refresh the server. Click Advanced > Manage This Server > Refresh.  There is a clock discrepancy between the client and server.  Determine if the clock on the computer providing the activation or the clock on the computer receiving the activation was changed since the activation was issued. If the time changed, set the time relative to the time the activation was borrowed. For example, if the activation was borrowed at noon and five hours have passed, set the client computer's clock to 5 PM and return the activation.  The activation has already been returned.  Click Manage Activations > Find available activations and make sure there is a borrowed activation. Sometimes activations are returned to the activation server, but still appear present on the computer that borrowed the activation.  See also  Troubleshoot FactoryTalk Activation  "
+  },
+  {
+    "id": 91,
+    "title": "Product does not start properly after borrowing activations",
+    "url": "22774.htm",
+    "text": "Possible cause and solution:  An incorrect set of activations were borrowed.  Click Manage Activations > Find available activations and view the list of available activations. If the activations needed are not available, return the previously borrowed activation and borrow the required set.  The activations were borrowed before the latest update of FactoryTalk Activation Manager.  If the activation was borrowed using an earlier version of FactoryTalk Activation Manager, return the activation, update FactoryTalk Activation Manager, and borrow the activation again.  See also  Borrow an activation  Find available activations page  Options file  "
+  },
+  {
+    "id": 92,
+    "title": "Inaccurate display of borrowed information",
+    "url": "302289.htm",
+    "text": "View borrow details from Find Available Activations by selecting the number in the Borrowed column.  However, upon restart, the Borrow Details dialog box on the Activation Server will show an inaccurate expiration date for the FactoryTalk Activation Service on the FactoryTalk Activation Server of the borrowed activation. The expiration date will be based on the time the FactoryTalk Activation Service was restarted instead of the time when the activation was borrowed. This does not affect when the borrowed activation will expire and automatically returned. The initial term of the borrow will be honored. Only what displays in the Borrow Details dialog box is inaccurate. Inaccurate expiration dates and times might appear on client computers, also, if the FactoryTalk Activation Manager application is open when the Activation Server is rebooted.  Additionally, if a borrowed activation is renewed, in Find Available Activations on the Activation server, the numbers in the In use and Borrowed columns are changed from 1 to 0. The borrowed activation will be returned as normal. Only what displays in In use and Borrowed is inaccurate.  See also  Find where activations are in use  Borrow activations  Renew activations  "
+  },
+  {
+    "id": 93,
+    "title": "Bindings",
+    "url": "283809.htm",
+    "text": "In this section:  Cannot retrieve a binding from a dongle  Disk drive binding is not available for selection  Dongle activations take longer than expected  Activations not always available on a single computer  "
+  },
+  {
+    "id": 94,
+    "title": "Cannot retrieve a binding from a dongle",
+    "url": "22764.htm",
+    "text": "Possible cause and solution:  The dongle driver is not installed.  Install the dongle driver.  The dongle drive is out of date.  Check for updates to the dongle driver. If any are found install them and then try to retrieve the binding again.  See also  Install a driver for a FlexNet dongle  "
+  },
+  {
+    "id": 95,
+    "title": "Disk drive binding is not available for selection",
+    "url": "22798.htm",
+    "text": "Possible cause and solution:  The computer may have more than one hard disk drive.  The only hard disk binding listed is for the hard drive that the computer uses to boot up. Use that binding or bind the activation to the Ethernet MAC ID.  See also  Create or update a data file  Bind an activation to an Ethernet MAC ID  "
+  },
+  {
+    "id": 96,
+    "title": "Dongle activations take longer than expected",
+    "url": "22803.htm",
+    "text": "Possible cause and solution:  Dongle activations take longer than other activations to become available.  This is a known limitation of dongle activations.  See also  Supported dongle types  "
+  },
+  {
+    "id": 97,
+    "title": "Activations not always available on a single computer",
+    "url": "24298.htm",
+    "text": "Possible cause and solution:  The activation is locked to a virtual network adapter, such as a virtual private network (VPN) or virtual machine or is locked to a device that is currently not available, such as a network adapter, docking station, or a network adapter on a laptop that automatically powers down when not in use.  Rehost the activation. Get a new activation and lock it to the bindings of devices that are always available, such as hard disk serial numbers or Ethernet network adapters.  See also  Rehost activations  Damaged or deleted activation files  Activation checkout is denied  "
+  },
+  {
+    "id": 98,
+    "title": "Activation server and services",
+    "url": "24406.htm",
+    "text": "In this section:  Activation server is not responding  Activation checkout is denied  Start up time is excessive  A computer is consuming too many of the activations on the server  "
+  },
+  {
+    "id": 99,
+    "title": "Activation server is not responding",
+    "url": "22788.htm",
+    "text": "Possible cause and solution:  Rehosting a borrowed activation sometimes causes the activation server to be unresponsive and stop displaying concurrent activations.  Refresh the server. Click Advanced > Refresh This Server > Refresh Server.  See also  Restart the activation service  "
+  },
+  {
+    "id": 100,
+    "title": "Activation checkout is denied",
+    "url": "22765.htm",
+    "text": "Possible cause and solution:  All available activations are checked out.  Wait until an activation is returned or contact Rockwell Automation technical support to purchase additional activations.  The activation file was modified.  Rehost the activation file. Modified activations files are no longer valid. In these instances, get a new activation.  The activation file contains an invalid license.  Renew the activation file. If the license is invalid a new license file must be granted from the activation server.  The options file restricts access to activations.  Update the options file to enable the required access.  The activation is not available on the server providing activations.  Update the Path to Activations to include the activation server that is hosting the activation needed.  Tip:  Additional information about denied activations may be available in the activation server log file.  See also  View the server log file  Rehost activations  Renew activations  Options file  Path to Activations list  "
+  },
+  {
+    "id": 101,
+    "title": "Start up time is excessive",
+    "url": "22771.htm",
+    "text": "Possible cause and solution:  Network latency is impacting performance of the activation server.  The Microsoft Loopback Adapter can affect local check in and check out of concurrent activations. Review the Microsoft hotfix 979612 which can improve TCP loopback latency and UDP latency in Windows Server 2008, Windows Server 2008 R2, Windows Vista, and Windows 7 to see if it applies to your system.  A computer listed in the Path to Activations is not accessible.  From the Home page, click Manage Activations > Find available activations, and make sure each path in Path to Activations is correct. Also, remove any computer from the list that is no longer being used to provide activations and make sure that the order of the locations is optimal for providing activations without delays. Click Up or Down to reorder the activation paths.  The activation server is not running.  Click Advanced >Refresh This Server. If the Server state is Stopped, click Refresh.  See also  Manage the server  Set up a primary and a backup activation server  "
+  },
+  {
+    "id": 102,
+    "title": "A computer is consuming too many of the activations on the server",
+    "url": "22773.htm",
+    "text": "Possible cause and solution:  By default, capacity activations are granted on a first come first served basis.  If one computer is requesting an excessive number of activations, edit the Options file to set a MAX number of licenses for that host computer by adding a line in the following syntax:  MAX [count] [featurekey] HOST [name]  For example, if you wanted to keep the computer \"SharedOps\" from obtaining more than three activations for RSLinx you would use the following line:<br />MAX 3 RSLINX.EXE HOST SharedOps  See also  Options file  "
+  },
+  {
+    "id": 103,
+    "title": "Glossary",
+    "url": "22730.htm",
+    "text": "In this section:  A - B  C - F  G - Z  "
+  },
+  {
+    "id": 104,
+    "title": "A - B",
+    "url": "278790.htm",
+    "text": "activate  To make a Rockwell Software product active so that it can run without the limitations imposed by demonstration mode. Without activation, some Rockwell Software products will not run, some will run with diminished functionality, and others will run for a limited period of time and then shut down with or without warning.  activation file  A text file that contains all of the activation information that is required to license a software product and allow it to properly function. While the file is simply plain text, the contents of the file are protected by a signature.  activation host  The device associated with an activation by a unique ID.  activation server  An activation server is any computer that hosts concurrent activations. The activation server manages the activations and shares them with other configured computers on the network.  binding  A virtual connection of two or more components in a system.\u00a0  "
+  },
+  {
+    "id": 105,
+    "title": "C - F",
+    "url": "283642.htm",
+    "text": "capacity activation  A type of concurrent activation in which the number of activations is based on some defined capacity of the product, such as tag count, number of users, or number of computers.   concurrent activation  A type of activation that allows multiple computers across a network to use Rockwell Software products at the same time. Concurrent activations include floating activations and borrowed activations.   dongle  A dongle is a security or copy protection device for commercial computer programs. When required by a program, a dongle must be connected to an input/output port, such as USB or parallel port of the computer, to allow the program to run. Programs that use a dongle query the port at start-up and at programmed intervals thereafter, and terminate if the dongle does not respond with the expected validation code.  floating activation  A type of concurrent activation that requires a continuous network connection and allows multiple computers to use Rockwell Software products concurrently. An activation server manages a predetermined number of activations in a pool, and makes these activations available to any configured computer on the network.  When a computer connects to the network and runs a Rockwell Software product, it automatically \"checks out\" an activation from the pool of available concurrent activations. When the product shuts down, the activation is automatically freed and returns to the activation server's available pool. Checking out activations from the pool and returning them to the server happens automatically, without any user intervention.  "
+  },
+  {
+    "id": 106,
+    "title": "G - Z",
+    "url": "283643.htm",
+    "text": "mobile activation  An activation that is locked to a dongle rather than to a computer hardware device allowing the software to be activated on any computer to which the dongle is attached.  node-locked activation  An activation that is locked to a specific piece of computer hardware and is used only on the computer to which it is locked. Examples of computer hardware used for node-locked activation include an ethernet card, a hard disk, or a dongle. Node-locked activation is not supported by all products. See your product documentation for information on what types of activation it supports.  rehost (an activation)  Rehosting an activation provides a way of moving an activation file from one computer or device to another. Rehosting an activation file deactivates the file on the computer that is hosting it, and then creates a rehost code that&nbsp;Rockwell Technical Support staff can use to generate a new activation file for use on another computer.  rehost code  A code generated by the FactoryTalk Activation Manager when you rehost an activation.  signature  The unique key to each activation file that protects the contents of the file. The signature is generated by Rockwell Automation, and is based on machine-specific information that you provide when you install the software.   "
+  },
+  {
+    "id": 107,
+    "title": "Legal Notices",
+    "url": "196866.htm",
+    "text": "Copyright notice  Copyright &copy; 2020 Rockwell Automation Technologies, Inc. All Rights Reserved. Printed in USA.  This document and any accompanying Rockwell Software products are copyrighted by Rockwell Automation Technologies, Inc. Any reproduction and/or distribution without prior written consent from Rockwell Automation Technologies, Inc. is strictly prohibited. Please refer to the license agreement for details.  End User License Agreement (EULA)  You can view the Rockwell Automation End-User License Agreement (\"EULA\") by opening the License.rtf file located in your product's install folder on your hard drive.  Open Source Licenses  The software included in this product contains copyrighted software that is licensed under one or more open source licenses. Copies of those licenses are included with the software. Corresponding Source code for open source packages included in this product are located at their respective web site(s).  Alternately, obtain complete Corresponding Source code by contacting Rockwell Automation via the Contact form on the Rockwell Automation website: http://www.rockwellautomation.com/global/about-us/contact/contact.page  <br />Please include \"Open Source\" as part of the request text.  A full list of all open source software used in this product and their corresponding licenses can be found in the OPENSOURCE folder included with these Release Notes. The default installed location of these licenses is C:\\Program Files (x86)\\Common Files\\Rockwell\\Help\\FTA\\ReleaseNotes\\ENU\\OPENSOURCE\\index.htm.  Trademark Notices  Allen-Bradley, Rockwell Automation, and Rockwell Software are trademarks of Rockwell Automation, Inc.  Any Rockwell Automation software or hardware not mentioned here is also a trademark, registered or otherwise, of Rockwell Automation, Inc.  Other Trademarks  All other trademarks are the property of their respective holders and are hereby acknowledged.  Trademarks not belonging to Rockwell Automation are property of their respective companies  Warranty  This product is warranted in accordance with the product license. The product&#8217;s performance may be affected by system configuration, the application being performed, operator control, maintenance, and other related factors. Rockwell Automation is not responsible for these intervening factors. The instructions in this document do not cover all the details or variations in the equipment, procedure, or process described, nor do they provide directions for meeting every possible contingency during installation, operation, or maintenance. This product&#8217;s implementation may vary among users.  This document is current as of the time of release of the product; however, the accompanying software may have changed since the release. Rockwell Automation, Inc. reserves the right to change any information contained in this document or the software at any time without prior notice. It is your responsibility to obtain the most current information available from Rockwell when installing or using this product.  Contact Rockwell Automation  Customer Support Telephone &#8212; 1.888.382.1583  Online Support &#8212; http://www.rockwellautomation.com/support/  "
+  }
+]
+; return json; };

@@ -1,0 +1,2 @@
+// Copyright © Rockwell Automation Technologies, Inc. All Rights Reserved
+$(document).ready(function(){$("#search_form #keyword").attr("placeholder",translation_search),$("#search_form").submit(function(e){var r="search_results.htm?search_term="+$("#keyword").val();window.location.assign(encodeURI(r)),e.preventDefault()})});

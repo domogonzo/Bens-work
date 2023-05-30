@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title> Set up a primary and a backup activation server </title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Force IE to use latest rendering mode. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Kindly request zoom-in on mobile devices. -->
+		<link rel="stylesheet" type="text/css" href="mft/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="mft/mobile-toolkit-ra/mobile-toolkit-ra.css">
+		<link rel="stylesheet" type="text/css" href="mft/ra-icons/ra-icons.css">
+		<link rel="stylesheet" type="text/css" href="template_layout.css">
+		<script language="javascript" type="text/javascript" src="mft/jquery/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/popper/popper.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/bootstrap/bootstrap.js"></script>
+		<script language="javascript" type="text/javascript" src="jquery.mark.js"></script>
+		<script language="javascript" type="text/javascript" src="ui_strings.js"></script>
+		<script language="javascript" type="text/javascript" src="search.js"></script>
+		<script language="javascript" type="text/javascript" src="toc.js"></script>
+		<script language="javascript" type="text/javascript" src="create_toc.js"></script>
+	</head>
+	<body>
+		<div>
+			<div class="ra-flex-column">
+				<!-- PAGE HEADER -->
+				<div id="page_header" class="ra-flex-row ra-flex-align-main-center ra-flex-align-cross-center">
+					<div class="ra-flex-item-shrink"><p class="breadcrumbs"><a class="breadcrumblink" href="22785.htm">Configure the FactoryTalk Activation server</a><span class="breadcrumbactive"><span class="breadcrumbdelimiter"> &gt; </span>Set up a primary and a backup activation server</span></p></div>
+					<div class="ra-flex-item-dynamic"><!-- spacer --></div>
+					<form class="ra-flex-item-shrink ra-flex-row ra-flex-align-main-end ra-flex-align-cross-center" id="search_form">
+						<div class="ra-flex-item-shrink">
+							<input class="form-control" type="text" id="keyword" placeholder="...">
+						</div>
+						<div class="ra-flex-item-shrink">
+							<button class="btn btn-outline-dark" type="submit">
+								<span class="ra-icon-search"></span>
+							</button>
+						</div>
+					</form>
+					<div class="ra-flex-item-shrink dropdown">
+						<button id="cvbhelp_settings_button" class="btn btn-outline-dark" data-toggle="dropdown" data-display="static">
+							<span class="ra-icon-settings"></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="cvbhelp_settings_button">
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="show_toc_checkbox" id="show_toc_label" style="white-space: nowrap;">Show Table of Contents</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="show_toc_checkbox">
+								</div>
+							</div>
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="highlight_terms_checkbox" id="highlight_terms_label" style="white-space: nowrap;">Highlight search results</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="highlight_terms_checkbox">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PAGE BODY -->
+				<div class="ra-flex-row ra-flex-item-dynamic">
+					<!-- CONTENT -->
+					<div id="content_section" class="ra-flex-item-dynamic">
+						<h1>Set up a primary and a backup activation server</h1>
+<p>Use a backup activation server to provide activations in case your primary activation server fails. To establish two activation servers with one as a backup, install FactoryTalk Activation Manager and add the activation files to both computers. Lock the activations to a dongle so that the dongle can be moved between the servers. Add the location of both activation servers to any computer that will be checking out activations.</p>
+<h2>To set up a primary and a backup activation server:</h2>
+<ol>
+<li>Install FactoryTalk Activation Manager on both server computers.</li>
+<li>Retrieve activation files for the primary server using the dongle as the binding.</li>
+<li>Copy the activation files you retrieved to the activation folder on the backup server.</li>
+<li>Attach the dongle to the primary server.</li>
+<li>Configure all computers that need software activations to recognize both servers. To expedite checkouts, place the primary server at the top of the list of servers.</li>
+<li>If the primary server fails, move the dongle to the secondary server.</li>
+<li>On the FactoryTalk Activation Manager <strong>Home</strong> page, click the <strong>Manage Activations</strong> tab, and move the secondary server to the top of the list to expedite checkouts.</li>
+</ol>
+<h2>See also</h2>
+<p class="seealso"><a id="h22820" class="jumptemplate" title="Get an activation for a dongle" href="22722.htm" target="_self">Get an activation for a plug-and-play dongle</a></p>
+<p class="seealso"><a id="h22809" class="jumptemplate" title="Add an activation server to the search path" href="22704.htm" target="_self">Update activation search path locations</a></p>
+<p class="seealso"><a id="h22831" class="jumptemplate" title="Refresh the FactoryTalk Activation server" href="28910.htm" target="_self">Manage the FactoryTalk Activation server</a></p>
+<p class="seealso"><a id="h22904" class="jumptemplate" title="File access settings" href="22780.htm" target="_self">File access</a></p>
+<p class="keywords">Keywords: primary, backup, secondary</p>
+
+
+					</div>
+					<!-- TOC COLUMN -->
+					<div id="related_and_nav_column" class="ra-flex-item-static collapse in">
+						<div id="TOCBoxContents">
+							<!-- Content filled in by create_toc.js -->
+						</div>
+					</div>
+				</div>
+				<!-- PAGE FOOTER -->
+				<div id="page_footer" class="ra-flex-row ra-flex-item-static small">
+					<div class="ra-flex-item-dynamic">
+						Copyright © 2020 Rockwell Automation Technologies, Inc. All Rights Reserved.
+					</div>
+					<div class="ra-flex-item-static">
+						<a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/du/ra-du002_-en-e.pdf">How are we doing?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

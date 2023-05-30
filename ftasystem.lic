@@ -1,0 +1,10 @@
+# Rockwell Automation License File
+# Copyright (C) 2003-2010 All Rights Reserved
+
+SERVER this_host ANY
+USE_SERVER
+VENDOR flexsvr
+INCREMENT fta.system flexsvr 1.00 permanent 1 VENDOR_STRING=1 \
+    vendor_info="PRODUCT_NAME:FTA System Placeholder" SN=1 \
+    SIGN="00FB D8C8 C8F8 49F2 480A E303 5567 E100 A110 03FF 3224 \
+    F038 B859 C955 5900"

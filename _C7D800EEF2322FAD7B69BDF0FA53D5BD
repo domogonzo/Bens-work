@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title> Application notes </title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Force IE to use latest rendering mode. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Kindly request zoom-in on mobile devices. -->
+		<link rel="stylesheet" type="text/css" href="mft/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="mft/mobile-toolkit-ra/mobile-toolkit-ra.css">
+		<link rel="stylesheet" type="text/css" href="mft/ra-icons/ra-icons.css">
+		<link rel="stylesheet" type="text/css" href="template_layout.css">
+		<script language="javascript" type="text/javascript" src="mft/jquery/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/popper/popper.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/bootstrap/bootstrap.js"></script>
+		<script language="javascript" type="text/javascript" src="jquery.mark.js"></script>
+		<script language="javascript" type="text/javascript" src="ui_strings.js"></script>
+		<script language="javascript" type="text/javascript" src="search.js"></script>
+		<script language="javascript" type="text/javascript" src="toc.js"></script>
+		<script language="javascript" type="text/javascript" src="create_toc.js"></script>
+	</head>
+	<body>
+		<div>
+			<div class="ra-flex-column">
+				<!-- PAGE HEADER -->
+				<div id="page_header" class="ra-flex-row ra-flex-align-main-center ra-flex-align-cross-center">
+					<div class="ra-flex-item-shrink"><p class="breadcrumbs"><a class="breadcrumblink" href="135540.htm">FactoryTalk Activation Manager Release Notes</a><span class="breadcrumbactive"><span class="breadcrumbdelimiter"> &gt; </span>Application notes</span></p></div>
+					<div class="ra-flex-item-dynamic"><!-- spacer --></div>
+					<form class="ra-flex-item-shrink ra-flex-row ra-flex-align-main-end ra-flex-align-cross-center" id="search_form">
+						<div class="ra-flex-item-shrink">
+							<input class="form-control" type="text" id="keyword" placeholder="...">
+						</div>
+						<div class="ra-flex-item-shrink">
+							<button class="btn btn-outline-dark" type="submit">
+								<span class="ra-icon-search"></span>
+							</button>
+						</div>
+					</form>
+					<div class="ra-flex-item-shrink dropdown">
+						<button id="cvbhelp_settings_button" class="btn btn-outline-dark" data-toggle="dropdown" data-display="static">
+							<span class="ra-icon-settings"></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="cvbhelp_settings_button">
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="show_toc_checkbox" id="show_toc_label" style="white-space: nowrap;">Show Table of Contents</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="show_toc_checkbox">
+								</div>
+							</div>
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="highlight_terms_checkbox" id="highlight_terms_label" style="white-space: nowrap;">Highlight search results</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="highlight_terms_checkbox">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PAGE BODY -->
+				<div class="ra-flex-row ra-flex-item-dynamic">
+					<!-- CONTENT -->
+					<div id="content_section" class="ra-flex-item-dynamic">
+						<table class="relatedtopics aboveheading">
+<tr>
+<td>
+<p><a href="toc4418403.htm" target="TOC"><img src="122.gif" alt="Book Contents" height="17" width="48" vspace="0" hspace="0" align="bottom" border="0"></a></p>
+</td>
+</tr>
+</table>
+<h1>Application notes</h1>
+<p>The following are the application notes for FactoryTalk Activation Manager.</p>
+<h2>FactoryTalk Activation Manager version 4.04 supports renewing activations that have changed type from FlexNet to CodeMeter</h2>
+<p>In FactoryTalk Activation Manager versions 4.04 and later, renewals of activations can include an activation type change from FlexNet to CodeMeter in addition to the expiration date change.</p>
+<p>This type change is supported only when the original FlexNet activation is bound to the computer and replaced with a CodeMeter activation bound to the computer.</p>
+<p>For dongles, perform a rehost of the original activation and a get of the renewed activation for the activation type. For example, a rehost is necessary when:</p>
+<ul>
+<li>Changing from a FlexNet dongle to a CodeMeter dongle</li>
+<li>Changing from a CodeMeter dongle to a FlexNet dongle</li>
+<li>Activation is bound to a FlexNet dongle, a CodeMeter dongle, or a CodeMeter computer</li>
+</ul>
+<p>In FactoryTalk Activation Manager versions 4.02 and later, renewals of activations bound to dongles or computers are supported in which the technology is not changing.</p>
+<h2>FactoryTalk Activation Manager versions 4.03 and earlier do not support renewing activations that have changed type from FlexNet to CodeMeter</h2>
+<p>FactoryTalk Activation Manager versions 4.03 and earlier do not renew activations that have changed type from FlexNet to CodeMeter. Rockwell Automation recommends installing version 4.04, which supports renewing activations that have changed type from FlexNet to CodeMeter. If upgrading to version 4.04 is not possible, perform a rehost of the original activation and a get of the renewed activation for the activation type.</p>
+<h2>FactoryTalk Activation Manager versions on client and server should match to support Subscription Portal License Manager</h2>
+<p>If upgrading either activation servers or clients from FactoryTalk Activation Manager 4.00 or earlier, upgrade both the servers and clients to FactoryTalk Activation Manager 4.04.   </p>
+<h2>Unavailable activations are listed only on FactoryTalk Activation Manager running on a server </h2>
+<p>Expired FlexNet activations do not appear on FactoryTalk Activation Manager running on client machines. This behavior is by design, because expired activations cannot be acted upon from a client machine. On FactoryTalk Activation Manager running on a server, activations that are not available, because they have either expired or not yet reached their start date, are displayed as disabled and show a red icon. Hovering over the icon displays a tooltip that explains why the row is disabled.</p>
+<p>Rehost expired activations to remove them from the Find Available display.</p>
+<h2>Removing CodeMeter server address from search path causes errors</h2>
+<p>After a CM activation is borrowed, removing the CodeMeter server address from the search path on the <strong>Update Activation Search Path</strong> dialog box on the client PC causes these errors:</p>
+<ul>
+<li>The return of the activation fails and this error appears: <code>Borr.010: Server License not found.</code>
+</li>
+<li>In the <strong>Borrow date</strong> box in the <strong>Return Activations</strong> table, this text appears: <code>Start time is not available. The source of the borrowed license may not be available.</code>
+</li>
+</ul>
+<h2>Date and time settings must match on client and server computers</h2>
+<p>To borrow CodeMeter activations correctly, the date and time settings of the client and server computers must match within one minute. If the date and time settings do not match, unexpected behavior occurs, such as the failure to activate valid licenses.</p>
+<h2>Borrowing or returning CodeMeter activations generates only client diagnostic message</h2>
+<p>Borrowing or returning CodeMeter activations generates only a client diagnostic message. However, borrowing or returning FlexNet Publisher (FNP) activations generates both server and client diagnostic messages.</p>
+<p>This is intended behavior.</p>
+<h2>Updates to server search list</h2>
+<p>Rockwell Automation recommends using FactoryTalk Activation Manager exclusively to make updates to the server search list. If using CodeMeter Web Admin to update the server search list, the updates may not reflect accurately in the FactoryTalk Activation Manager search list.</p>
+<h2>Remote Desktop Connection to client computer running Windows Server limits return of activations and activation of products</h2>
+<p>When using a remote desktop connection to a client computer running a Windows Server operating system, borrowed CodeMeter activations are not displayed, borrowed activations cannot be returned manually (they are automatically returned when they expire), and products relying on the borrowed activation cannot be activated. To work around these limitations, log into the client computer directly. Rockwell Automation recommends not using a Windows Server operating system on a computer that uses borrowed activations or points to a FactoryTalk Activation server.</p>
+<h2>FactoryTalk Activation Manager is incompatible with Top Server 6 software</h2>
+<p>For FactoryTalk Activation Manager to operate correctly, Top Server 6 software must be uninstalled, and the FLEXID_LIBRARY_PATH environment variable must be removed.</p>
+<p>For more information on this issue, see Knowledgebase Document ID: <a class="" title="" href="https://rockwellautomation.custhelp.com/app/answers/answer_view/a_id/1074301" target="_blank">BF14522 FactoryTalk Activation Manager: FTAManager has stopped working</a>.</p>
+<table class="tableintopic">
+<tr>
+<td>
+<p class="tablebodytextcenter"><img src="gsm_brand_2020_note_lightbulb_web.jpg" alt="NOTE" height="40" width="40" vspace="0" hspace="0" align="bottom" border="0"></p>
+</td>
+<td>
+<p>Tip: Sign in to your Rockwell Automation account to view Knowledgebase articles.</p>
+</td>
+</tr>
+
+</table>
+<h2>VeriSign Universal Root Certification Authority certificate</h2>
+<p>If the VeriSign Universal Root Certification Authority certificate does not exist on the local computer, the certificate is installed while installing Rockwell Automation software. Use Microsoft Management Console (MMC) to view the certificate in <strong>Console Root &gt; Certificates (Local Computer) &gt; Trusted Root Certification Authorities &gt; Certificates</strong>.</p>
+<h2>Unattended or silent install</h2>
+<p>Use command-line parameters to perform an unattended or silent installation of the software.</p>
+<h2>Command-line parameters</h2>
+<p>The following table identifies the installation command-line parameters. Command-line parameters are case-insensitive. However, if a specified value includes a space, be sure to enclose the value in quotation marks (for example, "value with spaces").</p>
+<p></p>
+<table class="tableintopic">
+<tr>
+<th style="border-right:1px solid #010101;border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Parameter</strong></p>
+</th>
+<th style="border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Description</strong></p>
+</th>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>/Q</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>One of /Q and /QS is required if /Record is not specified. </p>
+<p>Installs the product in the silent mode without any user interface.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>/QS</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>One of /Q and /QS is required if /Record is not specified.</p>
+<p>Installs the product in the unattended mode without user interaction during installation, and shows the progress, errors, or complete messages on the user interface.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>/IAcceptAllLicenseTerms</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Required for /Q or /QS. </p>
+<p>Specifies that you read and acknowledge all license agreements, and agree to continue the installation.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>/AutoRestart</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Optional. If specified, the computer restarts automatically after the installation if a restart is required to complete the installation. If a restart is not required, the parameter is ignored.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>/SetupLanguage</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Optional. Specifies which language is displayed during the install process.</p>
+<p>The value must be one of the following:</p>
+<ul>
+<li>ENU</li>
+<li>CHS</li>
+<li>DEU</li>
+<li>ESP</li>
+<li>FRA</li>
+<li>ITA</li>
+<li>JPN</li>
+<li>KOR</li>
+<li>PTB<p>If this parameter is omitted, the default language is the user or system user interface language.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>/Record</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Optional. Records inputs to a recording file.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>/Playback</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Optional. Plays back a recorded file.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>/DisableAutoRenew</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Optional. If specified, disables the FactoryTalk Activation Manager from automatically connecting to the Rockwell Automation Activation service to query for renewed activations to download. Activations are renewed automatically by default.</p>
+</td>
+</tr>
+
+</table>
+<h2>Examples</h2>
+<p>The following examples show how to use the installation commands.</p>
+<ul>
+<li>For a silent install with default parameters:<p class="codeindent2"><code>Setup.exe /Q /IAcceptAllLicenseTerms</code></p>
+</li>
+<li>For an unattended install with customized parameter:<p class="codeindent2"><code>Setup.exe /QS /IAcceptAllLicenseTerms /AutoRestart /SetupLanguage=CHS</code></p>
+</li>
+<li>For launching an install with the /Record parameter to enter record mode:<p class="codeindent2"><code>Setup.exe /Record</code></p>
+</li>
+<li>For launching an install with the /Playback parameter to enter playback mode:<p class="codeindent2"><code>Setup.exe /Q /IAcceptAllLicenseTerms /Playback="C:\Filename.rec"</code></p>
+</li>
+</ul>
+<h2>Error codes</h2>
+<p>The following table identifies the error codes that can be returned by an installation. </p>
+<table class="tableintopic">
+<tr>
+<th style="border-right:1px solid #010101;border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Error Code</strong></p>
+</th>
+<th style="border-right:1px solid #010101;border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Value</strong></p>
+</th>
+<th style="border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Description</strong></p>
+</th>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>ERROR_SUCCESS</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>0</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Installation completed successfully.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>ERROR_INVALID_PARAMETER</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>87</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>One parameters is invalid.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>ERROR_INSTALL_USEREXIT</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>1602</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Installation cancelled by user.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>ERROR_INSTALL_FAILURE</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>1603</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Fatal error during installation.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>ERROR_BAD_CONFIGURATION</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>1610</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Configuration data for product corrupt. Contact support personnel.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>ERROR_REBOOT_CONTINUE</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>1641</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Restart required to continue installation.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>ERROR_SUCCESS_REBOOT_REQUIRED</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>3010</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Restart required to complete installation. After restart, product is successfully installed.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>ERROR_REBOOT_PENDING</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>3012</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Restart pending. Restart computer for installation to continue.</p>
+</td>
+</tr>
+
+</table>
+<h2>See also</h2>
+<p class="seealso"><a id="h402517" class="jumptemplate" title="Legal Notices" href="401355.htm" target="_self">Legal Notices</a></p>
+
+
+					</div>
+					<!-- TOC COLUMN -->
+					<div id="related_and_nav_column" class="ra-flex-item-static collapse in">
+						<div id="TOCBoxContents">
+							<!-- Content filled in by create_toc.js -->
+						</div>
+					</div>
+				</div>
+				<!-- PAGE FOOTER -->
+				<div id="page_footer" class="ra-flex-row ra-flex-item-static small">
+					<div class="ra-flex-item-dynamic">
+						Copyright © 2021 Rockwell Automation Technologies, Inc. All Rights Reserved.
+					</div>
+					<div class="ra-flex-item-static">
+						<a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/du/ra-du002_-en-e.pdf">How are we doing?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

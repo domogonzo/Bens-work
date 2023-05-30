@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Force IE to use latest rendering mode. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Kindly request zoom-in on mobile devices. -->
+		<link rel="stylesheet" type="text/css" href="mft/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="mft/mobile-toolkit-ra/mobile-toolkit-ra.css">
+		<link rel="stylesheet" type="text/css" href="mft/ra-icons/ra-icons.css">
+		<link rel="stylesheet" type="text/css" href="template_layout.css">
+		<script language="javascript" type="text/javascript" src="mft/jquery/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/popper/popper.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/bootstrap/bootstrap.js"></script>
+		<script language="javascript" type="text/javascript" src="jquery.mark.js"></script>
+		<script language="javascript" type="text/javascript" src="ui_strings.js"></script>
+		<script language="javascript" type="text/javascript" src="search.js"></script>
+		<script language="javascript" type="text/javascript" src="search_db.js"></script>
+		<script language="javascript" type="text/javascript" src="search_results.js"></script>
+		<script language="javascript" type="text/javascript" src="toc.js"></script>
+		<script language="javascript" type="text/javascript" src="create_toc.js"></script>
+	</head>
+	<body>
+		<div>
+			<div class="ra-flex-column">
+				<!-- PAGE HEADER -->
+				<div id="page_header" class="ra-flex-row ra-flex-align-main-center ra-flex-align-cross-center">
+					<!-- No breadcrumbs. -->
+					<div class="ra-flex-item-dynamic"><!-- spacer --></div>
+					<form class="ra-flex-item-shrink ra-flex-row ra-flex-align-main-end ra-flex-align-cross-center" id="search_form">
+						<div class="ra-flex-item-shrink">
+							<input class="form-control" type="text" id="keyword" placeholder="...">
+						</div>
+						<div class="ra-flex-item-shrink">
+							<button class="btn btn-outline-dark" type="submit">
+								<span class="ra-icon-search"></span>
+							</button>
+						</div>
+					</form>
+					<div class="ra-flex-item-shrink dropdown">
+						<button id="cvbhelp_settings_button" class="btn btn-outline-dark" data-toggle="dropdown" data-display="static">
+							<span class="ra-icon-settings"></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="cvbhelp_settings_button">
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="show_toc_checkbox" id="show_toc_label" style="white-space: nowrap;">Afficher la table des matières</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="show_toc_checkbox">
+								</div>
+							</div>
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="highlight_terms_checkbox" id="highlight_terms_label" style="white-space: nowrap;">Surligner les résultats de la recherche</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="highlight_terms_checkbox">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PAGE BODY -->
+				<div class="ra-flex-row ra-flex-item-dynamic">
+					<!-- CONTENT -->
+					<div id="search_results" class="ra-flex-item-dynamic">
+						<!-- Auto-replaced by search_results.js -->
+					</div>
+					<!-- TOC COLUMN -->
+					<div id="related_and_nav_column" class="ra-flex-item-static collapse in">
+						<div id="TOCBoxContents">
+							<!-- Content filled in by create_toc.js -->
+						</div>
+					</div>
+				</div>
+				<!-- PAGE FOOTER -->
+				<div id="page_footer" class="ra-flex-row ra-flex-item-static small">
+					<div class="ra-flex-item-dynamic">
+						Copyright © 2020 Rockwell Automation Technologies, Inc. Tous droits réservés.
+					</div>
+					<div class="ra-flex-item-static">
+						<a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/du/ra-du002_-en-e.pdf">How are we doing?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

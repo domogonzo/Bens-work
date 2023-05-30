@@ -1,0 +1,2 @@
+// Copyright © Rockwell Automation Technologies, Inc. All Rights Reserved
+var translation_search="Cerca",translation_search_results="Risultati della ricerca",translation_please_enter_a_search_term="Immettere un termine per la ricerca.",translation_no_results_for_term="Nessun risultato di ricerca per",translation_show_toc="Visualizza il sommario",translation_highlight_results="Evidenzia i risultati delle ricerche";

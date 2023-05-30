@@ -1,0 +1,1 @@
+CALL "%~dp0certmgr.exe" /add "%~dp0MicRooCerAut2011_2011_03_22.cer" /s /r localMachine root

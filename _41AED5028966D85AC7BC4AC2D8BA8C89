@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title> Get new activations </title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Force IE to use latest rendering mode. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Kindly request zoom-in on mobile devices. -->
+		<link rel="stylesheet" type="text/css" href="mft/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="mft/mobile-toolkit-ra/mobile-toolkit-ra.css">
+		<link rel="stylesheet" type="text/css" href="mft/ra-icons/ra-icons.css">
+		<link rel="stylesheet" type="text/css" href="template_layout.css">
+		<script language="javascript" type="text/javascript" src="mft/jquery/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/popper/popper.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/bootstrap/bootstrap.js"></script>
+		<script language="javascript" type="text/javascript" src="jquery.mark.js"></script>
+		<script language="javascript" type="text/javascript" src="ui_strings.js"></script>
+		<script language="javascript" type="text/javascript" src="search.js"></script>
+		<script language="javascript" type="text/javascript" src="toc.js"></script>
+		<script language="javascript" type="text/javascript" src="create_toc.js"></script>
+	
+</head>
+	<body>
+		<div>
+			<div class="ra-flex-column">
+				<!-- PAGE HEADER -->
+				<div id="page_header" class="ra-flex-row ra-flex-align-main-center ra-flex-align-cross-center">
+					<div class="ra-flex-item-shrink"><p class="breadcrumbs"><span class="breadcrumbactive">Get new activations</span></p></div>
+					<div class="ra-flex-item-dynamic"><!-- spacer --></div>
+					<form class="ra-flex-item-shrink ra-flex-row ra-flex-align-main-end ra-flex-align-cross-center" id="search_form">
+						<div class="ra-flex-item-shrink">
+							<input class="form-control" type="text" id="keyword" placeholder="...">
+						</div>
+						<div class="ra-flex-item-shrink">
+							<button class="btn btn-outline-dark" type="submit">
+								<span class="ra-icon-search"></span>
+							</button>
+						</div>
+					</form>
+					<div class="ra-flex-item-shrink dropdown">
+						<button id="cvbhelp_settings_button" class="btn btn-outline-dark" data-toggle="dropdown" data-display="static">
+							<span class="ra-icon-settings"></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="cvbhelp_settings_button">
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="show_toc_checkbox" id="show_toc_label" style="white-space: nowrap;">Show Table of Contents</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="show_toc_checkbox">
+								</div>
+							</div>
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="highlight_terms_checkbox" id="highlight_terms_label" style="white-space: nowrap;">Highlight search results</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="highlight_terms_checkbox">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PAGE BODY -->
+				<div class="ra-flex-row ra-flex-item-dynamic">
+					<!-- CONTENT -->
+					<div id="content_section" class="ra-flex-item-dynamic">
+						<table class="relatedtopics aboveheading">
+<tr>
+<td>
+<p><a href="toc.htm" target="TOC"><img src="122.gif" alt="Book Contents" height="17" width="48" vspace="0" hspace="0" align="bottom" border="0"></a></p>
+</td>
+</tr>
+</table>
+<h1>Get new activations</h1>
+<p><a tabindex="0" data-toggle="collapse" data-target="#d28897" id="h28897" class="expandingblocktemplate" title="How do I display the Get New Activations page?" target="_self">How do I open the Get New Activations page?</a></p>
+<div id="d28897" class="collapse">
+<p>Click <strong>Manage Activations &gt; Get New Activations</strong>.</p>
+</div>
+<p>Use the <strong>Get New Activations</strong> page to download an activation to the computer or to a storage device.</p>
+<p>The procedure used to get a new activation depends on:</p>
+<ul>
+<li>Whether the activation is for the local computer or another computer</li>
+<li>Whether the computer is connected to the Internet</li>
+<li>The binding method chosen for the activation</li>
+</ul>
+<p>To get an activation for a product that is running with multiple versions, you need to specify the Product Version of the software as part of the activation request.</p>
+<p>FactoryTalk Activation Manager detects whether you are connected to the Internet. The options available for getting new activations differ depending on your Internet connectivity.</p>
+<h2>See also</h2>
+<p class="seealso"><a id="h135755" class="jumptemplate" title="Get an activation for a computer with Internet access" href="25124.htm" target="_self">Get an activation for a computer with Internet access</a></p>
+<p class="seealso"><a id="h25259" class="jumptemplate" title="Get an activation from another Internet-connected computer" href="25128.htm" target="_self">Get an activation from another Internet-connected computer</a></p>
+<p class="seealso"><a id="h22818" class="jumptemplate" title="Get an activation when Internet access is not available" href="22726.htm" target="_self">Get an activation when Internet access is not available</a></p>
+<p class="seealso"><a id="h22820" class="jumptemplate" title="Get an activation for a dongle" href="22722.htm" target="_self">Get an activation for a dongle</a></p>
+<p class="keywords">Keywords: get, new, activations</p>
+
+
+					</div>
+					<!-- TOC COLUMN -->
+					<div id="related_and_nav_column" class="ra-flex-item-static collapse in">
+						<div id="TOCBoxContents">
+							<!-- Content filled in by create_toc.js -->
+						</div>
+					</div>
+				</div>
+				<!-- PAGE FOOTER -->
+				<div id="page_footer" class="ra-flex-row ra-flex-item-static small">
+					<div class="ra-flex-item-dynamic">
+						Copyright © 2020 Rockwell Automation Technologies, Inc. All Rights Reserved.
+					</div>
+					<div class="ra-flex-item-static">
+						<a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/du/ra-du002_-en-e.pdf">How are we doing?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

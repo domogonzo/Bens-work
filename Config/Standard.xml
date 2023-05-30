@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommonInstall SchemaRevision="1.0" AddMainEntryInARP= "no">
+	<RootInstallPath Type="drive" Visible="no">$(ProgramFiles)Rockwell Software</RootInstallPath>
+	<NotesLink>Common\4.05.04-FTA\ReleaseNotes\ENU\index.htm</NotesLink>
+	<OperatingSystem Name="WIN7" ServicePack="0" MaxUnsupported="yes" />
+	<OperatingSystem Name="2008SERVERR2" ServicePack="0" Unsupported="yes"/>
+	
+	<OperatingSystem Name="WIN7" Untested="yes" />
+	<OperatingSystem Name="2008SERVERR2" Untested="yes" />
+	<OperatingSystem Name="WIN8" Untested="yes" />
+	<OperatingSystem Name="WIN81" Untested="yes" />
+	<OperatingSystem Name="WIN10" Bit="32" Untested="yes" />
+	<OperatingSystem Name="WIN10" Version="1511" Untested="yes" />
+
+	<Product Name="Prerequisites" Required="no" Protected="no" Visible="no" Typical="no">
+	
+		<Product Name="Microsoft .NET Framework" Version="4.8" MultipleVersionSupport="yes" Required="no" Protected="no" Visible="yes" Typical="no" Critical="yes" Size="40684749">
+			<VersionDisplayInfo ShowName="yes" ShowMajor="yes" ShowMinor="yes" ShowBuild="yes" ShowUpdate="yes" ShowExtra="no" />
+			<EULA Name="license_MSDOTNET48" Title="Microsoft .NET Framework 4.8" />
+			<Plugin Name="KB2919355DetectionPlugin.dll" Path="Plugins" />
+			<Plugin Name="ImmediateRestartPlugin.dll" Path="Plugins" />
+			<Plugin Name="RootCertificatesSetupPlugin.dll" Path="Plugins" />
+			<InstalledRegKey OldProduct="no" Class="HKLM" Key="Software\Microsoft\NET Framework Setup\NDP\v4\Full" ValueName="Release" Value="528040" ValueMinVersion="yes" />
+			<ProductExe Name="ndp48-x86-x64-allos-enu.exe" Path="Redist\DotNETFX_4.8" CommandLine="/passive /norestart" SilentCommandLine="/q /norestart" />
+		</Product>
+		
+		<Product Name="Microsoft Visual C++ 2017 Redistributable (x86)" Version="14.15.26706.0" MultipleVersionSupport="yes" Required="no" Protected="no" Visible="yes" Typical="no" Critical="yes" Size="21390950">
+			<VersionDisplayInfo ShowName="yes" ShowMajor="yes" ShowMinor="yes" ShowBuild="yes" ShowUpdate="yes" ShowExtra="no" />
+			<Plugin Name="KB2919355DetectionPlugin.dll" Path="Plugins" />
+			<InstalledRegKey OldProduct="no" Class="HKLM" Key="SOFTWARE\Classes\Installer\Dependencies\Microsoft.VS.VC_RuntimeMinimumVSU_x86,v14" ValueName="Version" Value="14.15.26706" ValueMinVersion="yes" />
+			<ProductExe Name="vc_redist.x86.exe" Path="Redist\VCRedist_2017" CommandLine="/quiet /norestart" />
+		</Product>
+		
+		<Product Name="Microsoft Visual C++ 2017 Redistributable (x64)" Version="14.15.26706.0" Platform64BitOnly="yes" MultipleVersionSupport="yes" Required="no" Protected="no" Visible="yes" Typical="no" Critical="yes" Size="24326963">
+			<VersionDisplayInfo ShowName="yes" ShowMajor="yes" ShowMinor="yes" ShowBuild="yes" ShowUpdate="yes" ShowExtra="no" />
+			<Plugin Name="KB2919355DetectionPlugin.dll" Path="Plugins" />
+			<InstalledRegKey OldProduct="no" Class="HKLM" Key="SOFTWARE\Classes\Installer\Dependencies\Microsoft.VS.VC_RuntimeMinimumVSU_amd64,v14" ValueName="Version" Value="14.15.26706" ValueMinVersion="yes" />
+			<ProductExe Name="vc_redist.x64.exe" Path="Redist\VCRedist_2017" CommandLine="/quiet /norestart" />
+		</Product>
+		
+		<Product Name="CodeMeter Runtime Kit" Version="7.30.4811.500" Required="no" Protected="no" Visible="yes" Typical="no" UpgradeCode="{CA3262B1-A5FA-4AC8-A3F0-72873B23C30C}" Critical="yes" Size="54735615">
+			<VersionDisplayInfo ShowName="yes" ShowMajor="no" ShowMinor="no" ShowBuild="no" ShowUpdate="no" ShowExtra="no" />
+			<MsiProductName>CodeMeter Runtime Kit</MsiProductName>
+			<Plugin Name="ImmediateRestartPlugin.dll" Path="Plugins" />
+			<AltUpgradeCode>{6D51F7BF-E48C-4802-AE9C-23A29D595089}</AltUpgradeCode>
+			<ProductExe Name="CodeMeterRuntime.exe" Path="Redist\CodeMeter_7.30" CommandLine="/ComponentArgs &quot;*&quot;:&quot;/qn REBOOT=ReallySuppress&quot;"  />			
+		</Product>
+		
+		<Product Name="FactoryTalk Diagnostics" Version="6.11.00 (CPR 9 SR 11)" Required="no" Protected="no" Visible="yes" Typical="no" ProductCode="{23A74197-1511-4CF7-9991-DBCF81246F96}" UpgradeCode="{3142F260-515F-40BF-B68F-B89532D07C04}" Critical="yes">
+			<VersionDisplayInfo ShowName="yes" ShowMajor="yes" ShowMinor="yes" ShowBuild="yes" ShowUpdate="yes" ShowExtra="no" />
+			<Plugin Name="VSCleanSetupPlugin.dll" Path="Plugins" />
+			<ProductMsi Name="FactoryTalk Diagnostics 6.11.00 (CPR 9 SR 11).msi" Path="Redist\FTDiagnostics_6.11.00" MsiCallingMode="AddLocalSome">
+				<Property Type="uninstall">DISABLEDEPENDENTPRODUCTSCHECK=1</Property>
+				<Feature Name="FactoryTalk" Value="FactoryTalk" Required="no" Visible="no" Typical="yes" Size="41372806">
+					<Feature Name="FTDiagnostics" Value="FTDiagnostics" Required="no" Visible="no" Typical="yes" Size="15636006">
+						<Feature Name="FTDiagLib" Value="FTDiagLib" Required="no" Visible="no" Typical="yes" Size="26520" />
+						<Feature Name="FTDiagPIA" Value="FTDiagPIA" Required="no" Visible="no" Typical="yes" Size="239071" />
+						<Feature Name="FTDiagReaderCOM" Value="FTDiagReaderCOM" Required="no" Visible="no" Typical="yes" Size="75672" />
+						<Feature Name="FTDiagService" Value="FTDiagService" Required="no" Visible="no" Typical="yes" Size="38956" />
+					</Feature>
+					<Feature Name="FTUtility" Value="FTUtility" Required="no" Visible="no" Typical="yes" Size="3081916" />
+				</Feature>
+			</ProductMsi>
+		</Product>
+		
+		<Product Name="Windows Firewall Configuration Utility" Version="1.00.12.0003" Required="no" Protected="no" Visible="yes" Typical="no" ProductCode="{950877C4-1DD7-456B-9715-C53B29991D75}" UpgradeCode="{7A18ACF5-3D1E-43F6-ABEB-8E3A08CCC160}" Critical="yes">
+			<VersionDisplayInfo ShowName="yes" ShowMajor="yes" ShowMinor="yes" ShowBuild="yes" ShowUpdate="yes" ShowExtra="no" />
+			<ProductMsi Name="Windows Firewall Configuration Utility 1.00.12.msi" Path="Redist\WFCU_1.00.12">
+				<Feature Name="Local FactoryTalk Diagnostics PIA" Value="LocalCopyPIA" Required="yes" Visible="no" Typical="yes" Size="26008" />
+				<Feature Name="WFCU" Value="WFCU" Required="yes" Visible="yes" Typical="yes" Size="634617" />
+			</ProductMsi>
+		</Product>
+	</Product>
+	<Product Name="FactoryTalk Activation Manager" Version="4.05.04" Required="yes" Protected="no" Visible="yes" Typical="yes" ProductCode="{7CBDB2B5-F0B2-4E86-9192-508DD2F81E03}" UpgradeCode="{0A4834F5-C1EE-4B6A-A48C-2052AFF571A3}" Critical="yes">
+		<VersionDisplayInfo ShowName="yes" ShowMajor="yes" ShowMinor="yes" ShowBuild="yes" ShowUpdate="yes" ShowExtra="yes" />
+		<EULA Name="license" Title="Rockwell Automation Technologies Inc." />
+		<UpgradeCandidate UpgradeCode="{5390F1A5-028F-4927-82F7-4919884611BD}" MaxVersion="3.30.00.0148" MaxVersionInclusive="no" />
+		<Plugin Name="FTASetupPlugin.dll" Path="Plugins" />
+		<Plugin Name="RootCertificatesSetupPlugin.dll" Path="Plugins" />
+		<Prerequisite Name="Microsoft .NET Framework" MajorRev="4" MinorRev="8" />
+		<Prerequisite Name="CodeMeter Runtime Kit" MajorRev="7" MinorRev="30" InstallIfUpgrade="yes" />
+		<Prerequisite Name="FactoryTalk Diagnostics" InstallIfUpgrade="yes" />
+		<Prerequisite Name="Windows Firewall Configuration Utility" InstallIfUpgrade="yes" />
+		<Prerequisite Name="Microsoft Visual C++ 2017 Redistributable (x86)" />
+		<Prerequisite Name="Microsoft Visual C++ 2017 Redistributable (x64)" />
+		<ProductMsi Name="FactoryTalk Activation Manager 4.05.04.msi" Path="Common\4.05.04-FTA">
+			<Property Type="generic">RUNFROMCOMMONINSTALL=1</Property>
+			<Feature Name="AlwaysInstalled" Value="AlwaysInstalled" Required="no" Visible="no" Typical="yes" Size="23618276" />
+			<Feature Name="FTAManager" Value="FTAManager" Required="yes" Visible="yes" Typical="yes" Size="31882675" />
+			<Feature Name="Service" Value="Service" Required="yes" Visible="yes" Typical="yes" Size="6007659" />
+			<Feature Name="Tools" Value="Tools" Required="yes" Visible="yes" Typical="yes" Size="11293821" />
+		</ProductMsi>
+	</Product>
+</CommonInstall>

@@ -1,0 +1,2 @@
+// Copyright © Rockwell Automation Technologies, Inc. All Rights Reserved
+var translation_search="검색",translation_search_results="검색 결과",translation_please_enter_a_search_term="검색어를 입력하십시오.",translation_no_results_for_term="다음에 대한 검색 결과 없음:",translation_show_toc="목차 표시",translation_highlight_results="하이라이트 검색 결과";
