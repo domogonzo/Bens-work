@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title> Exclude a specific computer from borrowing an activation </title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Force IE to use latest rendering mode. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Kindly request zoom-in on mobile devices. -->
+		<link rel="stylesheet" type="text/css" href="mft/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="mft/mobile-toolkit-ra/mobile-toolkit-ra.css">
+		<link rel="stylesheet" type="text/css" href="mft/ra-icons/ra-icons.css">
+		<link rel="stylesheet" type="text/css" href="template_layout.css">
+		<script language="javascript" type="text/javascript" src="mft/jquery/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/popper/popper.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/bootstrap/bootstrap.js"></script>
+		<script language="javascript" type="text/javascript" src="jquery.mark.js"></script>
+		<script language="javascript" type="text/javascript" src="ui_strings.js"></script>
+		<script language="javascript" type="text/javascript" src="search.js"></script>
+		<script language="javascript" type="text/javascript" src="toc.js"></script>
+		<script language="javascript" type="text/javascript" src="create_toc.js"></script>
+	</head>
+	<body>
+		<div>
+			<div class="ra-flex-column">
+				<!-- PAGE HEADER -->
+				<div id="page_header" class="ra-flex-row ra-flex-align-main-center ra-flex-align-cross-center">
+					<div class="ra-flex-item-shrink"><p class="breadcrumbs"><a class="breadcrumblink" href="25184.htm">Advanced FactoryTalk Activation server settings</a><span class="breadcrumbactive"><span class="breadcrumbdelimiter"> &gt; </span>Exclude a specific computer from borrowing an activation</span></p></div>
+					<div class="ra-flex-item-dynamic"><!-- spacer --></div>
+					<form class="ra-flex-item-shrink ra-flex-row ra-flex-align-main-end ra-flex-align-cross-center" id="search_form">
+						<div class="ra-flex-item-shrink">
+							<input class="form-control" type="text" id="keyword" placeholder="...">
+						</div>
+						<div class="ra-flex-item-shrink">
+							<button class="btn btn-outline-dark" type="submit">
+								<span class="ra-icon-search"></span>
+							</button>
+						</div>
+					</form>
+					<div class="ra-flex-item-shrink dropdown">
+						<button id="cvbhelp_settings_button" class="btn btn-outline-dark" data-toggle="dropdown" data-display="static">
+							<span class="ra-icon-settings"></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="cvbhelp_settings_button">
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="show_toc_checkbox" id="show_toc_label" style="white-space: nowrap;">Show Table of Contents</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="show_toc_checkbox">
+								</div>
+							</div>
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="highlight_terms_checkbox" id="highlight_terms_label" style="white-space: nowrap;">Highlight search results</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="highlight_terms_checkbox">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PAGE BODY -->
+				<div class="ra-flex-row ra-flex-item-dynamic">
+					<!-- CONTENT -->
+					<div id="content_section" class="ra-flex-item-dynamic">
+						<h1>Exclude a specific computer from borrowing an activation</h1>
+<p>Edit the Options file to prevent a specific computer from borrowing an activation.</p>
+<table class="tableintopic">
+<tr>
+<td>
+<p class="tableheading"><strong>Tip:</strong></p>
+</td>
+<td>
+<p>On systems using Flexera, activations are borrowed from a system account. Regardless of which computer logs into the system, Flexera considers the computer a system account, and using an EXCLUDE_BORROW entry in the <strong>flexsvr.opt</strong> file does not prevent that computer or a specific user from borrowing an activation.</p>
+</td>
+</tr>
+
+</table>
+<p></p>
+<h2>To exclude a specific computer from borrowing an activation:</h2>
+<ol>
+<li>Open the existing <strong>flexsvr.opt</strong> options file or create a new file.</li>
+<li>Edit the Options file to include the following line. Replace:<ul>
+<li>[featurekey] with the name of the software application executable.</li>
+<li>[name] with the computer name to exclude from borrowing activations.<p>EXCLUDE_BORROW [featurekey] HOST [name]</p>
+<p>For example: </p>
+<p><code>EXCLUDE_BORROW RS5K_700.EXE HOST InternPC1.*</code></p>
+<p>Prevents the computer named InternPC1 from borrowing an activation for the Logix Designer application.</p>
+</li>
+</ul>
+</li>
+<li>Save the file with the name <strong>flexsvr.opt</strong> in the default folder.</li>
+<li>From the <strong>Advanced</strong> tab, refresh the activation server.</li>
+</ol>
+<h2>See also</h2>
+<p class="seealso"><a id="h227316" class="jumptemplate" title="Example Options file for individual host computers" href="25230.htm" target="_self">Example Options file for individual host computers</a></p>
+<p class="seealso"><a id="h22827" class="jumptemplate" title="Activation feature names associated with products" href="22799.htm" target="_self">Activation feature names associated with products</a></p>
+<p class="seealso"><a id="h22861" class="jumptemplate" title="Decrease the maximum borrow time of an activation" href="22758.htm" target="_self">Restrict maximum borrow time</a></p>
+<p class="seealso"><a id="h22901" class="jumptemplate" title="Reserve activations for individual host computers" href="22801.htm" target="_self">Reserve activations for individual host computers</a></p>
+<p class="seealso"><a id="h22902" class="jumptemplate" title="Reserve activations for groups of host computers" href="22800.htm" target="_self">Reserve activations for groups of host computers</a></p>
+<p class="keywords">Keywords: exclude, borrow</p>
+
+
+					</div>
+					<!-- TOC COLUMN -->
+					<div id="related_and_nav_column" class="ra-flex-item-static collapse in">
+						<div id="TOCBoxContents">
+							<!-- Content filled in by create_toc.js -->
+						</div>
+					</div>
+				</div>
+				<!-- PAGE FOOTER -->
+				<div id="page_footer" class="ra-flex-row ra-flex-item-static small">
+					<div class="ra-flex-item-dynamic">
+						Copyright © 2020 Rockwell Automation Technologies, Inc. All Rights Reserved.
+					</div>
+					<div class="ra-flex-item-static">
+						<a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/du/ra-du002_-en-e.pdf">How are we doing?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

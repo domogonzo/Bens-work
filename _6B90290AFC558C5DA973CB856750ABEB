@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title> Options file syntax </title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Force IE to use latest rendering mode. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Kindly request zoom-in on mobile devices. -->
+		<link rel="stylesheet" type="text/css" href="mft/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="mft/mobile-toolkit-ra/mobile-toolkit-ra.css">
+		<link rel="stylesheet" type="text/css" href="mft/ra-icons/ra-icons.css">
+		<link rel="stylesheet" type="text/css" href="template_layout.css">
+		<script language="javascript" type="text/javascript" src="mft/jquery/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/popper/popper.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/bootstrap/bootstrap.js"></script>
+		<script language="javascript" type="text/javascript" src="jquery.mark.js"></script>
+		<script language="javascript" type="text/javascript" src="ui_strings.js"></script>
+		<script language="javascript" type="text/javascript" src="search.js"></script>
+		<script language="javascript" type="text/javascript" src="toc.js"></script>
+		<script language="javascript" type="text/javascript" src="create_toc.js"></script>
+	</head>
+	<body>
+		<div>
+			<div class="ra-flex-column">
+				<!-- PAGE HEADER -->
+				<div id="page_header" class="ra-flex-row ra-flex-align-main-center ra-flex-align-cross-center">
+					<div class="ra-flex-item-shrink"><p class="breadcrumbs"><a class="breadcrumblink" href="25184.htm">Advanced FactoryTalk Activation server settings</a><span class="breadcrumbactive"><span class="breadcrumbdelimiter"> &gt; </span>Options file syntax</span></p></div>
+					<div class="ra-flex-item-dynamic"><!-- spacer --></div>
+					<form class="ra-flex-item-shrink ra-flex-row ra-flex-align-main-end ra-flex-align-cross-center" id="search_form">
+						<div class="ra-flex-item-shrink">
+							<input class="form-control" type="text" id="keyword" placeholder="...">
+						</div>
+						<div class="ra-flex-item-shrink">
+							<button class="btn btn-outline-dark" type="submit">
+								<span class="ra-icon-search"></span>
+							</button>
+						</div>
+					</form>
+					<div class="ra-flex-item-shrink dropdown">
+						<button id="cvbhelp_settings_button" class="btn btn-outline-dark" data-toggle="dropdown" data-display="static">
+							<span class="ra-icon-settings"></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="cvbhelp_settings_button">
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="show_toc_checkbox" id="show_toc_label" style="white-space: nowrap;">Show Table of Contents</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="show_toc_checkbox">
+								</div>
+							</div>
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="highlight_terms_checkbox" id="highlight_terms_label" style="white-space: nowrap;">Highlight search results</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="highlight_terms_checkbox">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PAGE BODY -->
+				<div class="ra-flex-row ra-flex-item-dynamic">
+					<!-- CONTENT -->
+					<div id="content_section" class="ra-flex-item-dynamic">
+						<table class="relatedtopics aboveheading">
+<tr>
+<td>
+<p><a href="toc40443748.htm" target="TOC"><img src="122.gif" alt="Book Contents" height="17" width="48" vspace="0" hspace="0" align="bottom" border="0"></a></p>
+</td>
+</tr>
+</table>
+<h1>Options file syntax</h1>
+<p>The options file is a plain text file that is read by the activation server when it determines the activation request to grant a license to a client. Each line of the options file control one option identified by a keyword. The keyword implementation options are specified using the following syntax items:</p>
+<ul>
+<li>count<p>The limit being defined by the element</p>
+</li>
+<li>featurekey<p>The Rockwell Automation software this element applies to, identified by executable name.</p>
+</li>
+<li>USER, HOST, DISPLAY, GROUP or HOST_GROUP<p>Identifies the type of account to which to apply the element.</p>
+</li>
+<li>name<p>Identifier for the account, such as a user name, group name, or IP address</p>
+</li>
+</ul>
+<p>The following keywords are used to define the behavior specified by the options file:</p>
+<table class="tableintopic">
+<tr>
+<td style="border-right:1px solid #010101;border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Keyword</strong></p>
+</td>
+<td style="border-right:1px solid #010101;border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Syntax</strong></p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Example</strong></p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>BORROW_LOWWATER</p>
+<p>Sets limit of licenses that cannot be borrowed.</p>
+<p>There must be more than one install available for borrowing to use this option.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>BORROW_LOWWATER [featurekey] [count]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>BORROW_LOWWATER RSLINX.EXE 3</p>
+<p>Restricts three licenses of RSLinx from being available to borrow.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>DEBUGLOG</p>
+<p>Specifies a location for the debug log output. Precede the <em class="emphasis">debug_log_path</em> with a + character to append log entries to the existing file; otherwise, the log file is overwritten with each restart of the service FactoryTalk Activation Service.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>DEBUGLOG [+] [debug_log_path]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>DEBUGLOG +C:\Logs\RSsvr.log</p>
+<p>Will append log entries to C:\Logs\RSsvr.log</p>
+<p>DEBUGLOG C:\Logs\RSsvr.log</p>
+<p>Log file C:\Logs\RSsvr.log will be overwritten when FactoryTalk Activation Service is started.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>EXCLUDE</p>
+<p>Creates a list of users, groups, or computers that are prevented from using the software. If a user or group is identified by an INCLUDE element as well as an EXCLUDE element, the user or group is excluded. To give a previously excluded user or group permission to use the software, remove them from the EXCLUDE list.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>EXCLUDE [featurekey] [USER | HOST | DISPLAY | GROUP | HOST_GROUP] [name]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>EXCLUDE RSLINX.EXE USER jondoe</p>
+<p>Prevents a user named <strong>jondoe</strong> from using RSLinx.</p>
+<p>EXCLUDE RS5K_700.EXE HOST 10.15.123.*</p>
+<p>Prevents computers in the 10.15.123 network from using the Logix Designer application.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>EXCLUDE_BORROW</p>
+<p>Creates a list of computers or groups of computers that are prevented from borrowing an activation for a software application. If a computer is identified by an INCLUDE_BORROW element as well as an EXCLUDE_BORROW element, the computer is excluded. To give previously excluded computers permission to borrow an activation for a software application, remove them from the EXCLUDE_BORROW list.</p>
+<p><strong>Tip: </strong>A specific user cannot be excluded from borrowing a license. A borrowed license is available for all users logged into the computer.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>EXCLUDE_BORROW [featurekey] [HOST | HOST_GROUP] [name]</p>
+<p> </p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>EXCLUDE_BORROW RS5K_700.EXE HOST 10.15.123.*</p>
+<p>Prevents computers in the 10.15.123 network from borrowing activations for the  Logix Designer application.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>EXCLUDEALL</p>
+<p>Creates a list of users, groups, or computers that are prevented from using all Rockwell Automation software activations on the activation server.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>EXCLUDEALL<em class="emphasis"> </em>[USER | HOST | DISPLAY | GROUP | HOST_GROUP]<em class="emphasis"> </em>[name]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>EXCLUDEALL GROUP officepcs</p>
+<p>Prevents the <strong>officepcs </strong>group from using any applications managed by the activation server.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>GROUP</p>
+<p>Used to define a group name for a list of user account names. Use the group name to assign options or a group of users instead of specifying each user individually. Group and User names are case sensitive by default.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>GROUP [group_name] [user1] [user2] [userN]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>GROUP authusers Frank Sarah Will</p>
+<p>Creates a group of users called <strong>authusers</strong>, consisting of <strong>Frank</strong>, <strong>Sarah, </strong>and <strong>Will</strong>.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>GROUPCASEINSENSITIVE</p>
+<p>Turns on case insensitivity for groups and group members.</p>
+<p>Does not turn on case insensitivity for the group name.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>GROUPCASEINSENSITIVE ON</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>GROUPCASEINSENSITIVE ON</p>
+<p>GROUP testgroup usr</p>
+<p>EXCLUDE RSLINX.GW GROUP testgroup</p>
+<p>Excludes the user <strong>usr </strong>or <strong>USR </strong>from checking out the RSLINX.GW license.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>HOST_GROUP</p>
+<p>Defines a group of host computers. Use Multiple HOST_GROUP lines to add all the specified hosts into the group. Host computers can be specified using computer names or IP addresses. Host names are case insensitive.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>HOST_GROUP [group_name] [host1] [host2] [hostN]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>HOST_GROUP officepcs frontdeskpc accountingpc1 accountingpc2</p>
+<p>Creates a group of host computers called <strong>officepcs </strong>consisting of PCs named <strong>frontdeskpc</strong>, <strong>accountingpc1</strong>, and <strong>accountingpc2</strong>.</p>
+<p>HOST_GROUP plantfloor 10.15.*</p>
+<p>Create a group of host computers called <strong>plantfloor </strong>that includes all PCs with IP addresses starting with 10.15.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>INCLUDE</p>
+<p>Creates a list of users, groups, or computers that are allowed to use the software. If a user or group is identified by an INCLUDE element as well as an EXCLUDE element, the user or group is excluded. To give a previously excluded user or group permission to use a feature, remove them from the EXCLUDE list.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>INCLUDE [featurekey] [USER | HOST | DISPLAY | GROUP | HOST_GROUP] [name]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>INCLUDE RSLINX.EXE USER jondoe</p>
+<p>Allows a user named <strong>jondoe </strong>to activate RSLinx.</p>
+<p>INCLUDE RS5K_700.EXE HOST 10.15.123.*</p>
+<p>Allow computers in the 10.15.123 network to activate the Logix Designer application.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>INCLUDE_BORROW</p>
+<p>Creates a list of computers or groups that are allowed to borrow an activation for a feature. If a computer or group is identified by an INCLUDE_BORROW element as well as an EXCLUDE_BORROW element, the computer or group is excluded. To give a previously excluded computer or group permission to borrow an activation for a feature, remove them from the EXCLUDE_BORROW list.</p>
+<p><strong>Tip:</strong> A specific user cannot be allowed to borrow a license. A borrowed license is available for all users logged into the computer.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>INCLUDE_BORROW [featurekey] | HOST | HOST_GROUP] [name]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>INCLUDE_BORROW RS5K_700.EXE HOST 10.15.123.*</p>
+<p>Allows computers in the 10.15.123 network to borrow activations for the Logix Designer application.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>INCLUDEALL</p>
+<p>Creates a list of users, groups, or computers that are allowed to use any of the Rockwell Automation software activations on the activation server.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>INCLUDEALL [USER | HOST | DISPLAY | GROUP | HOST_GROUP] [name]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>INCLUDEALL GROUP plantadmins</p>
+<p>Allows the members of the <strong>plantadmins </strong>group to use any applications managed by the activation server.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>MAX</p>
+<p>Limits the usage of a software application for a user or group. </p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>MAX [count] [featurekey] [USER | HOST | DISPLAY | GROUP | HOST_GROUP] [name]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>MAX 3 RSLINX.EXE GROUP China</p>
+<p>Allows only 3 users in the <strong>China </strong>group to run FactoryTalk® Linx™ at one time.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>MAX_BORROW_HOURS</p>
+<p>Changes the maximum time for which a license can be borrowed. New period of time must be less than in the original license certificate.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>MAX_BORROW_HOURS [featurekey] [count]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>MAX_BORROW_HOURS RS5K_700.exe 36</p>
+<p>Sets the maximum borrow time limit for borrowed activations for the Logix Designer application to 36 hours.</p>
+<p> </p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>NOLOG</p>
+<p>Disables logging of a specific type of event in the log file. The event types are:</p>
+<ul>
+<li>IN - Check in of activations</li>
+<li>OUT - Check out of activations</li>
+<li>DENIED - Activations denied</li>
+<li>QUEUED - Activation request queued</li>
+</ul>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>NOLOG [IN | OUT| DENIED | QUEUED]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>NOLOG IN</p>
+<p>Turns off logging of activations checked in.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>RESERVE</p>
+<p>Holds a license back to be used by a specific user, computer, or group.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>RESERVE [count] [featurekey] [USER | HOST | DISPLAY | GROUP | HOST_GROUP] [name]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>RESERVE 1 RSlgx5.exe HOST electricianbullpen_pc</p>
+<p>Ensures that the computer named <strong>electriacianbullpen_pc</strong> will always have an available activation for the Logix Designer application.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>TIMEOUT</p>
+<p>Sets the time in seconds after which inactive licenses for a specific product are freed and reclaimed by the activation server.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>TIMEOUT [featurekey] [count]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>TIMEOUT RSlgx5.exe 3600</p>
+<p>Reclaims RSLogix 5 licenses that have been inactive for 1 hour (3600 seconds).</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>TIMEOUTALL</p>
+<p>Sets the time in seconds after which inactive licenses for all products are freed and reclaimed by the activation server.</p>
+</td>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>TIMEOUTALL [count]</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>TIMEOUTALL 7200</p>
+<p>Reclaims any licenses that have been inactive for 2 hours (7200 seconds).</p>
+</td>
+</tr>
+
+</table>
+<h2>See also</h2>
+<p class="seealso"><a id="h22826" class="jumptemplate" title="Create or edit the Options file" href="22718.htm" target="_self">Create or edit the Options file</a></p>
+<p class="seealso"><a id="h227316" class="jumptemplate" title="Example Options file for individual host computers" href="25230.htm" target="_self">Example Options file for individual host computers</a></p>
+<p class="seealso"><a id="h255328" class="jumptemplate" title="Example Options file for groups of host computers" href="25122.htm" target="_self">Example Options file for groups of host computers</a></p>
+<p class="keywords">Keywords: option, options, syntax</p>
+
+
+					</div>
+					<!-- TOC COLUMN -->
+					<div id="related_and_nav_column" class="ra-flex-item-static collapse in">
+						<div id="TOCBoxContents">
+							<!-- Content filled in by create_toc.js -->
+						</div>
+					</div>
+				</div>
+				<!-- PAGE FOOTER -->
+				<div id="page_footer" class="ra-flex-row ra-flex-item-static small">
+					<div class="ra-flex-item-dynamic">
+						Copyright © 2020 Rockwell Automation Technologies, Inc. All Rights Reserved.
+					</div>
+					<div class="ra-flex-item-static">
+						<a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/du/ra-du002_-en-e.pdf">How are we doing?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

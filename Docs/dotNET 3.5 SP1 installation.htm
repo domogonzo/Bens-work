@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Install Microsoft .NET Framework 3.5 SP 1 </title>
+		<meta charset='ISO-8859-1'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Force IE to use latest rendering mode. -->
+		
+	</head>
+<body>
+
+<h1 class="heading1">Install Microsoft .NET Framework 3.5 SP 1</h1>
+<p class="bodytext">If you are using Windows 8, Windows 8.1, Windows Server 2012, or Windows Server 2012 R2, you must install .NET Framework 3.5 SP1.</p>
+<p class="bodytext">Depending on your access to the Internet, select one of the following:</p>
+<ul class="listbullet"><li class="listbullet">If you have an Internet connection, install .NET Framework 3.5 SP1 via the Control Panel. For details see: <a class="" title="Installing the .NET Framework 3.5 on Windows 8 or 8.1" href="http://msdn.microsoft.com/en-us/library/hh506443.aspx" target="_self">http://msdn.microsoft.com/en-us/library/hh506443.aspx</a>.</li><li class="listbullet">If you do not have an Internet connection, install .NET Framework 3.5 SP1 with the Deployment Image Servicing and Management (DISM) command-line tool. You will need the original Windows installation DVD and administrative rights to the operating system. Follow these steps:<ol class="listnumber2"><li class="listnumber2">Insert the Windows installation DVD.</li><li class="listnumber2">On the Taskbar, click the <span class="specialbold">Start </span>button.</li><li class="listnumber2">From the Start menu, in the search box, type <span class="specialbold">CMD</span>.</li><li class="listnumber2">On the Taskbar, right-click the <span class="specialbold">CMD </span>icon, and select <span class="specialbold">Run as administrator</span>.</li><li class="listnumber2">In the Command Prompt window, enter the following command where <span class="specialbold">&lt;Drive&gt;</span> is the directory location of the Windows installation DVD (for example: ...<span class="specialbold">E:</span>):<p class="listcontinue2"><span class="specialbold">DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /LimitAccess /Source:&lt;Drive&gt;:\sources\sxs</span></p>
+</li></ol></li></ul><p class="bodytext">When the installation is completed, <em class="emphasis">The operation completed successfully</em> displays in the Command Prompt window.</p>
+<p class="bodytext">For more information on installing .NET 3.5 SP1 on Windows 8 and later, visit: <a class="help3template" title=".NET Framework 3.5 installation error" href="http://support.microsoft.com/kb/2734782" target="_self">http://support.microsoft.com/kb/2734782</a></p>
+<h2 class="heading2">Troubleshooting: Error code 0x800F081F</h2>
+<p class="bodytext">This error occurs when an alternative installation source is specified and one of the following conditions occurs:</p>
+<ul class="listbullet"><li class="listbullet">The location specified by the path does not contain the installation files.</li><li class="listbullet">The user does not have READ access to the files.</li><li class="listbullet">The set of installation files is corrupted, incomplete, or invalid for the version of Windows that you are running.</li></ul><p class="bodytext">To resolve this problem, verify that the full path of the source is correct (x:\sources\sxs) and that you have READ access to the location. Try to access the source directly from the affected computer. Verify that the installation source contains a valid and complete set of files. If the problem persists, try a different installation source.</p>
+<p class="subheading">See also</p>
+<p class="bodytextindent"><a class="" title="Installing the .NET Framework 3.5 on Windows 8 or 8.1" href="http://msdn.microsoft.com/en-us/library/hh506443.aspx" target="_self">Install the .NET Framework 3.5 on Windows 8 or 8.1</a></p>
+<p class="bodytextindent"><a class="help3template" title=".NET Framework 3.5 installation error" href="http://support.microsoft.com/kb/2734782" target="_self">.NET Framework installation error 0x800F081F</a></p>
+<p class="bodytext"></p>
+
+		
+		
+	</body>
+</html>
