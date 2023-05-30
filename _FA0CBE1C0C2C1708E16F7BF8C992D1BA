@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title> Rehost activation considerations </title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Force IE to use latest rendering mode. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Kindly request zoom-in on mobile devices. -->
+		<link rel="stylesheet" type="text/css" href="mft/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="mft/mobile-toolkit-ra/mobile-toolkit-ra.css">
+		<link rel="stylesheet" type="text/css" href="mft/ra-icons/ra-icons.css">
+		<link rel="stylesheet" type="text/css" href="template_layout.css">
+		<script language="javascript" type="text/javascript" src="mft/jquery/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/popper/popper.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/bootstrap/bootstrap.js"></script>
+		<script language="javascript" type="text/javascript" src="jquery.mark.js"></script>
+		<script language="javascript" type="text/javascript" src="ui_strings.js"></script>
+		<script language="javascript" type="text/javascript" src="search.js"></script>
+		<script language="javascript" type="text/javascript" src="toc.js"></script>
+		<script language="javascript" type="text/javascript" src="create_toc.js"></script>
+	</head>
+	<body>
+		<div>
+			<div class="ra-flex-column">
+				<!-- PAGE HEADER -->
+				<div id="page_header" class="ra-flex-row ra-flex-align-main-center ra-flex-align-cross-center">
+					<div class="ra-flex-item-shrink"><p class="breadcrumbs"><a class="breadcrumblink" href="24360.htm">Rehost Activations page</a><span class="breadcrumbactive"><span class="breadcrumbdelimiter"> &gt; </span>Rehost activation considerations</span></p></div>
+					<div class="ra-flex-item-dynamic"><!-- spacer --></div>
+					<form class="ra-flex-item-shrink ra-flex-row ra-flex-align-main-end ra-flex-align-cross-center" id="search_form">
+						<div class="ra-flex-item-shrink">
+							<input class="form-control" type="text" id="keyword" placeholder="...">
+						</div>
+						<div class="ra-flex-item-shrink">
+							<button class="btn btn-outline-dark" type="submit">
+								<span class="ra-icon-search"></span>
+							</button>
+						</div>
+					</form>
+					<div class="ra-flex-item-shrink dropdown">
+						<button id="cvbhelp_settings_button" class="btn btn-outline-dark" data-toggle="dropdown" data-display="static">
+							<span class="ra-icon-settings"></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="cvbhelp_settings_button">
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="show_toc_checkbox" id="show_toc_label" style="white-space: nowrap;">Show Table of Contents</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="show_toc_checkbox">
+								</div>
+							</div>
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="highlight_terms_checkbox" id="highlight_terms_label" style="white-space: nowrap;">Highlight search results</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="highlight_terms_checkbox">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PAGE BODY -->
+				<div class="ra-flex-row ra-flex-item-dynamic">
+					<!-- CONTENT -->
+					<div id="content_section" class="ra-flex-item-dynamic">
+						<table class="relatedtopics aboveheading">
+<tr>
+<td>
+<p><a href="toc40443733.htm" target="TOC"><img src="122.gif" alt="Book Contents" height="17" width="48" vspace="0" hspace="0" align="bottom" border="0"></a></p>
+</td>
+</tr>
+</table>
+<h1>Rehost activation considerations</h1>
+<p>Keep these considerations in mind when rehosting activations:</p>
+<ul>
+<li>If multiple FlexNet Publisher (FNP) activations of different product versions but the same serial number and binding or host ID are either partially rehosted or renewed, the product version of the activations after the completion of the partial rehost or renew will all indicate the same product version. This indicated product version will be the latest downloaded product version before performing the partial rehost or renew. This behavior can have adverse effects if activations of different product versions are required, including Rockwell products not being activated and node-locked activations being changed to concurrent activations. </li>
+<li>When performing a disconnected rehost for multiple FNP activations of different product versions but the same serial number, the quantities displayed in the <strong># to Rehost</strong> and <strong>Available </strong>columns will not be correct. All of the activations will be removed and entitlements will be returned as expected upon completion of the disconnected rehost steps.</li>
+<li>In case of a hard drive crash, contact Rockwell Automation Technical Support.</li>
+<li>Do not rehost borrowed activations. If you need to rehost an activation that is currently borrowed, ensure that the activation is returned to the activation server before you rehost the activation.</li>
+<li>Rehosting is not intended for moving activations frequently. It is intended to be used only for unexpected or infrequent events such as a computer upgrade or failure, or a change to the system. </li>
+<li>Each serial number can be rehosted using the web site up to three times in any 12-month period. Rehosting an activation a fourth time requires a call to Rockwell Automation Technical Support.</li>
+<li>Rehosting deletes activation files from the local computer, always run this process on the physical computer where the activation files reside.</li>
+<li>For concurrent activations with a quantity greater than 1, there is the option to select a quantity less than the total activations. This leaves a quantity of the activations on the local computer while allowing the rest of the activations to become available for download to other computers. By default, all activations are removed from the local computer. Once an activation is rehosted, borrows of that activation appear in the <strong>Find Available Activations</strong> table until they expire. </li>
+<li>Both FlexNet and CodeMeter activations rehosted on a disconnected computer require confirmation to complete the rehost. You need the product key originally provided with the software to download the activations again after the rehost.</li>
+</ul>
+<h2>See also</h2>
+<p class="seealso"><a id="h197497" class="jumptemplate" title="Rehost Activations page" href="24360.htm" target="_self">Rehost Activations page</a></p>
+
+
+					</div>
+					<!-- TOC COLUMN -->
+					<div id="related_and_nav_column" class="ra-flex-item-static collapse in">
+						<div id="TOCBoxContents">
+							<!-- Content filled in by create_toc.js -->
+						</div>
+					</div>
+				</div>
+				<!-- PAGE FOOTER -->
+				<div id="page_footer" class="ra-flex-row ra-flex-item-static small">
+					<div class="ra-flex-item-dynamic">
+						Copyright © 2020 Rockwell Automation Technologies, Inc. All Rights Reserved.
+					</div>
+					<div class="ra-flex-item-static">
+						<a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/du/ra-du002_-en-e.pdf">How are we doing?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

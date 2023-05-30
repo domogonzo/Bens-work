@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title> Activation file details </title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Force IE to use latest rendering mode. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Kindly request zoom-in on mobile devices. -->
+		<link rel="stylesheet" type="text/css" href="mft/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="mft/mobile-toolkit-ra/mobile-toolkit-ra.css">
+		<link rel="stylesheet" type="text/css" href="mft/ra-icons/ra-icons.css">
+		<link rel="stylesheet" type="text/css" href="template_layout.css">
+		<script language="javascript" type="text/javascript" src="mft/jquery/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/popper/popper.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/bootstrap/bootstrap.js"></script>
+		<script language="javascript" type="text/javascript" src="jquery.mark.js"></script>
+		<script language="javascript" type="text/javascript" src="ui_strings.js"></script>
+		<script language="javascript" type="text/javascript" src="search.js"></script>
+		<script language="javascript" type="text/javascript" src="toc.js"></script>
+		<script language="javascript" type="text/javascript" src="create_toc.js"></script>
+	</head>
+	<body>
+		<div>
+			<div class="ra-flex-column">
+				<!-- PAGE HEADER -->
+				<div id="page_header" class="ra-flex-row ra-flex-align-main-center ra-flex-align-cross-center">
+					<div class="ra-flex-item-shrink"><p class="breadcrumbs"><a class="breadcrumblink" href="25184.htm">Advanced FactoryTalk Activation server settings</a><span class="breadcrumbactive"><span class="breadcrumbdelimiter"> &gt; </span>Activation file details</span></p></div>
+					<div class="ra-flex-item-dynamic"><!-- spacer --></div>
+					<form class="ra-flex-item-shrink ra-flex-row ra-flex-align-main-end ra-flex-align-cross-center" id="search_form">
+						<div class="ra-flex-item-shrink">
+							<input class="form-control" type="text" id="keyword" placeholder="...">
+						</div>
+						<div class="ra-flex-item-shrink">
+							<button class="btn btn-outline-dark" type="submit">
+								<span class="ra-icon-search"></span>
+							</button>
+						</div>
+					</form>
+					<div class="ra-flex-item-shrink dropdown">
+						<button id="cvbhelp_settings_button" class="btn btn-outline-dark" data-toggle="dropdown" data-display="static">
+							<span class="ra-icon-settings"></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="cvbhelp_settings_button">
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="show_toc_checkbox" id="show_toc_label" style="white-space: nowrap;">Show Table of Contents</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="show_toc_checkbox">
+								</div>
+							</div>
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="highlight_terms_checkbox" id="highlight_terms_label" style="white-space: nowrap;">Highlight search results</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="highlight_terms_checkbox">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PAGE BODY -->
+				<div class="ra-flex-row ra-flex-item-dynamic">
+					<!-- CONTENT -->
+					<div id="content_section" class="ra-flex-item-dynamic">
+						<table class="relatedtopics aboveheading">
+<tr>
+<td>
+<p><a href="toc40443748.htm" target="TOC"><img src="122.gif" alt="Book Contents" height="17" width="48" vspace="0" hspace="0" align="bottom" border="0"></a></p>
+</td>
+</tr>
+</table>
+<h1>Activation file details</h1>
+<p>System administrators can find information about the contents of an activation file useful. For example, when writing an Options file, a system administrator might need to obtain activation information without starting the server and shutting it back down again.</p>
+<h2>Concurrent activation file example</h2>
+<p>This example shows a concurrent activation file for RSLogix 500:</p>
+<p class="code"><code>SERVER LicnSvr 39F837ABC83</code></p>
+<p class="code"><code>VENDOR flexsvr</code></p>
+<p class="code"><code>INCREMENT RS500.exe  flexsvr 1.0 permanent 5 \</code></p>
+<p class="code"><code>    VENDOR_STRING=1234567890 \</code></p>
+<p class="code"><code>    BORROW=48 </code></p>
+<p class="code"><code>    vendor_info=PRODUCT_NAME:RSLogix500 \</code></p>
+<p class="code"><code>    SN=0451234567</code></p>
+<p class="code"><code>    SIGN="0000 C0A3 5511 2DDD 3151 82FC D473 \</code></p>
+<p class="code"><code>    8F9B 5623 3099 BBCD 63ED 9999 FFFF C829 \</code></p>
+<p class="code"><code>    4606 4E85 7A20 DC42 A691 1234"</code></p>
+<p>The concurrent activation file has these elements:</p>
+<table class="tableintopic">
+<tr>
+<td style="border-right:1px solid #010101;border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Element</strong></p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>LicnSvr</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The name of the activation server, followed by its binding.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>flexsvr</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The name of the vendor service.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>Increment RS500.exe</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The name of the activation that identifies the software product.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>1.0</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Indicates that this activation will only work with versions 0.0 to 1.0 inclusive.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>permanent 5</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The number of concurrent activations that have been purchased and are available for check out or borrow.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>Vendor_string</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The product serial number.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>Borrow=48</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The time limit, in hours, that an activation can be borrowed. If the product does not support borrowing, this statement will not appear.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>Vendor_info</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Information that identifies the product.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>SN</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>A number used to identify the vendor for each activation.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>SIGN=“ … ”</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The signature for this entry in the activation file. The signature enables the activation.</p>
+</td>
+</tr>
+
+</table>
+<h2>Node-locked activation file example</h2>
+<p>This example shows a node-locked activation file for an RSNetWorx for ControlNet software package.</p>
+<p class="code"><code>INCREMENT rsntwcn3.exe flexsvr 1.0 permanent \</code></p>
+<p class="code"><code>    uncounted \</code></p>
+<p class="code"><code>    VENDOR_STRING=1211234567 \</code></p>
+<p class="code"><code>    HOSTID=39F837ABC83 \</code></p>
+<p class="code"><code>    vendor_info="PRODUCT_NAME:RSNetworx \</code></p>
+<p class="code"><code>    for ControlNet" \</code></p>
+<p class="code"><code>    SN=0431234567 \</code></p>
+<p class="code"><code>    SIGN="0000 3214 1111 CED1 BF34 3214 7777 5312 \</code></p>
+<p class="code"><code>     8878 AABC FE43 7777 5312 8878 AABC FE43 \</code></p>
+<p class="code"><code>     7777 5312 8878 AABC FE43 2222"</code></p>
+<p>The node-locked activation file has these elements:</p>
+<table class="tableintopic">
+<tr>
+<td style="border-right:1px solid #010101;border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Element</strong></p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>Increment rsntwcn3.exe</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The activation that identifies the RSNetWorx for ControlNet software product.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>flexsvr</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The name of the vendor service.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>1.0</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Indicates that this activation will only work with versions 0.0 to 1.0 inclusive.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>permanent</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The activation never expires.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>uncounted</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>An unlimited number of activations can be used on the specified host. </p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>Vendor_string</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The serial number of the product.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>HOSTID=39F837ABC83</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The binding of the machine that the activation is locked to.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>Vendor_info</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Information that identifies the product.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>SN</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>A number used to identify the vendor for each activation.</p>
+</td>
+</tr>
+<tr>
+<td style="border-right:1px solid #010101;border-bottom:1px solid #010101;">
+<p>SIGN=“ … ”</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The signature for this entry in the activation file.</p>
+</td>
+</tr>
+
+</table>
+<h2>See also</h2>
+<p class="seealso"><a id="h22827" class="jumptemplate" title="Activation feature names associated with products" href="22799.htm" target="_self">Activation feature names associated with products</a></p>
+<p class="keywords">Keywords: activation file</p>
+
+
+					</div>
+					<!-- TOC COLUMN -->
+					<div id="related_and_nav_column" class="ra-flex-item-static collapse in">
+						<div id="TOCBoxContents">
+							<!-- Content filled in by create_toc.js -->
+						</div>
+					</div>
+				</div>
+				<!-- PAGE FOOTER -->
+				<div id="page_footer" class="ra-flex-row ra-flex-item-static small">
+					<div class="ra-flex-item-dynamic">
+						Copyright © 2020 Rockwell Automation Technologies, Inc. All Rights Reserved.
+					</div>
+					<div class="ra-flex-item-static">
+						<a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/du/ra-du002_-en-e.pdf">How are we doing?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

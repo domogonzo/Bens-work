@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title> Renew an activation from a computer without an Internet connection </title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Force IE to use latest rendering mode. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Kindly request zoom-in on mobile devices. -->
+		<link rel="stylesheet" type="text/css" href="mft/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="mft/mobile-toolkit-ra/mobile-toolkit-ra.css">
+		<link rel="stylesheet" type="text/css" href="mft/ra-icons/ra-icons.css">
+		<link rel="stylesheet" type="text/css" href="template_layout.css">
+		<script language="javascript" type="text/javascript" src="mft/jquery/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/popper/popper.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/bootstrap/bootstrap.js"></script>
+		<script language="javascript" type="text/javascript" src="jquery.mark.js"></script>
+		<script language="javascript" type="text/javascript" src="ui_strings.js"></script>
+		<script language="javascript" type="text/javascript" src="search.js"></script>
+		<script language="javascript" type="text/javascript" src="toc.js"></script>
+		<script language="javascript" type="text/javascript" src="create_toc.js"></script>
+	</head>
+	<body>
+		<div>
+			<div class="ra-flex-column">
+				<!-- PAGE HEADER -->
+				<div id="page_header" class="ra-flex-row ra-flex-align-main-center ra-flex-align-cross-center">
+					<div class="ra-flex-item-shrink"><p class="breadcrumbs"><a class="breadcrumblink" href="284454.htm">Renew activations</a><span class="breadcrumbactive"><span class="breadcrumbdelimiter"> &gt; </span>Renew an activation from a computer without an Internet connection</span></p></div>
+					<div class="ra-flex-item-dynamic"><!-- spacer --></div>
+					<form class="ra-flex-item-shrink ra-flex-row ra-flex-align-main-end ra-flex-align-cross-center" id="search_form">
+						<div class="ra-flex-item-shrink">
+							<input class="form-control" type="text" id="keyword" placeholder="...">
+						</div>
+						<div class="ra-flex-item-shrink">
+							<button class="btn btn-outline-dark" type="submit">
+								<span class="ra-icon-search"></span>
+							</button>
+						</div>
+					</form>
+					<div class="ra-flex-item-shrink dropdown">
+						<button id="cvbhelp_settings_button" class="btn btn-outline-dark" data-toggle="dropdown" data-display="static">
+							<span class="ra-icon-settings"></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="cvbhelp_settings_button">
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="show_toc_checkbox" id="show_toc_label" style="white-space: nowrap;">Show Table of Contents</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="show_toc_checkbox">
+								</div>
+							</div>
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="highlight_terms_checkbox" id="highlight_terms_label" style="white-space: nowrap;">Highlight search results</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="highlight_terms_checkbox">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PAGE BODY -->
+				<div class="ra-flex-row ra-flex-item-dynamic">
+					<!-- CONTENT -->
+					<div id="content_section" class="ra-flex-item-dynamic">
+						<h1>Renew an activation from a computer without an Internet connection</h1>
+<p>If the computer using the activation does not have an Internet connection, transfer the activation data file to a removable storage device and take it to a computer with Internet access to perform the renewal process.</p>
+<table class="tableintopic">
+<tr>
+<td>
+<p class="tableheading"><strong>Tip:</strong></p>
+</td>
+<td>
+<p>Both the computer connected to the Internet and the computer disconnected from the Internet must run the same version of FactoryTalk Activation Manager.</p>
+</td>
+</tr>
+
+</table>
+<h2>To renew an activation from a computer without an Internet connection:</h2>
+<ol>
+<li>On the computer without an Internet connection, attach the removable storage device and then start FactoryTalk Activation Manager. Collect activation renewal information by performing these steps:<ol>
+<li class="listalpha">Select <strong>Manage Activations </strong>&gt; <strong>Renew Activations</strong>.</li>
+<li class="listalpha">On the <strong>Choose Phase</strong> page, select <strong>I need to start the renewal procedure by creating a data file</strong> and then select <strong>Specify Data File</strong>.</li>
+<li class="listalpha">On the <strong>Specify Data File</strong> page, specify the data file location and name. (Optional) Use the default file location and name (<strong>FTAManagerData.xml</strong>).</li>
+<li class="listalpha">Select <strong>Create Data File</strong>. The <strong>Create Data File</strong> page displays the result of the operation and the location of the data file.</li>
+<li class="listalpha">If needed, on the <strong>Create Data File</strong> page, select <strong>Go to Data File Location</strong>, move or copy the data file to the removable storage device, and then remove the storage device from the computer.</li>
+</ol>
+</li>
+<li>Go to a computer with an Internet connection, attach the storage device and then start FactoryTalk Activation Manager to continue the renewal process:<ol>
+<li class="listalpha">Select <strong>Manage Activations</strong> &gt; <strong>Renew Activations</strong>.</li>
+<li class="listalpha">Select <strong>Import from Data File</strong>. The data file copied to the removable storage device is selected by default. Select <strong>Open</strong>. Activations that require renewal appear.</li>
+<li class="listalpha">Select the check box of the activations to renew.</li>
+<li class="listalpha">Select <strong>Continue Renewing</strong>. The <strong>Contacting Rockwell Automation Activation Service</strong> progress bar appears while the activations are being processed. The <strong>Continue Renewing</strong> page displays the results of the renew operation.</li>
+<li class="listalpha">Remove the storage device from the computer.</li>
+</ol>
+</li>
+<li>Return to the computer without an Internet connection, attach the removable storage device, start FactoryTalk Activation Manager and perform these steps to finish the renewal process:<ol>
+<li class="listalpha">Select <strong>Manage Activations</strong> &gt; <strong>Renew Activations</strong>.</li>
+<li class="listalpha">On the <strong>Choose Phase</strong> page, select <strong>I have moved the data transport file and need to import the updates to this computer </strong>and then select <strong>Select Data File</strong>.</li>
+<li class="listalpha">Select the name and location of the data file on the removable storage device and then select <strong>Continue Renewing</strong>. The <strong>Continue Renewing</strong> page displays the results of the renew operation.</li>
+</ol>
+</li>
+</ol>
+<h2>See also</h2>
+<p class="seealso"><a id="h284507" class="jumptemplate" title="Renew activations" href="284454.htm" target="_self">Renew activations</a></p>
+<p class="seealso"><a id="h378640" class="jumptemplate" title="Activation renewals" href="299525.htm" target="_self">Activation renewals</a></p>
+<p class="keywords">Keywords: activations, renew, no internet, disconnected, internet, data, file </p>
+
+
+					</div>
+					<!-- TOC COLUMN -->
+					<div id="related_and_nav_column" class="ra-flex-item-static collapse in">
+						<div id="TOCBoxContents">
+							<!-- Content filled in by create_toc.js -->
+						</div>
+					</div>
+				</div>
+				<!-- PAGE FOOTER -->
+				<div id="page_footer" class="ra-flex-row ra-flex-item-static small">
+					<div class="ra-flex-item-dynamic">
+						Copyright © 2020 Rockwell Automation Technologies, Inc. All Rights Reserved.
+					</div>
+					<div class="ra-flex-item-static">
+						<a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/du/ra-du002_-en-e.pdf">How are we doing?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

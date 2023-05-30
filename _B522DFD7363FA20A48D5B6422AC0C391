@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title> Find where activations are in use </title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Force IE to use latest rendering mode. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Kindly request zoom-in on mobile devices. -->
+		<link rel="stylesheet" type="text/css" href="mft/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="mft/mobile-toolkit-ra/mobile-toolkit-ra.css">
+		<link rel="stylesheet" type="text/css" href="mft/ra-icons/ra-icons.css">
+		<link rel="stylesheet" type="text/css" href="template_layout.css">
+		<script language="javascript" type="text/javascript" src="mft/jquery/jquery.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/popper/popper.js"></script>
+		<script language="javascript" type="text/javascript" src="mft/bootstrap/bootstrap.js"></script>
+		<script language="javascript" type="text/javascript" src="jquery.mark.js"></script>
+		<script language="javascript" type="text/javascript" src="ui_strings.js"></script>
+		<script language="javascript" type="text/javascript" src="search.js"></script>
+		<script language="javascript" type="text/javascript" src="toc.js"></script>
+		<script language="javascript" type="text/javascript" src="create_toc.js"></script>
+	</head>
+	<body>
+		<div>
+			<div class="ra-flex-column">
+				<!-- PAGE HEADER -->
+				<div id="page_header" class="ra-flex-row ra-flex-align-main-center ra-flex-align-cross-center">
+					<div class="ra-flex-item-shrink"><p class="breadcrumbs"><a class="breadcrumblink" href="22699.htm">Find available activations</a><span class="breadcrumbactive"><span class="breadcrumbdelimiter"> &gt; </span>Find where activations are in use</span></p></div>
+					<div class="ra-flex-item-dynamic"><!-- spacer --></div>
+					<form class="ra-flex-item-shrink ra-flex-row ra-flex-align-main-end ra-flex-align-cross-center" id="search_form">
+						<div class="ra-flex-item-shrink">
+							<input class="form-control" type="text" id="keyword" placeholder="...">
+						</div>
+						<div class="ra-flex-item-shrink">
+							<button class="btn btn-outline-dark" type="submit">
+								<span class="ra-icon-search"></span>
+							</button>
+						</div>
+					</form>
+					<div class="ra-flex-item-shrink dropdown">
+						<button id="cvbhelp_settings_button" class="btn btn-outline-dark" data-toggle="dropdown" data-display="static">
+							<span class="ra-icon-settings"></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="cvbhelp_settings_button">
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="show_toc_checkbox" id="show_toc_label" style="white-space: nowrap;">Show Table of Contents</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="show_toc_checkbox">
+								</div>
+							</div>
+							<div class="ra-flex-row">
+								<div class="ra-flex-item-dynamic" style="padding-left: 1em; padding-right: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<label for="highlight_terms_checkbox" id="highlight_terms_label" style="white-space: nowrap;">Highlight search results</label>
+								</div>
+								<div class="ra-flex-item-static" style="padding-right: 1em; padding-left: 0.5em; padding-top: 0.5em; padding-bottom: 0.5em;">
+									<input type="checkbox" id="highlight_terms_checkbox">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PAGE BODY -->
+				<div class="ra-flex-row ra-flex-item-dynamic">
+					<!-- CONTENT -->
+					<div id="content_section" class="ra-flex-item-dynamic">
+						<h1>Find where activations are in use</h1>
+<p>As an administrator, identify where activations are used to:</p>
+<ul>
+<li>Ensure activations are being used properly.</li>
+<li>Identify activations being used on a computer that was lost, stolen, or failed.</li>
+</ul>
+<h2>To find where activations are in use:</h2>
+<ol>
+<li>Click the <strong>Home</strong> tab and then click <strong>Find Available Activations</strong>.</li>
+<li>In the <strong>Available activations</strong> table, click a non-zero number in the <strong>In Use</strong> or <strong>Borrowed</strong> column to display the <strong>Activation Usage Detail</strong> dialog box.<ol>
+<li class="listalpha">Click the <strong>In Use</strong> number to see a three column grid that provides these details:<table class="tableintopic">
+<tr>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Column </strong></p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #010101;">
+<p>Computer</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Name of the computer that checked out or borrowed the activation</p>
+<p>If using dongle-based activations, the hardware ID of the device the activation is bound to.</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #010101;">
+<p>Quantity</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Number of activations checked out or borrowed.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Type</p>
+</td>
+<td>
+<p>Floating for activations that have been checked out for currently running sessions.</p>
+<p>Borrowed for activations that are checked out for a specified length of time.</p>
+</td>
+</tr>
+
+</table>
+</li>
+<li class="listalpha">Click the <strong>Borrowed </strong>number to see a three column grid that provides these details:<table class="tableintopic">
+<tr>
+<td height="0"></td>
+<td height="0"></td>
+<td height="0"></td>
+<td height="0"></td>
+</tr>
+<tr>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" colspan="2">
+<p class="tableheading"><strong>Column </strong></p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;">
+<p class="tableheading"><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #010101;" colspan="2">
+<p>Computer</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>Name of the computer that borrowed the activation</p>
+<p>If using dongle-based activations, the hardware ID of the device the activation is bound to.</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #010101;" colspan="2">
+<p>Borrow Date</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>When the activation was borrowed by that computer.</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #010101;" colspan="2">
+<p>Expire Date</p>
+</td>
+<td style="border-bottom:1px solid #010101;">
+<p>The date when the activation expires.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Tip:</strong></p>
+</td>
+<td colspan="3">
+<p>If the borrow term of a license is updated on the activation server, the Borrow details are not updated in the FactoryTalk Activation Manager client display until the FactoryTalk Activation Service is restarted on the server.</p>
+</td>
+</tr>
+
+</table>
+</li>
+</ol>
+</li>
+</ol>
+<h2>See also</h2>
+<p class="seealso"><a id="h22828" class="jumptemplate" title="Find available activations" href="22699.htm" target="_self">Find Available Activations page</a></p>
+<p class="seealso"><a id="h276105" class="jumptemplate" title="Available Activations table" href="28893.htm" target="_self">Available Activations table</a></p>
+<p class="keywords">Keywords: who, where, activations, in use</p>
+
+
+					</div>
+					<!-- TOC COLUMN -->
+					<div id="related_and_nav_column" class="ra-flex-item-static collapse in">
+						<div id="TOCBoxContents">
+							<!-- Content filled in by create_toc.js -->
+						</div>
+					</div>
+				</div>
+				<!-- PAGE FOOTER -->
+				<div id="page_footer" class="ra-flex-row ra-flex-item-static small">
+					<div class="ra-flex-item-dynamic">
+						Copyright © 2020 Rockwell Automation Technologies, Inc. All Rights Reserved.
+					</div>
+					<div class="ra-flex-item-static">
+						<a href="https://literature.rockwellautomation.com/idc/groups/literature/documents/du/ra-du002_-en-e.pdf">How are we doing?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
