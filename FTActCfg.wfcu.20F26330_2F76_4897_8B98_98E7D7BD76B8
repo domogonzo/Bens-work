@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- XML file to configure Windows Firewall via WFCU for FactoryTalk Activation -->
+<WFCU xmlns="urn://www.factorytalk.net/schema/2004/WFCU">
+<FirewallConfig>
+	<ProcessExceptionList>
+		<ProcessExceptionBasePath pathName="HKLM\Software\Rockwell Software\FactoryTalk Activation:INSTALLDIR" treatAs="absFolderRegKey">
+			<ProcessExceptionRelPath id="lmgrd" pathName="FactoryTalk Activation\lmgrd.exe" treatAs="relFilePath"/>
+		</ProcessExceptionBasePath>	
+		<ProcessExceptionBasePath pathName="HKLM\Software\Rockwell Software\FactoryTalk Activation:INSTALLDIR" treatAs="absFolderRegKey">
+			<ProcessExceptionRelPath id="flexsvr" pathName="FactoryTalk Activation\flexsvr.exe" treatAs="relFilePath"/>
+		</ProcessExceptionBasePath>
+	</ProcessExceptionList>
+</FirewallConfig>
+
+<DisplayItemList>
+	<DisplayItem sourceId="lmgrd" lang="en">
+		<DisplayName>FactoryTalk Activation Server</DisplayName>
+		<Description>The FactoryTalk Activation Server processes serve activations to FactoryTalk Activation clients.</Description>
+	</DisplayItem>
+</DisplayItemList>
+
+
+<ContentInfo>
+	<Revisions>
+		<Revision>
+			<Version> 1.0 </Version> 
+			<Date> 10-21-04</Date>
+			<Author> DHuffman </Author>
+			<Comment>FactoryTalk Activation WFCU Control File</Comment> 
+		</Revision>
+	</Revisions>
+</ContentInfo>
+</WFCU>

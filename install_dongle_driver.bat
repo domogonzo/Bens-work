@@ -1,0 +1,1 @@
+haspdinst.exe -i -fss

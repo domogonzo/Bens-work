@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<fta>
+   <ProductNameUpdateList>
+      <ItemToUpdate>
+         <Prefix>2354</Prefix>
+         <ProductName>ChannelSW Automation Toolkit</ProductName>
+      </ItemToUpdate>
+      <ItemToUpdate>
+         <Prefix>2329</Prefix>
+         <ProductName>EDU Classroom Toolkit</ProductName>
+      </ItemToUpdate>
+      <ItemToUpdate>
+         <Prefix>2330</Prefix>
+         <ProductName>EDU Student Toolkit</ProductName>
+      </ItemToUpdate>
+      <ItemToUpdate>
+         <Prefix>2717</Prefix>
+         <ProductName>RSTrainer Toolkit Adder</ProductName>
+      </ItemToUpdate>
+      <ItemToUpdate>
+         <Prefix>2819</Prefix>
+         <ProductName>Channel Programs CMS Toolkit</ProductName>
+      </ItemToUpdate>
+      <ItemToUpdate>
+         <Prefix>2824</Prefix>
+         <ProductName>Automation Toolkit</ProductName>
+      </ItemToUpdate>
+      <ItemToUpdate>
+         <Prefix>2825</Prefix>
+         <ProductName>Automation Toolkit</ProductName>
+      </ItemToUpdate>
+      <ItemToUpdate>
+         <Prefix>2820</Prefix>
+         <ProductName>CMS Toolkit</ProductName>
+      </ItemToUpdate>
+      <ItemToUpdate>
+         <Prefix>2821</Prefix>
+         <ProductName>CMS Toolkit</ProductName>
+      </ItemToUpdate>
+   </ProductNameUpdateList>
+</fta>
