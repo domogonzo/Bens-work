@@ -1,0 +1,2 @@
+// Copyright © Rockwell Automation Technologies, Inc. All Rights Reserved
+document.addEventListener("DOMContentLoaded",function(n){var t=toc_content();top_level_url=t[0].url,window.location.assign(top_level_url)});
