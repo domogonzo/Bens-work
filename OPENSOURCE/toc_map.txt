@@ -1,0 +1,12 @@
+[TOPICS_TOC]
+"FactoryTalk Activation Manager Open Source Licenses","346654.htm","404431"
+"Bootstrap 4.5.2 License","404276.htm","404276"
+"Brumme Portable Hashing Library 7 License","346649.htm","346649"
+"jQuery 3.5.1 License","404277.htm","404277"
+"Mark.js v9.0.0 License","404275.htm","404275"
+[TOPICS_ALPHA]
+"Bootstrap 4.5.2 License","404276.htm","404276"
+"Brumme Portable Hashing Library 7 License","346649.htm","346649"
+"FactoryTalk Activation Manager Open Source Licenses","346654.htm","404431"
+"Mark.js v9.0.0 License","404275.htm","404275"
+"jQuery 3.5.1 License","404277.htm","404277"
